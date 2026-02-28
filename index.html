@@ -1,0 +1,1306 @@
+<head>
+<meta charset="UTF-8">
+<title>Gramanick ®</title>
+
+<!-- FUENTE PERMANENT MARKER -->
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+}
+
+#texto {
+    width: 80%;
+    height: 100px;
+    font-size: 20px;
+}
+
+#resultado {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+}
+
+.palabra {
+    display: inline-flex;       /* permite que varias palabras estén en línea */
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    max-width: 220px;           /* ancho máximo para palabras largas */
+    min-width: 100px;           /* ancho mínimo para palabras cortas */
+    white-space: nowrap;         /* evita que se rompa el texto */
+}
+
+.palabra img {
+    width: 70px;       /* tamaño fijo de la imagen */
+    height: 70px;      /* tamaño fijo de la imagen */
+    object-fit: contain; 
+    flex-shrink: 0;    /* evita que la imagen se estire o encoja */
+}
+
+.fila-picto {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fila-simbolo {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fila-texto {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.preposicion { 
+    color: blue; 
+    font-weight: bold; 
+}
+
+/* ESTILO PARA EL TÍTULO */
+.titulo {
+    color: #FF69B4; 
+    font-family: 'Permanent Marker', sans-serif; /* Letra divertida */
+    font-size: 80px; /* Tamaño grande */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo img {
+    width: 100px; /* Tamaño del logo */
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.boton-on {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.boton-off {
+    background-color: #dc3545;
+    color: red;
+    border: none;
+}
+
+button {
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.firma {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #000000;
+  background: pink;
+  padding: 6px 0;
+}
+
+.contenedor-linea {
+    display: flex;           /* organiza las palabras en fila */
+    flex-wrap: wrap;         /* permite saltar línea si no entra */
+    align-items: flex-start; /* alinea pictogramas y texto arriba */
+    gap: 15px;               /* espacio entre palabras */
+    margin-bottom: 10px;     /* separación entre líneas */
+}
+
+.palabra img,
+.fila-simbolo img,
+.fila-picto img {
+    max-width: 100%;   /* nunca más ancho que la palabra */
+    height: auto;      /* mantiene la proporción original */
+    object-fit: contain; /* evita que se deformen */
+}
+
+</style>
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+  <!-- Título con logo -->
+  <h1 class="titulo">
+    GramaNick 
+    <img src="https://i.ibb.co/wNLn4TGc/Documento-A4-Horizontal-Notas-Ornamental-Minimalista-Elegante-Sencillo-Blanco-y-Negro-1.png" alt="Logo">
+  </h1>
+
+  <!-- Área de texto y botones -->
+  <textarea id="texto" placeholder="Un cafecito y a seguir ♡..."></textarea>
+  <br><br>
+  <button onclick="mostrarPictos()">Crear</button>
+  <button onclick="descargarImagen()">Descargar imagen</button>
+  <br><br>
+  <button id="btnSimbolos" class="boton-on" onclick="toggleSimbolos()">Símbolos ON</button>
+  <button id="btnPictos" class="boton-on" onclick="togglePictos()">Pictogramas ON</button>
+  <button id="btnColor" class="boton-on" onclick="toggleColor()">Color ON</button>
+
+  <!-- Aquí se muestran los resultados -->
+  <div id="resultado"></div>
+
+  <!-- Footer -->
+  <footer class="firma">Hecho con amor por Iara Lupi ❤</footer>
+</body>
+
+<script>
+
+// ==================== DATOS ====================
+
+const simboloAdjetivo = "https://i.ibb.co/gFLMWsdC/Whats-App-Image-2026-02-26-at-5-33-08-PM.jpg";
+const simboloPronombre = "https://i.ibb.co/jZL13LrK/simbolo-pronombre.png";
+const simboloRelacionante = "https://i.ibb.co/d4tdpfxJ/simbolo-relacionante.png";
+const simboloVerboInfinitivo = "https://i.ibb.co/dwB90kGz/Whats-App-Image-2026-02-26-at-5-00-49-PM.jpg";
+
+let pictogramas = {
+    "maestra": "https://static.arasaac.org/pictograms/6555/6555_300.png",
+    "escuela": "https://static.arasaac.org/pictograms/3082/3082_300.png",
+    "yo": "https://static.arasaac.org/pictograms/6632/6632_300.png",
+    "comer": "https://static.arasaac.org/pictograms/6456/6456_300.png",
+    "hamburguesa": "https://static.arasaac.org/pictograms/2419/2419_300.png",
+    "tomar": "https://static.arasaac.org/pictograms/6061/6061_300.png",
+    "jugar": "https://static.arasaac.org/pictograms/6537/6537_300.png",
+    "pintar": "https://static.arasaac.org/pictograms/2348/2348_300.png",
+    "comprar": "https://static.arasaac.org/pictograms/8986/8986_300.png",
+    "cortar": "https://static.arasaac.org/pictograms/2547/2547_300.png",
+    "lavar": "https://static.arasaac.org/pictograms/34826/34826_300.png",
+    "ir": "https://static.arasaac.org/pictograms/8142/8142_300.png",
+    "hacer": "https://i.ibb.co/Pv6RMqJj/Chat-GPT-Image-26-feb-2026-06-30-47-p-m.png",
+    "ver": "https://static.arasaac.org/pictograms/6564/6564_300.png",
+    "dar": "https://static.arasaac.org/pictograms/28431/28431_300.png",
+    "saber": "https://static.arasaac.org/pictograms/16885/16885_300.png",
+    "querer": "",
+    "traer": "https://static.arasaac.org/pictograms/7280/7280_300.png",
+    "tachar": "https://static.arasaac.org/pictograms/30851/30851_300.png",
+    "dormir": "https://static.arasaac.org/pictograms/6479/6479_300.png",
+    "pegar": "https://static.arasaac.org/pictograms/2511/2511_300.png",
+    "subrayar": "https://static.arasaac.org/pictograms/6219/6219_300.png",
+    "unir": "https://static.arasaac.org/pictograms/8243/8243_300.png",
+    "encerrar": "https://i.ibb.co/B58GMS7w/Chat-GPT-Image-26-feb-2026-06-41-03-p-m.png",
+    "lindo": "https://static.arasaac.org/pictograms/11194/11194_300.png",
+    "linda": "https://static.arasaac.org/pictograms/11194/11194_300.png",
+    "contento": "https://static.arasaac.org/pictograms/31923/31923_300.png",
+    "contenta": "https://static.arasaac.org/pictograms/28647/28647_300.png",
+"grande": "https://static.arasaac.org/pictograms/4658/4658_300.png",
+"feo": "",
+"fea": "",
+"chico": "https://static.arasaac.org/pictograms/4716/4716_300.png",
+"chica": "https://static.arasaac.org/pictograms/4716/4716_300.png",
+"alto": "https://static.arasaac.org/pictograms/4557/4557_300.png",
+"alta": "https://static.arasaac.org/pictograms/10193/10193_300.png",
+"bajo": "https://static.arasaac.org/pictograms/4571/4571_300.png",
+"baja": "https://static.arasaac.org/pictograms/10196/10196_300.png",
+"bueno": "",
+"buena": "",
+"malo": "",
+"mala": "",
+"feliz": "https://static.arasaac.org/pictograms/9907/9907_300.png",
+"triste": "https://static.arasaac.org/pictograms/35545/35545_300.png",
+"rapido": "https://static.arasaac.org/pictograms/37850/37850_300.png",
+"rapida": "https://static.arasaac.org/pictograms/37850/37850_300.png",
+"lento": "https://static.arasaac.org/pictograms/4676/4676_300.png",
+"lenta": "https://static.arasaac.org/pictograms/4676/4676_300.png",
+"sucio": "https://static.arasaac.org/pictograms/26459/26459_300.png",
+"sucia": "https://static.arasaac.org/pictograms/26459/26459_300.png",
+"limpio": "https://static.arasaac.org/pictograms/26172/26172_300.png",
+"limpia": "https://static.arasaac.org/pictograms/26172/26172_300.png",
+"nuevo": "https://static.arasaac.org/pictograms/11316/11316_300.png",
+"nueva": "https://static.arasaac.org/pictograms/11316/11316_300.png",
+"viejo": "https://static.arasaac.org/pictograms/11394/11394_300.png",
+"vieja": "https://static.arasaac.org/pictograms/11394/11394_300.png",
+"enojado": "",
+"enojada": "",
+"lluvioso": "https://static.arasaac.org/pictograms/7148/7148_300.png",
+"lluvia": "https://static.arasaac.org/pictograms/7148/7148_300.png",
+"sol": "https://static.arasaac.org/pictograms/7252/7252_300.png",
+"soleado": "",
+"nublado": "https://static.arasaac.org/pictograms/34383/34383_300.png",
+"gordo": "https://static.arasaac.org/pictograms/25133/25133_300.png",
+"gorda": "https://static.arasaac.org/pictograms/25133/25133_300.png",
+"flaco": "https://static.arasaac.org/pictograms/25048/25048_300.png",
+"flaca": "https://static.arasaac.org/pictograms/25048/25048_300.png",
+"mojado": "https://static.arasaac.org/pictograms/25253/25253_300.png",
+"mojada": "https://static.arasaac.org/pictograms/25253/25253_300.png",
+"seco": "https://static.arasaac.org/pictograms/25437/25437_300.png",
+"seca": "https://static.arasaac.org/pictograms/25437/25437_300.png",
+"sano": "https://static.arasaac.org/pictograms/12293/12293_300.png",
+"sana": "https://static.arasaac.org/pictograms/29648/29648_300.png",
+"enfermo": "https://static.arasaac.org/pictograms/28742/28742_300.png",
+"enferma": "https://static.arasaac.org/pictograms/3308/3308_300.png",
+"largo": "https://static.arasaac.org/pictograms/26162/26162_300.png",
+"larga": "https://static.arasaac.org/pictograms/26162/26162_300.png",
+"corto": "https://static.arasaac.org/pictograms/26002/26002_300.png",
+"corta": "https://static.arasaac.org/pictograms/26002/26002_300.png",
+"prendido": "https://static.arasaac.org/pictograms/26753/26753_300.png",
+"prendida": "https://static.arasaac.org/pictograms/26753/26753_300.png",
+"encendido": "https://static.arasaac.org/pictograms/26753/26753_300.png",
+"encendida": "https://static.arasaac.org/pictograms/26753/26753_300.png",
+"encender": "https://static.arasaac.org/pictograms/21818/21818_300.png",
+"apagar": "https://static.arasaac.org/pictograms/21365/21365_300.png",
+"apagado": "https://static.arasaac.org/pictograms/26993/26993_300.png",
+"apagada": "https://static.arasaac.org/pictograms/26993/26993_300.png",
+"abierto": "https://static.arasaac.org/pictograms/4549/4549_300.png",
+"abierta": "https://static.arasaac.org/pictograms/4549/4549_300.png",
+"cerrado": "https://static.arasaac.org/pictograms/4596/4596_300.png",
+"cerrada": "https://static.arasaac.org/pictograms/4596/4596_300.png",
+"caliente": "https://static.arasaac.org/pictograms/26716/26716_300.png",
+"frio": "https://static.arasaac.org/pictograms/26865/26865_300.png",
+"fria": "https://static.arasaac.org/pictograms/26865/26865_300.png",
+"distraido": "https://static.arasaac.org/pictograms/8551/8551_300.png",
+"distraida": "https://static.arasaac.org/pictograms/28635/28635_300.png",
+"jugo": "https://static.arasaac.org/pictograms/11461/11461_300.png",
+"frutas": "https://static.arasaac.org/pictograms/28339/28339_300.png",
+"manzana": "https://static.arasaac.org/pictograms/2462/2462_300.png",
+"banana": "https://static.arasaac.org/pictograms/10218/10218_300.png",
+"naranja": "https://static.arasaac.org/pictograms/2483/2483_300.png",
+"comida": "https://static.arasaac.org/pictograms/4610/4610_300.png",
+"pan": "https://static.arasaac.org/pictograms/2494/2494_300.png",
+"papas fritas" : "https://static.arasaac.org/pictograms/8653/8653_300.png",
+"carne": "https://static.arasaac.org/pictograms/2316/2316_300.png",
+"gaseosa": "https://static.arasaac.org/pictograms/2338/2338_300.png",
+"agua": "https://static.arasaac.org/pictograms/2248/2248_300.png",
+"mes": "https://static.arasaac.org/pictograms/37724/37724_300.png",
+"ayer": "https://static.arasaac.org/pictograms/38279/38279_300.png",
+"hoy" : "https://static.arasaac.org/pictograms/38276/38276_300.png",
+"lunes": "https://i.ibb.co/PvR5Z5QD/LUNES.png",
+"martes": "", 
+"miercoles": "",
+"jueves": "",
+"viernes": "",
+"sabado": "",
+"domingo": "",
+"enero": "",
+"febrero": "",
+"marzo": "",
+"abril": "",
+"mayo": "",
+"junio": "",
+"julio": "",
+"agosto": "",
+"septiembre": "",
+"octubre": "",
+"noviembre": "",
+"diciembre": "",
+"¿quién": "https://i.ibb.co/xKDrXbtt/quien.png",
+"¿qué": "https://i.ibb.co/N6ByscQZ/que.png",
+"¿cómo": "https://i.ibb.co/GvWxf1x8/como.png",
+"¿dónde": "https://i.ibb.co/hxqP5p6J/donde.png",
+"¿cuál": "https://i.ibb.co/sJgqQ7GC/cual.png",
+"¿cuándo": "https://i.ibb.co/bghT6jnd/cuando.png",
+"¿cuántos": "https://i.ibb.co/kVpZNSRj/cuantos.png",
+"¿por": "https://i.ibb.co/tMSZ8wKj/por-qu.png",
+"pregunta": "https://i.ibb.co/5gSLP4ht/pregunta.png",
+"¿quiénes": "https://i.ibb.co/S71JzRkZ/quienes.png",
+"iara": "https://i.ibb.co/kzrCTcF/iara.jpg",
+"plaza": "https://static.arasaac.org/pictograms/2859/2859_300.png",
+"casa": "https://static.arasaac.org/pictograms/2317/2317_300.png",
+"mamá": "https://static.arasaac.org/pictograms/2458/2458_300.png",
+"papá": "https://static.arasaac.org/pictograms/31146/31146_300.png",
+"hermana": "https://static.arasaac.org/pictograms/2422/2422_300.png",
+"hermano": "https://static.arasaac.org/pictograms/2423/2423_300.png",
+"empezaron las clases": "https://i.ibb.co/TqNbxMjH/empezaron-las-clases.jpg"
+
+
+
+};
+
+// Verbos conjugados manuales, apuntando al infinitivo
+let verbosConjugados = {
+
+// ===== FRACES VERBALES =====
+"va a comer": "comer",
+"va a trabajar": "trabajar",
+"va a pintar": "pintar",
+"va a bañarse": "bañarse",
+"vamos a trabajar": "trabajar",
+"vamos a jugar": "jugar",
+
+// ===== VERBO ENCENDER =====
+
+// PRESENTE HABITUAL
+"enciendo": "encender",
+"enciendes": "encender",
+"enciende": "encender",
+"encendemos": "encender",
+"encienden": "encender",
+
+// PRETÉRITO PERFECTO SIMPLE
+"encendí": "encender",
+"encendiste": "encender",
+"encendió": "encender",
+"encendimos": "encender",
+"encendieron": "encender",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he encendido": "encender",
+"has encendido": "encender",
+"ha encendido": "encender",
+"hemos encendido": "encender",
+"han encendido": "encender",
+
+// FUTURO COMPUESTO
+"habré encendido": "encender",
+"habrás encendido": "encender",
+"habrá encendido": "encender",
+"habremos encendido": "encender",
+"habrán encendido": "encender",
+
+
+// ===== VERBO APAGAR =====
+
+// PRESENTE HABITUAL
+"apago": "apagar",
+"apagas": "apagar",
+"apaga": "apagar",
+"apagamos": "apagar",
+"apagan": "apagar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"apagué": "apagar",
+"apagaste": "apagar",
+"apagó": "apagar",
+"apagamos": "apagar",
+"apagaron": "apagar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he apagado": "apagar",
+"has apagado": "apagar",
+"ha apagado": "apagar",
+"hemos apagado": "apagar",
+"han apagado": "apagar",
+
+// FUTURO COMPUESTO
+"habré apagado": "apagar",
+"habrás apagado": "apagar",
+"habrá apagado": "apagar",
+"habremos apagado": "apagar",
+"habrán apagado": "apagar",
+
+// ===== VERBO ESTAR =====
+
+// PRESENTE HABITUAL
+"estoy": "estar",
+"estás": "estar",
+"esta": "estar",
+"está": "estar",
+"estamos": "estar",
+"están": "estar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"estuve": "estar",
+"estuviste": "estar",
+"estuvo": "estar",
+"estuvimos": "estar",
+"estuvieron": "estar",
+
+// PRETÉRITO IMPERFECTO
+"estaba": "estar",
+"estabas": "estar",
+"estábamos": "estar",
+"estaban": "estar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he estado": "estar",
+"has estado": "estar",
+"ha estado": "estar",
+"hemos estado": "estar",
+"han estado": "estar",
+
+// FUTURO SIMPLE
+"estaré": "estar",
+"estarás": "estar",
+"estará": "estar",
+"estaremos": "estar",
+"estarán": "estar",
+
+// PRESENTE HABITUAL
+"he": "haber",
+"has": "haber",
+"ha": "haber",
+"hemos": "haber",
+"han": "haber",
+
+// PRETÉRITO IMPERFECTO
+"había": "haber",
+"habías": "haber",
+"habíamos": "haber",
+"habían": "haber",
+
+// PRETÉRITO PERFECTO SIMPLE
+"hube": "haber",
+"hubiste": "haber",
+"hubo": "haber",
+"hubimos": "haber",
+"hubieron": "haber",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he habido": "haber",
+"has habido": "haber",
+"ha habido": "haber",
+"hemos habido": "haber",
+"han habido": "haber",
+
+// FUTURO SIMPLE
+"habré": "haber",
+"habrás": "haber",
+"habrá": "haber",
+"habremos": "haber",
+"habrán": "haber",
+
+// PRESENTE INDICATIVO
+"hay": "haber",
+
+// PRESENTE HABITUAL
+"soy": "ser",
+"eres": "ser",
+"es": "ser",
+"somos": "ser",
+"son": "ser",
+
+// PRETÉRITO PERFECTO SIMPLE
+"fui": "ser",
+"fuiste": "ser",
+"fue": "ser",
+"fuimos": "ser",
+"fueron": "ser",
+
+// PRETÉRITO IMPERFECTO
+"era": "ser",
+"eras": "ser",
+"éramos": "ser",
+"eran": "ser",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he sido": "ser",
+"has sido": "ser",
+"ha sido": "ser",
+"hemos sido": "ser",
+"han sido": "ser",
+
+// FUTURO SIMPLE
+"seré": "ser",
+"serás": "ser",
+"será": "ser",
+"seremos": "ser",
+"serán": "ser",
+
+    // PRESENTE HABITUAL
+    "como": "comer",
+    "comes": "comer",
+    "comés": "comer",
+    "come": "comer",
+    "comemos": "comer",
+    "comen": "comer",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "comí": "comer",
+    "comiste": "comer",
+    "comió": "comer",
+    "comimos": "comer",
+    "comieron": "comer",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he comido": "comer",
+    "has comido": "comer",
+    "ha comido": "comer",
+    "hemos comido": "comer",
+    "han comido": "comer",
+
+    // FUTURO COMPUESTO
+    "habré comido": "comer",
+    "habrás comido": "comer",
+    "habrá comido": "comer",
+    "habremos comido": "comer",
+    "habrán comido": "comer",
+
+    // PRESENTE HABITUAL
+    "tomo": "tomar",
+    "tomas": "tomar",
+    "tomás": "tomar",
+    "toma": "tomar",
+    "tomamos": "tomar",
+    "toman": "tomar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "tomé": "tomar",
+    "tomaste": "tomar",
+    "tomó": "tomar",
+    "tomamos": "tomar",
+    "tomaron": "tomar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he tomado": "tomar",
+    "has tomado": "tomar",
+    "ha tomado": "tomar",
+    "hemos tomado": "tomar",
+    "han tomado": "tomar",
+
+    // FUTURO COMPUESTO
+    "habré tomado": "tomar",
+    "habrás tomado": "tomar",
+    "habrá tomado": "tomar",
+    "habremos tomado": "tomar",
+    "habrán tomado": "tomar",
+
+    // PRESENTE HABITUAL
+    "juego": "jugar",
+    "juegas": "jugar",
+    "jugás": "jugar",
+    "juega": "jugar",
+    "jugamos": "jugar",
+    "juegan": "jugar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "jugué": "jugar",
+    "jugaste": "jugar",
+    "jugó": "jugar",
+    "jugamos": "jugar",
+    "jugaron": "jugar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he jugado": "jugar",
+    "has jugado": "jugar",
+    "ha jugado": "jugar",
+    "hemos jugado": "jugar",
+    "han jugado": "jugar",
+
+    // FUTURO COMPUESTO
+    "habré jugado": "jugar",
+    "habrás jugado": "jugar",
+    "habrá jugado": "jugar",
+    "habremos jugado": "jugar",
+    "habrán jugado": "jugar",
+
+    // PRESENTE HABITUAL
+    "pinto": "pintar",
+    "pintas": "pintar",
+    "pintás": "pintar",
+    "pinta": "pintar",
+    "pintamos": "pintar",
+    "pintan": "pintar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "pinté": "pintar",
+    "pintaste": "pintar",
+    "pintó": "pintar",
+    "pintamos": "pintar",
+    "pintaron": "pintar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he pintado": "pintar",
+    "has pintado": "pintar",
+    "ha pintado": "pintar",
+    "hemos pintado": "pintar",
+    "han pintado": "pintar",
+
+    // FUTURO COMPUESTO
+    "habré pintado": "pintar",
+    "habrás pintado": "pintar",
+    "habrá pintado": "pintar",
+    "habremos pintado": "pintar",
+    "habrán pintado": "pintar",
+
+    // PRESENTE HABITUAL
+    "compro": "comprar",
+    "compras": "comprar",
+    "comprás": "comprar",
+    "compra": "comprar",
+    "compramos": "comprar",
+    "compran": "comprar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "compré": "comprar",
+    "compraste": "comprar",
+    "compró": "comprar",
+    "compramos": "comprar",
+    "compraron": "comprar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he comprado": "comprar",
+    "has comprado": "comprar",
+    "ha comprado": "comprar",
+    "hemos comprado": "comprar",
+    "han comprado": "comprar",
+
+    // FUTURO COMPUESTO
+    "habré comprado": "comprar",
+    "habrás comprado": "comprar",
+    "habrá comprado": "comprar",
+    "habremos comprado": "comprar",
+    "habrán comprado": "comprar",
+
+    // PRESENTE HABITUAL
+    "cortas": "cortar",
+    "cortás": "cortar",
+    "corta": "cortar",
+    "cortamos": "cortar",
+    "cortan": "cortar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "corté": "cortar",
+    "cortaste": "cortar",
+    "cortó": "cortar",
+    "cortamos": "cortar",
+    "cortaron": "cortar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he cortado": "cortar",
+    "has cortado": "cortar",
+    "ha cortado": "cortar",
+    "hemos cortado": "cortar",
+    "han cortado": "cortar",
+
+    // FUTURO COMPUESTO
+    "habré cortado": "cortar",
+    "habrás cortado": "cortar",
+    "habrá cortado": "cortar",
+    "habremos cortado": "cortar",
+    "habrán cortado": "cortar",
+
+    // PRESENTE HABITUAL
+    "lavo": "lavar",
+    "lavas": "lavar",
+    "lavás": "lavar",
+    "lava": "lavar",
+    "lavamos": "lavar",
+    "lavan": "lavar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "lavé": "lavar",
+    "lavaste": "lavar",
+    "lavó": "lavar",
+    "lavamos": "lavar",
+    "lavaron": "lavar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he lavado": "lavar",
+    "has lavado": "lavar",
+    "ha lavado": "lavar",
+    "hemos lavado": "lavar",
+    "han lavado": "lavar",
+
+    // FUTURO COMPUESTO
+    "habré lavado": "lavar",
+    "habrás lavado": "lavar",
+    "habrá lavado": "lavar",
+    "habremos lavado": "lavar",
+    "habrán lavado": "lavar",
+
+    // PRESENTE HABITUAL
+    "voy": "ir",
+    "vas": "ir",
+    "va": "ir",
+    "vamos": "ir",
+    "van": "ir",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "fui": "ir",
+    "fuiste": "ir",
+    "fue": "ir",
+    "fuimos": "ir",
+    "fueron": "ir",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he ido": "ir",
+    "has ido": "ir",
+    "ha ido": "ir",
+    "hemos ido": "ir",
+    "han ido": "ir",
+
+    // FUTURO COMPUESTO
+    "habré ido": "ir",
+    "habrás ido": "ir",
+    "habrá ido": "ir",
+    "habremos ido": "ir",
+    "habrán ido": "ir",
+
+    // PRESENTE HABITUAL
+    "veo": "ver",
+    "ves": "ver",
+    "ve": "ver",
+    "vemos": "ver",
+    "ven": "ver",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "vi": "ver",
+    "viste": "ver",
+    "vio": "ver",
+    "vimos": "ver",
+    "vieron": "ver",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he visto": "ver",
+    "has visto": "ver",
+    "ha visto": "ver",
+    "hemos visto": "ver",
+    "han visto": "ver",
+
+    // FUTURO COMPUESTO
+    "habré visto": "ver",
+    "habrás visto": "ver",
+    "habrá visto": "ver",
+    "habremos visto": "ver",
+    "habrán visto": "ver",
+
+    // PRESENTE HABITUAL
+    "doy": "dar",
+    "das": "dar",
+    "da": "dar",
+    "damos": "dar",
+    "dan": "dar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "di": "dar",
+    "diste": "dar",
+    "dio": "dar",
+    "dimos": "dar",
+    "dieron": "dar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he dado": "dar",
+    "has dado": "dar",
+    "ha dado": "dar",
+    "hemos dado": "dar",
+    "han dado": "dar",
+
+    // FUTURO COMPUESTO
+    "habré dado": "dar",
+    "habrás dado": "dar",
+    "habrá dado": "dar",
+    "habremos dado": "dar",
+    "habrán dado": "dar",
+
+    // PRESENTE HABITUAL
+    "sé": "saber",
+    "sabes": "saber",
+    "sabe": "saber",
+    "sabemos": "saber",
+    "saben": "saber",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "supe": "saber",
+    "supiste": "saber",
+    "supo": "saber",
+    "supimos": "saber",
+    "supieron": "saber",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he sabido": "saber",
+    "has sabido": "saber",
+    "ha sabido": "saber",
+    "hemos sabido": "saber",
+    "han sabido": "saber",
+
+    // FUTURO COMPUESTO
+    "habré sabido": "saber",
+    "habrás sabido": "saber",
+    "habrá sabido": "saber",
+    "habremos sabido": "saber",
+    "habrán sabido": "saber",
+
+    // PRESENTE HABITUAL
+    "quiero": "querer",
+    "quieres": "querer",
+    "quiere": "querer",
+    "queremos": "querer",
+    "quieren": "querer",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "quise": "querer",
+    "quisiste": "querer",
+    "quiso": "querer",
+    "quisimos": "querer",
+    "quisieron": "querer",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he querido": "querer",
+    "has querido": "querer",
+    "ha querido": "querer",
+    "hemos querido": "querer",
+    "han querido": "querer",
+
+    // FUTURO COMPUESTO
+    "habré querido": "querer",
+    "habrás querido": "querer",
+    "habrá querido": "querer",
+    "habremos querido": "querer",
+    "habrán querido": "querer",
+
+    // PRESENTE HABITUAL
+    "traigo": "traer",
+    "traes": "traer",
+    "trae": "traer",
+    "traemos": "traer",
+    "traen": "traer",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "traje": "traer",
+    "trajiste": "traer",
+    "trajo": "traer",
+    "trajimos": "traer",
+    "trajeron": "traer",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he traído": "traer",
+    "has traído": "traer",
+    "ha traído": "traer",
+    "hemos traído": "traer",
+    "han traído": "traer",
+
+    // FUTURO COMPUESTO
+    "habré traído": "traer",
+    "habrás traído": "traer",
+    "habrá traído": "traer",
+    "habremos traído": "traer",
+    "habrán traído": "traer",
+
+    // PRESENTE HABITUAL
+    "encierro": "encerrar",
+    "encierras": "encerrar",
+    "encierra": "encerrar",
+    "encerramos": "encerrar",
+    "encierran": "encerrar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "encerré": "encerrar",
+    "encerraste": "encerrar",
+    "encerró": "encerrar",
+    "encerramos": "encerrar",
+    "encerraron": "encerrar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he encerrado": "encerrar",
+    "has encerrado": "encerrar",
+    "ha encerrado": "encerrar",
+    "hemos encerrado": "encerrar",
+    "han encerrado": "encerrar",
+
+    // FUTURO COMPUESTO
+    "habré encerrado": "encerrar",
+    "habrás encerrado": "encerrar",
+    "habrá encerrado": "encerrar",
+    "habremos encerrado": "encerrar",
+    "habrán encerrado": "encerrar",
+
+    // PRESENTE HABITUAL
+    "tacho": "tachar",
+    "tachas": "tachar",
+    "tacha": "tachar",
+    "tachamos": "tachar",
+    "tachan": "tachar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "taché": "tachar",
+    "tachaste": "tachar",
+    "tachó": "tachar",
+    "tachamos": "tachar",
+    "tacharon": "tachar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he tachado": "tachar",
+    "has tachado": "tachar",
+    "ha tachado": "tachar",
+    "hemos tachado": "tachar",
+    "han tachado": "tachar",
+
+    // FUTURO COMPUESTO
+    "habré tachado": "tachar",
+    "habrás tachado": "tachar",
+    "habrá tachado": "tachar",
+    "habremos tachado": "tachar",
+    "habrán tachado": "tachar",
+
+    // PRESENTE HABITUAL
+    "duermo": "dormir",
+    "duermes": "dormir",
+    "duerme": "dormir",
+    "dormimos": "dormir",
+    "duermen": "dormir",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "dormí": "dormir",
+    "dormiste": "dormir",
+    "durmió": "dormir",
+    "dormimos": "dormir",
+    "durmieron": "dormir",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he dormido": "dormir",
+    "has dormido": "dormir",
+    "ha dormido": "dormir",
+    "hemos dormido": "dormir",
+    "han dormido": "dormir",
+
+    // FUTURO COMPUESTO
+    "habré dormido": "dormir",
+    "habrás dormido": "dormir",
+    "habrá dormido": "dormir",
+    "habremos dormido": "dormir",
+    "habrán dormido": "dormir",
+
+    // PRESENTE HABITUAL
+    "pego": "pegar",
+    "pegas": "pegar",
+    "pega": "pegar",
+    "pegamos": "pegar",
+    "pegan": "pegar",
+
+    // PRETÉRITO PERFECTO SIMPLE
+    "pegué": "pegar",
+    "pegaste": "pegar",
+    "pegó": "pegar",
+    "pegamos": "pegar",
+    "pegaron": "pegar",
+
+    // PRETÉRITO PERFECTO COMPUESTO
+    "he pegado": "pegar",
+    "has pegado": "pegar",
+    "ha pegado": "pegar",
+    "hemos pegado": "pegar",
+    "han pegado": "pegar",
+
+    // FUTURO COMPUESTO
+    "habré pegado": "pegar",
+    "habrás pegado": "pegar",
+    "habrá pegado": "pegar",
+
+
+// PRESENTE HABITUAL
+"empiezo": "empezar",
+"empiezas": "empezar",
+"empieza": "empezar",
+"empezamos": "empezar",
+"empiezan": "empezar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"empecé": "empezar",
+"empezaste": "empezar",
+"empezó": "empezar",
+"empezamos": "empezar",
+"empezaron": "empezar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he empezado": "empezar",
+"has empezado": "empezar",
+"ha empezado": "empezar",
+"hemos empezado": "empezar",
+"han empezado": "empezar",
+
+// FUTURO COMPUESTO
+"habré empezado": "empezar",
+"habrás empezado": "empezar",
+"habrá empezado": "empezar",
+"habremos empezado": "empezar",
+"habrán empezado": "empezar",
+
+// PRESENTE HABITUAL
+"salto": "saltar",
+"saltas": "saltar",
+"salta": "saltar",
+"saltamos": "saltar",
+"saltan": "saltar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"salté": "saltar",
+"saltaste": "saltar",
+"saltó": "saltar",
+"saltamos": "saltar",
+"saltaron": "saltar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he saltado": "saltar",
+"has saltado": "saltar",
+"ha saltado": "saltar",
+"hemos saltado": "saltar",
+"han saltado": "saltar",
+
+// FUTURO COMPUESTO
+"habré saltado": "saltar",
+"habrás saltado": "saltar",
+"habrá saltado": "saltar",
+"habremos saltado": "saltar",
+"habrán saltado": "saltar",
+};
+
+// Adjetivos, pronombres, preposiciones, etc.
+let adjetivos = ["lindo","contento","contenta","linda","feo","fea","grande","chico","chica","alto","alta","bajo","baja","bueno",
+"buena","malo","mala","feliz","triste","rápido","lento","sucio","sucia","limpio","limpia","nuevo","nueva","viejo","vieja","enojado",
+"enojada","lluvioso","soleado","nublado","gordo","gorda","flaco","flaca","seco","seca","mojado","mojada","seco","seca","sano","sana",
+"enfermo","enferma","largo","larga","corto","corta","prendido","prendida","encendido","encendida","apagado","apagada","abierto","abierta","cerrado",
+"cerrada","fácil","dificil","caliente","frío","fría","atento","atenta","distraido","distraida","mi","mis","tu","tus","su","sus","nuestro","nuestra","nuestros","nuestras","vuestro","vuestra","vuestros","vuestras","mío","mía","míos","mías","tuyo","tuya","tuyos","tuyas","suyo","suya","suyos","suyas","este","esta","estos","estas","ese","esa","esos","esas","aquel","aquella","aquellos","aquellas","rico","feo","rica","fea"];
+
+let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos","ellas"];
+
+let relacionantes = ["porque","y"];
+
+let verbosBase = ["comer","tomar","jugar","pintar","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar",
+"querer","traer","trozar","encerrar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar"];
+
+let preposiciones = ["a","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
+
+// ==================== FUNCIONES AUX ====================
+function esPronombre(palabra){ return pronombres.includes(palabra.toLowerCase()); }
+function esRelacionante(palabra){ return relacionantes.includes(palabra.toLowerCase()); }
+function esPreposicion(palabra){ return preposiciones.includes(palabra); }
+function esAdjetivo(palabra){ return adjetivos.includes(palabra.toLowerCase()); }
+
+let mostrarSimbolos = true;
+let mostrarImagenes = true;
+let mostrarColores = true;
+
+// ==================== FUNCIONES ====================
+function mostrarPictos() {
+
+    const texto = document.getElementById("texto").value.toLowerCase();
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+
+    texto.split("\n").forEach(linea => {
+
+        const contenedorLinea = document.createElement("div");
+        contenedorLinea.className = "contenedor-linea"; // 
+        const palabras = linea.split(" ");
+
+        for (let i = 0; i < palabras.length; i++) {
+
+            let palabraOriginal = palabras[i];
+            let palabraAnterior = palabras[i - 1] ? palabras[i - 1].replace(/^[¡.,;:!?]+|[¿¡.,;:!?]+$/g, "") : "";
+            let palabraSiguiente = palabras[i + 1] ? palabras[i + 1].replace(/^[¡.,;:!?]+|[¿¡.,;:!?]+$/g, "") : "";
+
+            if (!palabraOriginal) continue;
+
+            // Elimina signos de puntuación al inicio y al final
+            let palabra = palabraOriginal.replace(/^[¡.,;:!?]+|[¿¡.,;:!?]+$/g, "");
+
+            let siguienteLimpia = palabras[i+1] 
+                ? palabras[i+1].replace(/^[¡.,;:!?]+|[¿¡.,;:!?]+$/g, "") 
+                : "";
+
+            // ESTRUCTURA FRASES VERBALES
+            const div = document.createElement("div");
+            div.className = "palabra";
+
+            const filaPicto = document.createElement("div");
+            filaPicto.className = "fila-picto";
+
+            const filaSimbolo = document.createElement("div");
+            filaSimbolo.className = "fila-simbolo";
+
+            const filaTexto = document.createElement("div");
+            filaTexto.className = "fila-texto";
+
+            // ===== PICTOGRAMAS NORMALES =====
+            if (verbosBase.includes(palabra) || verbosConjugados[palabra]) {
+
+                if (mostrarColores) {
+                    filaTexto.style.color = "red";
+                    filaTexto.style.fontWeight = "bold";
+                }
+
+                // Si la palabra es verbo, buscamos el pictograma y el símbolo
+                let raiz = verbosConjugados[palabra] || palabra;
+                let esInfinitivo = verbosBase.includes(palabra);
+
+                if (esInfinitivo) {
+                    const imgSimbolo = document.createElement("img");
+                    imgSimbolo.src = simboloVerboInfinitivo;
+                    imgSimbolo.style.width = "40px";
+                    imgSimbolo.style.height = "40px";
+
+                    if (mostrarSimbolos) {
+                        filaSimbolo.appendChild(imgSimbolo);
+                    }
+
+                } else {
+
+                    if (mostrarSimbolos) {
+                        filaSimbolo.innerText = "=";
+                        filaSimbolo.style.color = "red";
+                    }
+                }
+
+                if (pictogramas[raiz] && mostrarImagenes) {
+                    const img = document.createElement("img");
+                    img.src = pictogramas[raiz];
+                    filaPicto.appendChild(img);
+                }
+
+            }
+
+            // ===== PICTOGRAMAS COMPUESTOS (hasta 4 palabras) =====
+            // Este bloque ha sido eliminado para evitar el comportamiento no deseado
+            // Y mantener el símbolo solo sobre el verbo en frases compuestas
+
+            // ===== ADJETIVOS =====
+            if (esAdjetivo(palabra)) {
+
+                const imgSimbolo = document.createElement("img");
+                imgSimbolo.src = simboloAdjetivo;
+                imgSimbolo.style.width = "40px";
+                imgSimbolo.style.height = "40px";
+
+                if (mostrarSimbolos) {
+                    filaSimbolo.appendChild(imgSimbolo);
+                }
+            }
+
+            // ===== PRONOMBRES =====
+            if (esPronombre(palabra)) {
+
+                const img = document.createElement("img");
+                img.src = simboloPronombre;
+                img.style.width = "40px";
+                img.style.height = "40px";
+
+                if (mostrarSimbolos) {
+                    filaSimbolo.appendChild(img);
+                }
+            }
+
+            // ===== RELACIONANTES =====
+            if (esRelacionante(palabra)) {
+
+                const img = document.createElement("img");
+                img.src = simboloRelacionante;
+                img.style.width = "40px";
+                img.style.height = "40px";
+
+                if (mostrarSimbolos) {
+                    filaSimbolo.appendChild(img);
+                }
+            }
+
+            // ===== PREPOSICIONES =====
+            if (esPreposicion(palabra.toLowerCase())) {
+
+                let esFraseVerbal =
+                    palabra === "a" &&
+                    (verbosBase.includes(palabraSiguiente)) &&
+                    (verbosConjugados[palabraAnterior] || verbosBase.includes(palabraAnterior));
+
+                if (mostrarColores) {
+
+                    if (esFraseVerbal) {
+                        // La "a" forma parte de frase verbal → rojo
+                        filaTexto.style.color = "red";
+                        filaTexto.style.fontWeight = "bold";
+                    } else {
+                        // Preposición normal → azul
+                        filaTexto.style.color = "blue";
+                        filaTexto.style.fontWeight = "bold";
+                    }
+                }
+            }
+
+            // ===== BUSCAR FRASES DE HASTA 4 PALABRAS =====
+let fraseEncontrada = null;
+let palabrasConsumidas = 0;
+
+for (let longitud = 4; longitud > 0; longitud--) {
+
+    let grupo = palabras.slice(i, i + longitud)
+        .map(p => p.replace(/^[¡.,;:!?]+|[¿¡.,;:!?]+$/g, "").toLowerCase())
+        .join(" ");
+
+    if (pictogramas[grupo]) {
+        fraseEncontrada = grupo;
+        palabrasConsumidas = longitud;
+        break;
+    }
+}
+
+if (
+    fraseEncontrada &&
+    mostrarImagenes &&
+    !(verbosBase.includes(fraseEncontrada) || verbosConjugados[fraseEncontrada])
+) {
+    const img = document.createElement("img");
+    img.src = pictogramas[fraseEncontrada];
+    filaPicto.appendChild(img);
+
+    i += palabrasConsumidas - 1;
+}
+            // Mostrar el texto siempre, aunque sea la última palabra
+            let textoMostrar;
+
+if (fraseEncontrada) {
+    textoMostrar = fraseEncontrada.toUpperCase();
+} else {
+    textoMostrar = (palabraOriginal || "").toUpperCase();
+}
+
+const spanTexto = document.createElement("span");
+spanTexto.innerText = textoMostrar;
+filaTexto.appendChild(spanTexto);
+
+            // Agregar los elementos al div y al contenedor de la línea
+            div.appendChild(filaPicto);
+            div.appendChild(filaSimbolo);
+            div.appendChild(filaTexto);
+            contenedorLinea.appendChild(div);
+
+        } // fin for palabras
+
+        // Agregar la línea completa al resultado
+        resultado.appendChild(contenedorLinea);
+
+    }); // fin forEach líneas
+} // fin mostrarPictos
+// ===== FUNCIONES BOTONES =====
+
+function toggleSimbolos() {
+    mostrarSimbolos = !mostrarSimbolos;
+    document.getElementById("btnSimbolos").innerText = mostrarSimbolos ? "Símbolos ON" : "Símbolos OFF";
+    mostrarPictos(); // opcional: actualiza la visualización inmediatamente
+}
+
+function togglePictos() {
+    mostrarImagenes = !mostrarImagenes;
+    document.getElementById("btnPictos").innerText = mostrarImagenes ? "Pictogramas ON" : "Pictogramas OFF";
+    mostrarPictos();
+}
+
+function toggleColor() {
+    mostrarColores = !mostrarColores;
+    document.getElementById("btnColor").innerText = mostrarColores ? "Color ON" : "Color OFF";
+    mostrarPictos();
+}
+
+// ===== FUNCION DESCARGAR =====
+
+function descargarImagen() {
+    html2canvas(document.getElementById("resultado"), {
+        useCORS: true,
+        allowTaint: false,
+        backgroundColor: "#ffffff",
+        scale: 2
+    }).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "gramanick.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+    });
+}
+
+</script>
+
+<div id="resultado"></div>
+
+</body>
+</html>
