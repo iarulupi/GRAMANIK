@@ -1969,7 +1969,7 @@ let adjetivos = ["pasado","elasticas","lindo","contento","contenta","linda","feo
 "enfermo","enferma","largo","larga","corto","corta","prendido","prendida","encendido","encendida","apagado","apagada","abierto","abierta","cerrado","doler",
 "cerrada","fácil","dificil","caliente","frío","fría","atento","atenta","distraido","distraida","mi","mis","tu","tus","su","sus","nuestro","nuestra","nuestros","nuestras","vuestro","vuestra","vuestros","vuestras","mío","mía","míos","mías","tuyo","tuya","tuyos","tuyas","suyo","suya","suyos","suyas","este","esta","estos","estas","ese","esa","esos","esas","aquel","aquella","aquellos","aquellas","rico","feo","rica","fea","un", "una","dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve", "diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete", "dieciocho", "diecinueve", "veinte", "veintiuno", "veintidós", "veintitrés", "veinticuatro", "veinticinco", "veintiséis", "veintisiete", "veintiocho", "veintinueve", "treinta", "treinta y uno", "treinta y dos", "treinta y tres", "treinta y cuatro", "treinta y cinco", "treinta y seis", "treinta y siete", "treinta y ocho", "treinta y nueve", "cuarenta", "cuarenta y uno", "cuarenta y dos", "cuarenta y tres", "cuarenta y cuatro", "cuarenta y cinco", "cuarenta y seis", "cuarenta y siete", "cuarenta y ocho", "cuarenta y nueve", "cincuenta", "cincuenta y uno", "cincuenta y dos", "cincuenta y tres", "cincuenta y cuatro", "cincuenta y cinco", "cincuenta y seis", "cincuenta y siete", "cincuenta y ocho", "cincuenta y nueve", "sesenta", "sesenta y uno", "sesenta y dos", "sesenta y tres", "sesenta y cuatro", "sesenta y cinco", "sesenta y seis", "sesenta y siete", "sesenta y ocho", "sesenta y nueve", "setenta", "setenta y uno", "setenta y dos", "setenta y tres", "setenta y cuatro", "setenta y cinco", "setenta y seis", "setenta y siete", "setenta y ocho", "setenta y nueve", "ochenta", "ochenta y uno", "ochenta y dos", "ochenta y tres", "ochenta y cuatro", "ochenta y cinco", "ochenta y seis", "ochenta y siete", "ochenta y ocho", "ochenta y nueve", "noventa", "noventa y uno", "noventa y dos", "noventa y tres", "noventa y cuatro", "noventa y cinco", "noventa y seis", "noventa y siete", "noventa y ocho", "noventa y nueve", "cien","primer", "primera", "segundo", "segunda", "tercer", "tercera", "cuarto", "cuarta", "quinto", "quinta", "sexto", "sexta", "séptimo", "séptima", "octavo", "octava", "noveno", "novena", "décimo", "décima", "undécimo", "undécima", "duodécimo", "duodécima", "decimotercero", "decimotercera", "decimocuarto", "decimocuarta", "decimoquinto", "decimoquinta", "decimosexto", "decimosexta", "decimoséptimo", "decimoséptima", "decimoctavo", "decimoctava", "decimonoveno", "decimonovena", "vigésimo", "vigésima","doble", "dobles", "triple", "triples", "cuádruple", "cuádruples", "quíntuple", "quíntuples", "séxtuple", "séxtuples", "séptuple", "séptuples", "óctuple", "óctuples", "nónuple", "nónuples", "décuplo", "décupla", "décuplos", "décuplas", "undécuplo", "undécupla", "duodécuplo", "duodécupla", "céntuplo", "céntupla","medio", "media", "medios", "medias", "tercio", "tercia", "tercios", "tercias", "cuarto", "cuarta", "cuartos", "cuartas", "quinto", "quinta", "quintos", "quintas", "sexto", "sexta", "sextos", "sextas", "séptimo", "séptima", "séptimos", "séptimas", "octavo", "octava", "octavos", "octavas", "noveno", "novena", "novenos", "novenas", "décimo", "décima", "décimos", "décimas"];
 
-let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos","ellas","le","les","me","te","nos","se",];
+let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos","ellas",];
 
 let relacionantes = ["porque","y"];
 
@@ -1978,11 +1978,14 @@ let verbosBase = ["comer","contestar","viajar","escribir","mirar","pintarse","me
 
 let preposiciones = ["a","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
 
+let pronombresReflexivosCuasiReflejos = ["se", "me", "le", "les", "te", "nos"];
+    
 // ==================== FUNCIONES AUX ====================
 function esPronombre(palabra){ return pronombres.includes(palabra.toLowerCase()); }
 function esRelacionante(palabra){ return relacionantes.includes(palabra.toLowerCase()); }
 function esPreposicion(palabra){ return preposiciones.includes(palabra); }
 function esAdjetivo(palabra){ return adjetivos.includes(palabra.toLowerCase()); }
+function esReflexivosCuasiReflejos(palabra){ return pronombresReflexivosCuasiReflejos.includes(palabra.toLowerCase());}
 
 let mostrarSimbolos = true;
 let mostrarImagenes = true;
@@ -2097,6 +2100,21 @@ function mostrarPictos() {
                 }
             }
 
+   // ===== PRONOMBRES REFLEXIVOS CUASI REFLEJOS =====
+      if (esReflexivosCuasiReflejos(palabra)) {
+        if (mostrarColores) {
+          filaTexto.style.color = "red";
+          filaTexto.style.fontWeight = "bold";
+        }
+
+        const img = document.createElement("img");
+        img.src = simboloReflexivosCuasiReflejos;
+        img.style.width = "40px";
+        img.style.height = "40px";
+
+        if (mostrarSimbolos) filaSimbolo.appendChild(img);
+      }
+            
             // ===== RELACIONANTES =====
             if (esRelacionante(palabra)) {
 
