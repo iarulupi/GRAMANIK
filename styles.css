@@ -1,0 +1,135 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#texto {
+    width: 80%;
+    max-width: 800px;
+    height: 100px;
+    font-size: 20px;
+    display: block;
+    margin: 20px auto;   /* 👈 esto lo centra */
+}
+
+#resultado {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+	flex-grow: 1;
+}
+
+.palabra {
+    display: inline-flex;       /* permite que varias palabras estén en línea */
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    max-width: 220px;           /* ancho máximo para palabras largas */
+    min-width: 100px;           /* ancho mínimo para palabras cortas */
+    white-space: nowrap;         /* evita que se rompa el texto */
+}
+
+.palabra img {
+    width: 80px;       /* tamaño fijo de la imagen */
+    height: 80px;      /* tamaño fijo de la imagen */
+    object-fit: contain; 
+    flex-shrink: 0;    /* evita que la imagen se estire o encoja */
+}
+
+.fila-picto {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fila-simbolo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fila-texto {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 26px;
+}
+
+
+.preposicion { 
+    color: blue; 
+    font-weight: bold; 
+}
+
+/* ESTILO PARA EL TÍTULO */
+.titulo {
+    color: #FF69B4; 
+    font-family: 'Permanent Marker', sans-serif; /* Letra divertida */
+    font-size: 80px; /* Tamaño grande */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo img {
+    width: 100px; /* Tamaño del logo */
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.boton-on {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.boton-off {
+    background-color: #dc3545;
+    color: red;
+    border: none;
+}
+
+button {
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.firma {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #000000;
+  background: pink;
+  padding: 6px 0;
+}
+
+.contenedor-linea {
+    display: flex;           /* organiza las palabras en fila */
+    flex-wrap: wrap;         /* permite saltar línea si no entra */
+    align-items: flex-start; /* alinea pictogramas y texto arriba */
+    gap: 15px;               /* espacio entre palabras */
+    margin-bottom: 10px;     /* separación entre líneas */
+}
+
+.palabra img,
+.fila-simbolo img,
+.fila-picto img {
+    max-width: 100%;   /* nunca más ancho que la palabra */
+    height: auto;      /* mantiene la proporción original */
+    object-fit: contain; /* evita que se deformen */
+}
+
