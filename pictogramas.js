@@ -10,7 +10,7 @@ const aliasNormalizacion = {
     "cafecito": "café",
     "tele": "television",
 	"verbos":"verbo",
-	"dispositivos móviles": "cafe",
+	"dispositivos móviles": "dispositivos electrónicos",
 };  
 // Imágenes
 let pictogramas = {
