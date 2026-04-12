@@ -350,6 +350,8 @@ let pictogramas = {
 "ordená": "https://static.arasaac.org/pictograms/2872/2872_300.png",
 "bailar": "https://static.arasaac.org/pictograms/35747/35747_300.png", 
 "verbo":"https://static.arasaac.org/pictograms/32604/32604_300.png",
+"recordar": "https://static.arasaac.org/pictograms/37369/37369_300.png",
+"dispositivos electrónicos": "https://static.arasaac.org/pictograms/34906/34906_300.png",
 
 };
 
@@ -2037,7 +2039,6 @@ let verbosConjugados = {
 "habremos prendido": "prender",
 "habrán prendido": "prender",
 
-
 // ===== VERBO DESPEGAR =====
 
 // PRESENTE HABITUAL
@@ -2076,6 +2077,36 @@ let verbosConjugados = {
 "nos bañamos": "bañar",
 "se bañaron": "bañar",
 
+// ===== VERBO RECORDAR =====
+
+// PRESENTE HABITUAL
+"recuerdo": "recordar",
+"recuerdas": "recordar",
+"recuerda": "recordar",
+"recordamos": "recordar",
+"recuerdan": "recordar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"recordé": "recordar",
+"recordaste": "recordar",
+"recordó": "recordar",
+"recordamos": "recordar",
+"recordaron": "recordar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he recordado": "recordar",
+"has recordado": "recordar",
+"ha recordado": "recordar",
+"hemos recordado": "recordar",
+"han recordado": "recordar",
+
+// FUTURO COMPUESTO
+"habré recordado": "recordar",
+"habrás recordado": "recordar",
+"habrá recordado": "recordar",
+"habremos recordado": "recordar",
+"habrán recordado": "recordar",
+
 };
 
 // Adjetivos, pronombres, preposiciones.
@@ -2090,7 +2121,7 @@ let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos
 
 let relacionantes = ["porque","y"];
 
-let verbosBase = ["comer","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
+let verbosBase = ["comer","recordar","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
 "querer","formar","traer","trozar","encerrar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar","andar","repasar","trozar","dictar","ver","regalar","operar", "nadar", "cocinar","bañar"];
 
 let preposiciones = ["a","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
