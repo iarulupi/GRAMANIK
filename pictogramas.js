@@ -7,7 +7,7 @@ const simboloVerboInfinitivo = "https://i.ibb.co/dwB90kGz/Whats-App-Image-2026-0
 const simboloReflexivosCuasiReflejos = "https://i.ibb.co/vC9pXdML/Whats-App-Image-2026-03-07-at-14-06-26.jpg";
 // palabras que pueden escribirse diferente y las reconoce igual (como un diccionario de sinónimos)
 const aliasNormalizacion = {
-    "cafecito": "cafe",
+    "cafecito": "café",
     "tele": "television",
 	"verbos":"verbo",
 	"dispositivos móviles": "cafe",
