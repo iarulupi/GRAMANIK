@@ -2163,7 +2163,7 @@ let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos
 let relacionantes = ["porque","y"];
 
 let verbosBase = ["comer","encerrar","recordar","prender","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
-"querer","formar","traer","trozar","encerrar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar","andar","repasar","trozar","dictar","ver","regalar","operar", "nadar", "cocinar","bañar"];
+"querer","formar","traer","trozar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar","andar","repasar","trozar","dictar","ver","regalar","operar", "nadar", "cocinar","bañar"];
 
 let preposiciones = ["a","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
 
