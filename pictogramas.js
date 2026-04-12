@@ -360,6 +360,7 @@ let pictogramas = {
 "luz": "https://static.arasaac.org/pictograms/8619/8619_300.png",
 "ventilador": "https://static.arasaac.org/pictograms/2612/2612_300.png",
 "celular": "https://static.arasaac.org/pictograms/25269/25269_300.png",
+"encerrar": "https://static.arasaac.org/pictograms/6285/6285_300.png",
 
 };
 
@@ -380,6 +381,7 @@ let verbosConjugados = {
 "contestá": "contestar",
 "completá": "completar",
 "ordená": "ordenar",
+"encerrá": "encerrar",
 
 // ===== FRACES VERBALES =====
 "se puede formar": "formar",
@@ -390,6 +392,37 @@ let verbosConjugados = {
 "vamos a jugar": "jugar",
 "se cayó" : "caer",
 "va a bañarse": "bañar",
+"podemos prender": "prender",
+
+// ===== VERBO PODER =====
+
+// PRESENTE HABITUAL
+"puedo": "poder",
+"puedes": "poder",
+"puede": "poder",
+"podemos": "poder",
+"pueden": "poder",
+
+// PRETÉRITO PERFECTO SIMPLE
+"pude": "poder",
+"pudiste": "poder",
+"pudo": "poder",
+"pudimos": "poder",
+"pudieron": "poder",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he podido": "poder",
+"has podido": "poder",
+"ha podido": "poder",
+"hemos podido": "poder",
+"han podido": "poder",
+
+// FUTURO COMPUESTO
+"habré podido": "poder",
+"habrás podido": "poder",
+"habrá podido": "poder",
+"habremos podido": "poder",
+"habrán podido": "poder",
 
 // ===== VERBO HACER =====
 
@@ -2129,7 +2162,7 @@ let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos
 
 let relacionantes = ["porque","y"];
 
-let verbosBase = ["comer","recordar","prender","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
+let verbosBase = ["comer","encerrar","recordar","prender","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
 "querer","formar","traer","trozar","encerrar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar","andar","repasar","trozar","dictar","ver","regalar","operar", "nadar", "cocinar","bañar"];
 
 let preposiciones = ["a","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
