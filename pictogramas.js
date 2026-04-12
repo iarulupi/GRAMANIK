@@ -1200,7 +1200,8 @@ let verbosConjugados = {
     "habrán traído": "traer",
 
     // PRESENTE HABITUAL
-    "encierro": "encerrar",
+    "encerrá": "encerrar",
+	"encierro": "encerrar",
     "encierras": "encerrar",
     "encierra": "encerrar",
     "encerramos": "encerrar",
