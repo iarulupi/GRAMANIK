@@ -361,6 +361,8 @@ let pictogramas = {
 "ventilador": "https://static.arasaac.org/pictograms/2612/2612_300.png",
 "celular": "https://static.arasaac.org/pictograms/25269/25269_300.png",
 "encerrar": "https://static.arasaac.org/pictograms/6285/6285_300.png",
+"flores": "static.arasaac.org/pictograms/7105/7105_300.png",
+"muñeca":"static.arasaac.org/pictograms/26238/26238_300.png",
 
 };
 
