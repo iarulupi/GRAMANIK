@@ -463,6 +463,32 @@ let verbosConjugados = {
 "habrá hecho": "hacer",
 "habremos hecho": "hacer",
 "habrán hecho": "hacer",
+
+// ===== VERBO ROMPER =====
+// PRESENTE HABITUAL 
+"rompo": "romper", 
+"rompes": "romper", 
+"rompe": "romper",
+"rompemos": "romper", 
+"rompen": "romper",
+// PRETÉRITO PERFECTO SIMPLE 
+"rompí": "romper", 
+"rompiste": "romper", 
+"rompió": "romper", 
+"rompimos": "romper", 
+"rompieron": "romper",
+// PRETÉRITO PERFECTO COMPUESTO 
+"he roto": "romper", 
+"has roto": "romper", 
+"ha roto": "romper",
+"hemos roto": "romper",
+"han roto": "romper",
+// FUTURO COMPUESTO 
+"habré roto": "romper", 
+"habrás roto": "romper", 
+"habrá roto": "romper",
+"habremos roto": "romper", 
+"habrán roto": "romper",
  
 // ===== VERBO BAILAR =====
 
