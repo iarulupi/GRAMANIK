@@ -372,6 +372,7 @@ let pictogramas = {
 "dominó":"https://static.arasaac.org/pictograms/3095/3095_300.png",
 "bingo":"https://static.arasaac.org/pictograms/11191/11191_300.png",
 "romper":"https://static.arasaac.org/pictograms/32388/32388_300.png",
+"copiar": "https://static.arasaac.org/pictograms/21559/21559_300.png",
 
 };
 
@@ -2186,6 +2187,35 @@ let verbosConjugados = {
 "habremos recordado": "recordar",
 "habrán recordado": "recordar",
 
+// ===== VERBO COPIAR =====
+
+// PRESENTE HABITUAL
+"copio": "copiar",
+"copias": "copiar",
+"copia": "copiar",
+"copiamos": "copiar",
+"copian": "copiar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"copié": "copiar",
+"copiaste": "copiar",
+"copió": "copiar",
+"copiamos": "copiar",
+"copiaron": "copiar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he copiado": "copiar",
+"has copiado": "copiar",
+"ha copiado": "copiar",
+"hemos copiado": "copiar",
+"han copiado": "copiar",
+
+// FUTURO COMPUESTO
+"habré copiado": "copiar",
+"habrás copiado": "copiar",
+"habrá copiado": "copiar",
+"habremos copiado": "copiar",
+"habrán copiado": "copiar",
 };
 
 // Adjetivos, pronombres, preposiciones.
@@ -2200,7 +2230,7 @@ let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos
 
 let relacionantes = ["porque","y"];
 
-let verbosBase = ["comer","encerrar","recordar","romper","prender","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
+let verbosBase = ["comer","encerrar","recordar","romper","prender","copiar","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
 "querer","formar","traer","trozar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar","andar","repasar","trozar","dictar","ver","regalar","operar", "nadar", "cocinar","bañar"];
 
 let preposiciones = ["a","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
