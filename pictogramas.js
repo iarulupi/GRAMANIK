@@ -373,6 +373,8 @@ let pictogramas = {
 "bingo":"https://static.arasaac.org/pictograms/11191/11191_300.png",
 "romper":"https://static.arasaac.org/pictograms/32388/32388_300.png",
 "copiar": "https://static.arasaac.org/pictograms/21559/21559_300.png",
+"ordenar": "https://static.arasaac.org/pictograms/2872/2872_300.png",
+"imagenes": "https://static.arasaac.org/pictograms/7107/7107_300.png",
 
 };
 
