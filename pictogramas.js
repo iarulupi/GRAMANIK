@@ -363,14 +363,14 @@ let pictogramas = {
 "encerrar": "https://static.arasaac.org/pictograms/6285/6285_300.png",
 "flores": "static.arasaac.org/pictograms/7105/7105_300.png",
 "muñeca":"static.arasaac.org/pictograms/26238/26238_300.png",
-"juegos de mesa": "static.arasaac.org/pictograms/32580/32580_300.png",
-"ajedrez": "static.arasaac.org/pictograms/3054/3054_300.png",
-"ludo": "static.arasaac.org/pictograms/2501/2501_300.png", 
-"loteria": "static.arasaac.org/pictograms/11191/11191_300.png",
-"dados": "static.arasaac.org/pictograms/3089/3089_300.png",
-"cartas": "static.arasaac.org/pictograms/3181/3181_300.png",
-"dominó": "static.arasaac.org/pictograms/3095/3095_300.png",
-"bingo": "static.arasaac.org/pictograms/11191/11191_300.png",
+"juegos de mesa":"static.arasaac.org/pictograms/32580/32580_300.png",
+"ajedrez":"static.arasaac.org/pictograms/3054/3054_300.png",
+"ludo":"static.arasaac.org/pictograms/2501/2501_300.png", 
+"loteria":"static.arasaac.org/pictograms/11191/11191_300.png",
+"dados":"static.arasaac.org/pictograms/3089/3089_300.png",
+"cartas":"static.arasaac.org/pictograms/3181/3181_300.png",
+"dominó":"static.arasaac.org/pictograms/3095/3095_300.png",
+"bingo":"static.arasaac.org/pictograms/11191/11191_300.png",
 
 };
 
