@@ -375,6 +375,7 @@ let pictogramas = {
 "copiar": "https://static.arasaac.org/pictograms/21559/21559_300.png",
 "ordenar": "https://static.arasaac.org/pictograms/2872/2872_300.png",
 "imagenes": "https://static.arasaac.org/pictograms/7107/7107_300.png",
+"play": "https://static.arasaac.org/pictograms/2354/2354_300.png",
 
 };
 
