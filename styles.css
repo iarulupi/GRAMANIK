@@ -27,30 +27,24 @@ body {
     display: inline-flex;       /* permite que varias palabras estén en línea */
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    margin: 4px;
     max-width: 220px;           /* ancho máximo para palabras largas */
     min-width: 100px;           /* ancho mínimo para palabras cortas */
     white-space: nowrap;         /* evita que se rompa el texto */
 }
 
 .palabra img {
-    width: 80px;       /* tamaño fijo de la imagen */
-    height: 80px;      /* tamaño fijo de la imagen */
+    width: 65px;       /* tamaño fijo de la imagen */
+    height: 65px;      /* tamaño fijo de la imagen */
     object-fit: contain; 
     flex-shrink: 0;    /* evita que la imagen se estire o encoja */
 }
 
-.fila-picto {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.fila-simbolo {
-    height: 30px;
+.fila-picto {
+    height: 75px;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -62,6 +56,14 @@ body {
     font-family: 'Patrick Hand', cursive;
     font-size: 26px;
 }
+
+.fila-simbolo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 .preposicion { 
@@ -121,7 +123,7 @@ button {
     display: flex;           /* organiza las palabras en fila */
     flex-wrap: wrap;         /* permite saltar línea si no entra */
     align-items: flex-start; /* alinea pictogramas y texto arriba */
-    gap: 15px;               /* espacio entre palabras */
+    gap: 6px;               /* espacio entre palabras */
     margin-bottom: 10px;     /* separación entre líneas */
 }
 

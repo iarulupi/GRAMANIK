@@ -12,77 +12,157 @@ function limpiarBordes(texto) {
         .trim();
 }
 
-function normalizarTexto(texto) {
+// Exacto: conserva tildes
+function normalizarTextoExacto(texto) {
+    return limpiarBordes((texto || "").toLowerCase()).replace(/\s+/g, " ");
+}
+
+// Solo para buscar claves del aliasNormalizacion
+function normalizarTextoAlias(texto) {
     return quitarTildes(
         limpiarBordes((texto || "").toLowerCase())
     ).replace(/\s+/g, " ");
 }
 
 function aplicarAlias(texto) {
-    const t = normalizarTexto(texto);
-    return aliasNormalizacion[t] || t;
+    const t = normalizarTextoAlias(texto);
+    return aliasNormalizacion[t] || null;
 }
 
-function normalizarDiccionario(diccionario) {
+function normalizarDiccionarioExacto(diccionario) {
     const salida = {};
     for (const clave in diccionario) {
-        const claveNormalizada = aplicarAlias(clave);
-        salida[claveNormalizada] = diccionario[clave];
+        salida[normalizarTextoExacto(clave)] = diccionario[clave];
     }
     return salida;
 }
 
-// ==================== ÍNDICES NORMALIZADOS ====================
+function normalizarListaExacta(lista) {
+    return lista.map(item => normalizarTextoExacto(item));
+}
 
-const pictogramasNormalizados = normalizarDiccionario(pictogramas);
-const verbosConjugadosNormalizados = normalizarDiccionario(verbosConjugados);
-const verbosBaseNormalizados = verbosBase.map(v => aplicarAlias(v));
+// ==================== ÍNDICES EXACTOS ====================
 
-const pronombresNormalizados = pronombres.map(p => aplicarAlias(p));
-const relacionantesNormalizados = relacionantes.map(p => aplicarAlias(p));
-const preposicionesNormalizadas = preposiciones.map(p => aplicarAlias(p));
-const adjetivosNormalizados = adjetivos.map(p => aplicarAlias(p));
-const reflexivosNormalizados = pronombresReflexivosCuasiReflejos.map(p => aplicarAlias(p));
+const pictogramasExactos = normalizarDiccionarioExacto(pictogramas);
+const verbosConjugadosExactos = normalizarDiccionarioExacto(verbosConjugados);
+
+const verbosBaseExactos = normalizarListaExacta(verbosBase);
+const pronombresExactos = normalizarListaExacta(pronombres);
+const relacionantesExactos = normalizarListaExacta(relacionantes);
+const preposicionesExactas = normalizarListaExacta(preposiciones);
+const adjetivosExactos = normalizarListaExacta(adjetivos);
+const reflexivosExactos = normalizarListaExacta(pronombresReflexivosCuasiReflejos);
 
 // ==================== FUNCIONES AUX ====================
 
+function resolverPalabraExactaOAlias(palabra) {
+    const exacta = normalizarTextoExacto(palabra);
+
+    return {
+        exacta,
+        alias: aplicarAlias(palabra)
+    };
+}
+
+function estaEnLista(palabra, listaExacta) {
+    const { exacta, alias } = resolverPalabraExactaOAlias(palabra);
+
+    // 1. EXACTO
+    if (listaExacta.includes(exacta)) {
+        return true;
+    }
+
+    // 2. SOLO ALIAS EXPLÍCITO
+    if (alias) {
+        const aliasExacto = normalizarTextoExacto(alias);
+        return listaExacta.includes(aliasExacto);
+    }
+
+    return false;
+}
+
+function obtenerValorDiccionario(clave, diccionarioExacto) {
+    const { exacta, alias } = resolverPalabraExactaOAlias(clave);
+
+    // 1. EXACTO
+    if (Object.prototype.hasOwnProperty.call(diccionarioExacto, exacta)) {
+        return diccionarioExacto[exacta];
+    }
+
+    // 2. SOLO ALIAS EXPLÍCITO
+    if (alias) {
+        const aliasExacto = normalizarTextoExacto(alias);
+        if (Object.prototype.hasOwnProperty.call(diccionarioExacto, aliasExacto)) {
+            return diccionarioExacto[aliasExacto];
+        }
+    }
+
+    return null;
+}
+
 function esPronombre(palabra) {
-    return pronombresNormalizados.includes(aplicarAlias(palabra));
+    return estaEnLista(palabra, pronombresExactos);
 }
 
 function esRelacionante(palabra) {
-    return relacionantesNormalizados.includes(aplicarAlias(palabra));
+    return estaEnLista(palabra, relacionantesExactos);
 }
 
 function esPreposicion(palabra) {
-    return preposicionesNormalizadas.includes(aplicarAlias(palabra));
+    return estaEnLista(palabra, preposicionesExactas);
 }
 
 function esAdjetivo(palabra) {
-    return adjetivosNormalizados.includes(aplicarAlias(palabra));
+    return estaEnLista(palabra, adjetivosExactos);
 }
 
 function esReflexivosCuasiReflejos(palabra) {
-    return reflexivosNormalizados.includes(aplicarAlias(palabra));
+    return estaEnLista(palabra, reflexivosExactos);
 }
 
 function obtenerRaizVerbal(palabra) {
-    const p = aplicarAlias(palabra);
+    const { exacta, alias } = resolverPalabraExactaOAlias(palabra);
 
-    // Nunca tomar pronombres reflexivos como verbo
-    if (reflexivosNormalizados.includes(p)) {
+    // Nunca tomar reflexivos como verbo
+    if (reflexivosExactos.includes(exacta)) {
         return null;
     }
 
-    return verbosConjugadosNormalizados[p] || (verbosBaseNormalizados.includes(p) ? p : null);
+    // 1. EXACTO
+    if (verbosConjugadosExactos[exacta]) {
+        return verbosConjugadosExactos[exacta];
+    }
+
+    if (verbosBaseExactos.includes(exacta)) {
+        return exacta;
+    }
+
+    // 2. SOLO ALIAS EXPLÍCITO
+    if (alias) {
+        const aliasExacto = normalizarTextoExacto(alias);
+
+        if (reflexivosExactos.includes(aliasExacto)) {
+            return null;
+        }
+
+        if (verbosConjugadosExactos[aliasExacto]) {
+            return verbosConjugadosExactos[aliasExacto];
+        }
+
+        if (verbosBaseExactos.includes(aliasExacto)) {
+            return aliasExacto;
+        }
+    }
+
+    return null;
 }
 
 function existePicto(clave) {
-    return Object.prototype.hasOwnProperty.call(pictogramasNormalizados, aplicarAlias(clave));
+    return obtenerValorDiccionario(clave, pictogramasExactos) !== null;
 }
 
 function obtenerPicto(clave) {
-    return pictogramasNormalizados[aplicarAlias(clave)] || "";
+    return obtenerValorDiccionario(clave, pictogramasExactos) || "";
 }
 
 // ==================== ESTADO ====================
@@ -92,6 +172,7 @@ let mostrarImagenes = true;
 let mostrarColores = true;
 
 // ==================== FUNCIONES ====================
+
 function extraerPuntuacionFinal(texto) {
     const match = (texto || "").match(/[.,;:!?]+$/);
     return match ? match[0] : "";
@@ -111,7 +192,9 @@ function mostrarPictos() {
         for (let i = 0; i < palabras.length; i++) {
             const palabraOriginal = palabras[i];
             const palabraLimpia = limpiarBordes(palabraOriginal);
-            const palabraNormalizada = aplicarAlias(palabraLimpia);
+
+            const palabraExacta = normalizarTextoExacto(palabraLimpia);
+            const palabraAlias = aplicarAlias(palabraLimpia);
 
             const palabraAnteriorOriginal = palabras[i - 1] || "";
             const palabraSiguienteOriginal = palabras[i + 1] || "";
@@ -119,8 +202,11 @@ function mostrarPictos() {
             const palabraAnteriorLimpia = limpiarBordes(palabraAnteriorOriginal);
             const palabraSiguienteLimpia = limpiarBordes(palabraSiguienteOriginal);
 
-            const palabraAnteriorNormalizada = aplicarAlias(palabraAnteriorLimpia);
-            const palabraSiguienteNormalizada = aplicarAlias(palabraSiguienteLimpia);
+            const palabraAnteriorExacta = normalizarTextoExacto(palabraAnteriorLimpia);
+            const palabraSiguienteExacta = normalizarTextoExacto(palabraSiguienteLimpia);
+
+            const palabraAnteriorAlias = aplicarAlias(palabraAnteriorLimpia);
+            const palabraSiguienteAlias = aplicarAlias(palabraSiguienteLimpia);
 
             if (!palabraOriginal) continue;
 
@@ -149,17 +235,35 @@ function mostrarPictos() {
                     .map(p => limpiarBordes(p))
                     .join(" ");
 
-                const grupoNormalizado = aplicarAlias(grupoLimpio);
+                const grupoExacto = normalizarTextoExacto(grupoLimpio);
 
-                if (existePicto(grupoNormalizado)) {
+                // 1. EXACTO
+                if (Object.prototype.hasOwnProperty.call(pictogramasExactos, grupoExacto)) {
                     fraseEncontrada = {
                         original: grupoOriginal,
                         limpio: grupoLimpio,
-                        normalizado: grupoNormalizado,
-                        imagen: obtenerPicto(grupoNormalizado)
+                        normalizado: grupoExacto,
+                        imagen: pictogramasExactos[grupoExacto]
                     };
                     palabrasConsumidas = longitud;
                     break;
+                }
+
+                // 2. SOLO ALIAS EXPLÍCITO
+                const grupoAlias = aplicarAlias(grupoLimpio);
+                if (grupoAlias) {
+                    const grupoAliasExacto = normalizarTextoExacto(grupoAlias);
+
+                    if (Object.prototype.hasOwnProperty.call(pictogramasExactos, grupoAliasExacto)) {
+                        fraseEncontrada = {
+                            original: grupoOriginal,
+                            limpio: grupoLimpio,
+                            normalizado: grupoAliasExacto,
+                            imagen: pictogramasExactos[grupoAliasExacto]
+                        };
+                        palabrasConsumidas = longitud;
+                        break;
+                    }
                 }
             }
 
@@ -167,7 +271,9 @@ function mostrarPictos() {
             // VERBOS
             // =========================
             const raizVerbal = obtenerRaizVerbal(palabraLimpia);
-            const esInfinitivo = verbosBaseNormalizados.includes(palabraNormalizada);
+            const esInfinitivo =
+                verbosBaseExactos.includes(palabraExacta) ||
+                (palabraAlias && verbosBaseExactos.includes(normalizarTextoExacto(palabraAlias)));
 
             if (raizVerbal) {
                 if (mostrarColores) {
@@ -261,13 +367,23 @@ function mostrarPictos() {
             // PREPOSICIONES
             // =========================
             if (esPreposicion(palabraLimpia)) {
-                const esFraseVerbal =
-                    palabraNormalizada === "a" &&
-                    verbosBaseNormalizados.includes(palabraSiguienteNormalizada) &&
-                    (
-                        verbosConjugadosNormalizados[palabraAnteriorNormalizada] ||
-                        verbosBaseNormalizados.includes(palabraAnteriorNormalizada)
-                    );
+                const palabraA = palabraExacta === "a" || palabraAlias === "a";
+
+                const siguienteEsInfinitivo =
+                    verbosBaseExactos.includes(palabraSiguienteExacta) ||
+                    (palabraSiguienteAlias &&
+                        verbosBaseExactos.includes(normalizarTextoExacto(palabraSiguienteAlias)));
+
+                const anteriorEsVerbo =
+                    verbosConjugadosExactos[palabraAnteriorExacta] ||
+                    verbosBaseExactos.includes(palabraAnteriorExacta) ||
+                    (palabraAnteriorAlias &&
+                        (
+                            verbosConjugadosExactos[normalizarTextoExacto(palabraAnteriorAlias)] ||
+                            verbosBaseExactos.includes(normalizarTextoExacto(palabraAnteriorAlias))
+                        ));
+
+                const esFraseVerbal = palabraA && siguienteEsInfinitivo && anteriorEsVerbo;
 
                 if (mostrarColores) {
                     if (esFraseVerbal) {
@@ -283,11 +399,7 @@ function mostrarPictos() {
             // =========================
             // PICTOGRAMA DE FRASE O PALABRA SIMPLE
             // =========================
-            if (
-                fraseEncontrada &&
-                mostrarImagenes &&
-                !raizVerbal
-            ) {
+            if (fraseEncontrada && mostrarImagenes && !raizVerbal) {
                 if (fraseEncontrada.imagen) {
                     const img = document.createElement("img");
                     img.src = fraseEncontrada.imagen;
@@ -307,23 +419,20 @@ function mostrarPictos() {
             // =========================
             // TEXTO A MOSTRAR
             // =========================
-let textoMostrar;
+            let textoMostrar;
 
-if (fraseEncontrada && !raizVerbal) {
-    const puntuacionFinal = extraerPuntuacionFinal(fraseEncontrada.original);
-    const textoSinPuntuacion = fraseEncontrada.original.replace(/[.,;:!?]+$/g, "");
-    textoMostrar = textoSinPuntuacion.toUpperCase() + puntuacionFinal;
-} else {
-    textoMostrar = (palabraOriginal || "").toUpperCase();
-}
+            if (fraseEncontrada && !raizVerbal) {
+                const puntuacionFinal = extraerPuntuacionFinal(fraseEncontrada.original);
+                const textoSinPuntuacion = fraseEncontrada.original.replace(/[.,;:!?]+$/g, "");
+                textoMostrar = textoSinPuntuacion.toUpperCase() + puntuacionFinal;
+            } else {
+                textoMostrar = (palabraOriginal || "").toUpperCase();
+            }
 
             const spanTexto = document.createElement("span");
             spanTexto.innerText = textoMostrar;
             filaTexto.appendChild(spanTexto);
 
-            // =========================
-            // ARMADO FINAL
-            // =========================
             div.appendChild(filaPicto);
             div.appendChild(filaSimbolo);
             div.appendChild(filaTexto);
@@ -338,19 +447,28 @@ if (fraseEncontrada && !raizVerbal) {
 
 function toggleSimbolos() {
     mostrarSimbolos = !mostrarSimbolos;
-    document.getElementById("btnSimbolos").innerText = mostrarSimbolos ? "Símbolos ON" : "Símbolos OFF";
+    const btn = document.getElementById("btnSimbolos");
+    btn.innerText = mostrarSimbolos ? "Símbolos ON" : "Símbolos OFF";
+    btn.classList.toggle("boton-on", mostrarSimbolos);
+    btn.classList.toggle("boton-off", !mostrarSimbolos);
     mostrarPictos();
 }
 
 function togglePictos() {
     mostrarImagenes = !mostrarImagenes;
-    document.getElementById("btnPictos").innerText = mostrarImagenes ? "Pictogramas ON" : "Pictogramas OFF";
+    const btn = document.getElementById("btnPictos");
+    btn.innerText = mostrarImagenes ? "Pictogramas ON" : "Pictogramas OFF";
+    btn.classList.toggle("boton-on", mostrarImagenes);
+    btn.classList.toggle("boton-off", !mostrarImagenes);
     mostrarPictos();
 }
 
 function toggleColor() {
     mostrarColores = !mostrarColores;
-    document.getElementById("btnColor").innerText = mostrarColores ? "Color ON" : "Color OFF";
+    const btn = document.getElementById("btnColor");
+    btn.innerText = mostrarColores ? "Color ON" : "Color OFF";
+    btn.classList.toggle("boton-on", mostrarColores);
+    btn.classList.toggle("boton-off", !mostrarColores);
     mostrarPictos();
 }
 
