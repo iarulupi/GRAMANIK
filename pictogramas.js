@@ -411,6 +411,33 @@ let verbosConjugados = {
 "va a bañarse": "bañar",
 "podemos prender": "prender",
 
+"pierdo": "perder",
+"pierdes": "perder",
+"pierde": "perder",
+"perdemos": "perder",
+"pierden": "perder",
+
+// PRETÉRITO PERFECTO SIMPLE
+"perdí": "perder",
+"perdiste": "perder",
+"perdió": "perder",
+"perdimos": "perder",
+"perdieron": "perder",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he perdido": "perder",
+"has perdido": "perder",
+"ha perdido": "perder",
+"hemos perdido": "perder",
+"han perdido": "perder",
+
+// FUTURO COMPUESTO
+"habré perdido": "perder",
+"habrás perdido": "perder",
+"habrá perdido": "perder",
+"habremos perdido": "perder",
+"habrán perdido": "perder",
+	
 // ===== VERBO PODER =====
 
 // PRESENTE HABITUAL
@@ -2261,7 +2288,7 @@ let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos
 
 let relacionantes = ["porque","y"];
 
-let verbosBase = ["comer","llevar","encerrar","recordar","romper","prender","copiar","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
+let verbosBase = ["comer","llevar","encerrar","recordar","romper","prender","perder","copiar","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
 "querer","formar","traer","trozar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar","andar","repasar","trozar","dictar","ver","regalar","operar", "nadar", "cocinar","bañar"];
 
 let preposiciones = ["a","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
