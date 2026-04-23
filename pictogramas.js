@@ -366,7 +366,7 @@ let pictogramas = {
 "juegos de mesa":"https://static.arasaac.org/pictograms/32580/32580_300.png",
 "ajedrez":"https://static.arasaac.org/pictograms/3054/3054_300.png",
 "ludo":"https://static.arasaac.org/pictograms/2501/2501_300.png", 
-"loteria":"https://static.arasaac.org/pictograms/11191/11191_300.png",
+"lotería":"https://static.arasaac.org/pictograms/11191/11191_300.png",
 "dados":"https://static.arasaac.org/pictograms/3089/3089_300.png",
 "cartas":"https://static.arasaac.org/pictograms/3181/3181_300.png",
 "dominó":"https://static.arasaac.org/pictograms/3095/3095_300.png",
