@@ -397,6 +397,7 @@ let verbosConjugados = {
 "completá": "completar",
 "ordená": "ordenar",
 "encerrá": "encerrar",
+"leé": "leer",
 
 // ===== FRACES VERBALES =====
 "se puede formar": "formar",
