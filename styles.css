@@ -11,7 +11,7 @@ body {
     width: 80%;
     max-width: 800px;
     height: 100px;
-    font-size: 60px;
+    font-size: 30px;
     display: block;
     margin: 20px auto;   /* 👈 esto lo centra */
 }
@@ -54,7 +54,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: 'Patrick Hand', cursive;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 .fila-simbolo {
