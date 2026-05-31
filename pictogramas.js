@@ -377,7 +377,7 @@ let pictogramas = {
 "imagenes": "https://static.arasaac.org/pictograms/7107/7107_300.png",
 "play": "https://static.arasaac.org/pictograms/2354/2354_300.png",
 "llevar": "https://static.arasaac.org/pictograms/6553/6553_300.png",
-
+"elegir": "https://static.arasaac.org/pictograms/30510/30510_300.png",
 };
 
 // Verbos conjugados manuales, apuntando al infinitivo
@@ -437,6 +437,37 @@ let verbosConjugados = {
 "habrá perdido": "perder",
 "habremos perdido": "perder",
 "habrán perdido": "perder",
+
+	
+
+// PRETÉRITO PERFECTO SIMPLE
+"elegí": "elegir",
+"elegiste": "elegir",
+"eligió": "elegir",
+"elegimos": "elegir",
+"eligieron": "elegir",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he elegido": "elegir",
+"has elegido": "elegir",
+"ha elegido": "elegir",
+"hemos elegido": "elegir",
+"han elegido": "elegir",
+
+// FUTURO COMPUESTO
+"voy a elegir": "elegir",
+"vas a elegir": "elegir",
+"va a elegir": "elegir",
+"vamos a elegir": "elegir",
+"van a elegir": "elegir",
+
+// PRESENTE HABITUAL
+"elijo": "elegir",
+"eliges": "elegir",
+"elige": "elegir",
+"elegimos": "elegir",
+"eligen": "elegir",	
+
 	
 // ===== VERBO PODER =====
 
