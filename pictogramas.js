@@ -227,7 +227,7 @@ let pictogramas = {
 "buscar":"https://i.ibb.co/6JJP37Bp/buscar.jpg",
 "contar":"https://i.ibb.co/KxX22Pf9/contar.jpg",
 "caer": "https://i.ibb.co/vxxcXVP1/caerse.jpg",
-"completar": "https://i.ibb.co/dJKqfV1T/completar.jpg",
+"completar": "https://static.arasaac.org/pictograms/13078/13078_300.png",
 "dar": "https://i.ibb.co/kVhdSZPM/dar.jpg",
 "vos": "https://static.arasaac.org/pictograms/6625/6625_300.png",
 "él": "https://static.arasaac.org/pictograms/6481/6481_300.png",
