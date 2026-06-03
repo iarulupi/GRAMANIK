@@ -11,6 +11,7 @@ const aliasNormalizacion = {
     "tele": "television",
 	"verbos":"verbo",
 	"dispositivos móviles": "dispositivos electrónicos",
+	"oración": "oraciones",
 };  
 // Imágenes
 let pictogramas = {
