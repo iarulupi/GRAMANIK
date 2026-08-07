@@ -2312,7 +2312,7 @@ let verbosConjugados = {
 
 // Adjetivos, pronombres, preposiciones.
 
-let adjetivos = ["pasado","mucho","poco","elasticas","lindo","contento","contenta","linda","feo","fea","grande","chico","chica","alto","alta","bajo","baja","bueno","muchos","muchas","pocos","pocas",
+let adjetivos = ["pasado","moderno","antiguo","mucho","poco","elasticas","lindo","contento","contenta","linda","feo","fea","grande","chico","chica","alto","alta","bajo","baja","bueno","muchos","muchas","pocos","pocas",
 "buena","malo","mala","feliz","triste","rápido","lento","sucio","sucia","limpio","limpia","nuevo","nueva","viejo","vieja","enojado",
 "enojada","lluvioso","soleado","nublado","gordo","gorda","flaco","flaca","seco","seca","mojado","mojada","seco","seca","sano","sana","hermosa","hermoso",
 "enfermo","enferma","largo","larga","corto","corta","prendido","prendida","encendido","encendida","apagado","apagada","abierto","abierta","cerrado","doler",
