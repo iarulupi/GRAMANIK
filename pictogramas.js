@@ -380,7 +380,7 @@ let pictogramas = {
 "llevar": "https://static.arasaac.org/pictograms/6553/6553_300.png",
 "elegir": "https://static.arasaac.org/pictograms/30510/30510_300.png",
 "antiguo": "https://static.arasaac.org/pictograms/32806/32806_300.png",
-"moderno": "
+"moderno": "",
 };
 
 // Verbos conjugados manuales, apuntando al infinitivo
