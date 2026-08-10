@@ -15,7 +15,9 @@ const aliasNormalizacion = {
 };  
 // Imágenes
 let pictogramas = {
-    "maestra": "https://static.arasaac.org/pictograms/2456/2456_300.png",
+"pochoclos":"https://static.arasaac.org/pictograms/5534/5534_300.png",
+	"pochoclo":"https://static.arasaac.org/pictograms/5534/5534_300.png",
+	"maestra": "https://static.arasaac.org/pictograms/2456/2456_300.png",
     "escuela": "https://static.arasaac.org/pictograms/3082/3082_300.png",
     "yo": "https://static.arasaac.org/pictograms/6632/6632_300.png",
     "comer": "https://static.arasaac.org/pictograms/6456/6456_300.png",
@@ -2312,7 +2314,7 @@ let verbosConjugados = {
 
 // Adjetivos, pronombres, preposiciones.
 
-let adjetivos = ["pasado","moderno","antiguo","mucho","poco","elasticas","lindo","contento","contenta","linda","feo","fea","grande","chico","chica","alto","alta","bajo","baja","bueno","muchos","muchas","pocos","pocas",
+let adjetivos = ["dulce","salado","dulces","salados","saladas","pasado","moderno","antiguo","mucho","poco","elasticas","lindo","contento","contenta","linda","feo","fea","grande","chico","chica","alto","alta","bajo","baja","bueno","muchos","muchas","pocos","pocas",
 "buena","malo","mala","feliz","triste","rápido","lento","sucio","sucia","limpio","limpia","nuevo","nueva","viejo","vieja","enojado",
 "enojada","lluvioso","soleado","nublado","gordo","gorda","flaco","flaca","seco","seca","mojado","mojada","seco","seca","sano","sana","hermosa","hermoso",
 "enfermo","enferma","largo","larga","corto","corta","prendido","prendida","encendido","encendida","apagado","apagada","abierto","abierta","cerrado","doler",
