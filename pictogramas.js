@@ -15,7 +15,16 @@ const aliasNormalizacion = {
 };  
 // Imágenes
 let pictogramas = {
-"pochoclos":"https://static.arasaac.org/pictograms/5534/5534_300.png",
+"nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
+	"soldado": "https://static.arasaac.org/pictograms/2797/2797_300.png",
+	"soldados": "https://static.arasaac.org/pictograms/11246/11246_300.png",
+	"luchar": "https://i.ibb.co/1YCwJ05D/file-000000009fe8820e8825f8d9599d5832.png",
+	"españa": "https://static.arasaac.org/pictograms/28967/28967_300.png",
+	"morir": "https://static.arasaac.org/pictograms/29863/29863_300.png",
+	"cruzar": "https://static.arasaac.org/pictograms/37087/37087_300.png", 
+	"montaña": "https://static.arasaac.org/pictograms/2909/2909_300.png",
+	"nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
+	"pochoclos":"https://static.arasaac.org/pictograms/5534/5534_300.png",
 	"pochoclo":"https://static.arasaac.org/pictograms/5534/5534_300.png",
 	"maestra": "https://static.arasaac.org/pictograms/2456/2456_300.png",
     "escuela": "https://static.arasaac.org/pictograms/3082/3082_300.png",
@@ -443,6 +452,128 @@ let verbosConjugados = {
 "habremos perdido": "perder",
 "habrán perdido": "perder",
 
+// ===== VERBO NACER =====
+
+// PRESENTE HABITUAL
+"nazco": "nacer",
+"naces": "nacer",
+"nace": "nacer",
+"nacemos": "nacer",
+"nacen": "nacer",
+
+// PRETÉRITO PERFECTO SIMPLE
+"nací": "nacer",
+"naciste": "nacer",
+"nació": "nacer",
+"nacimos": "nacer",
+"nacieron": "nacer",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he nacido": "nacer",
+"has nacido": "nacer",
+"ha nacido": "nacer",
+"hemos nacido": "nacer",
+"han nacido": "nacer",
+
+// FUTURO COMPUESTO
+"habré nacido": "nacer",
+"habrás nacido": "nacer",
+"habrá nacido": "nacer",
+"habremos nacido": "nacer",
+"habrán nacido": "nacer",
+
+
+// ===== VERBO MORIR =====
+
+// PRESENTE HABITUAL
+"muero": "morir",
+"mueres": "morir",
+"muere": "morir",
+"morimos": "morir",
+"mueren": "morir",
+
+// PRETÉRITO PERFECTO SIMPLE
+"morí": "morir",
+"moriste": "morir",
+"murió": "morir",
+"morimos": "morir",
+"murieron": "morir",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he muerto": "morir",
+"has muerto": "morir",
+"ha muerto": "morir",
+"hemos muerto": "morir",
+"han muerto": "morir",
+
+// FUTURO COMPUESTO
+"habré muerto": "morir",
+"habrás muerto": "morir",
+"habrá muerto": "morir",
+"habremos muerto": "morir",
+"habrán muerto": "morir",
+
+
+// ===== VERBO LUCHAR =====
+
+// PRESENTE HABITUAL
+"lucho": "luchar",
+"luchas": "luchar",
+"lucha": "luchar",
+"luchamos": "luchar",
+"luchan": "luchar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"luché": "luchar",
+"luchaste": "luchar",
+"luchó": "luchar",
+"luchamos": "luchar",
+"lucharon": "luchar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he luchado": "luchar",
+"has luchado": "luchar",
+"ha luchado": "luchar",
+"hemos luchado": "luchar",
+"han luchado": "luchar",
+
+// FUTURO COMPUESTO
+"habré luchado": "luchar",
+"habrás luchado": "luchar",
+"habrá luchado": "luchar",
+"habremos luchado": "luchar",
+"habrán luchado": "luchar",
+
+
+// ===== VERBO CRUZAR =====
+
+// PRESENTE HABITUAL
+"cruzo": "cruzar",
+"cruzas": "cruzar",
+"cruza": "cruzar",
+"cruzamos": "cruzar",
+"cruzan": "cruzar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"crucé": "cruzar",
+"cruzaste": "cruzar",
+"cruzó": "cruzar",
+"cruzamos": "cruzar",
+"cruzaron": "cruzar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he cruzado": "cruzar",
+"has cruzado": "cruzar",
+"ha cruzado": "cruzar",
+"hemos cruzado": "cruzar",
+"han cruzado": "cruzar",
+
+// FUTURO COMPUESTO
+"habré cruzado": "cruzar",
+"habrás cruzado": "cruzar",
+"habrá cruzado": "cruzar",
+"habremos cruzado": "cruzar",
+"habrán cruzado": "cruzar",
 	
 
 // PRETÉRITO PERFECTO SIMPLE
