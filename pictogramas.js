@@ -23,6 +23,8 @@ let pictogramas = {
 	"morir": "https://static.arasaac.org/pictograms/29863/29863_300.png",
 	"cruzar": "https://static.arasaac.org/pictograms/37087/37087_300.png", 
 	"montaña": "https://static.arasaac.org/pictograms/2909/2909_300.png",
+	"montañas": "https://static.arasaac.org/pictograms/2909/2909_300.png",
+	"caballo": "https://static.arasaac.org/pictograms/2294/2294_300.png",
 	"nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
 	"pochoclos":"https://static.arasaac.org/pictograms/5534/5534_300.png",
 	"pochoclo":"https://static.arasaac.org/pictograms/5534/5534_300.png",
