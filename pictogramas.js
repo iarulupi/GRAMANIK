@@ -359,7 +359,7 @@ let pictogramas = {
 "dormir": "https://static.arasaac.org/pictograms/6479/6479_300.png",
 "fin de semana": "https://static.arasaac.org/pictograms/27329/27329_300.png",
 "carpa": "https://static.arasaac.org/pictograms/4756/4756_300.png",
-"a caballo": "https://static.arasaac.org/pictograms/27627/27627_300.png", 
+"a  caballo": "https://static.arasaac.org/pictograms/27627/27627_300.png", 
 "gigante": "https://i.ibb.co/q33pwrHG/Whats-App-Image-2026-04-08-at-6-36-32-PM.jpg",
 "algunas": "https://static.arasaac.org/pictograms/5374/5374_300.png",
 "ordená": "https://static.arasaac.org/pictograms/2872/2872_300.png",
