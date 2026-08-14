@@ -15,7 +15,9 @@ const aliasNormalizacion = {
 };  
 // Imágenes
 let pictogramas = {
-"nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
+
+	"remera":"https://static.arasaac.org/pictograms/2309/2309_nocolor_500.png",
+	"nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
 	"llamarse": "https://static.arasaac.org/pictograms/27353/27353_300.png",
 	"soldado": "https://static.arasaac.org/pictograms/2797/2797_300.png",
 	"soldados": "https://static.arasaac.org/pictograms/11246/11246_300.png",
