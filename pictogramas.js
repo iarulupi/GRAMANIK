@@ -16,6 +16,7 @@ const aliasNormalizacion = {
 // Imágenes
 let pictogramas = {
 "nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
+	"llamarse": "https://static.arasaac.org/pictograms/27353/27353_300.png",
 	"soldado": "https://static.arasaac.org/pictograms/2797/2797_300.png",
 	"soldados": "https://static.arasaac.org/pictograms/11246/11246_300.png",
 	"luchar": "https://i.ibb.co/1YCwJ05D/file-000000009fe8820e8825f8d9599d5832.png",
@@ -433,6 +434,35 @@ let verbosConjugados = {
 "perdemos": "perder",
 "pierden": "perder",
 
+
+// PRETÉRITO PERFECTO SIMPLE
+"me llamé": "llamarse",
+"te llamaste": "llamarse",
+"se llamó": "llamarse",
+"nos llamamos": "llamarse",
+"se llamaron": "llamarse",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"me he llamado": "llamarse",
+"te has llamado": "llamarse",
+"se ha llamado": "llamarse",
+"nos hemos llamado": "llamarse",
+"se han llamado": "llamarse",
+
+// FUTURO COMPUESTO
+"me voy a llamar": "llamarse",
+"te vas a llamar": "llamarse",
+"se va a llamar": "llamarse",
+"nos vamos a llamar": "llamarse",
+"se van a llamar": "llamarse",
+
+// PRESENTE HABITUAL
+"me llamo": "llamarse",
+"te llamas": "llamarse",
+"se llama": "llamarse",
+"nos llamamos": "llamarse",
+"se llaman": "llamarse",
+	
 // PRETÉRITO PERFECTO SIMPLE
 "perdí": "perder",
 "perdiste": "perder",
@@ -2457,7 +2487,7 @@ let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos
 
 let relacionantes = ["porque","y"];
 
-let verbosBase = ["comer","llevar","encerrar","elegir","recordar","romper","prender","perder","copiar","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
+let verbosBase = ["llamarse","comer","llevar","encerrar","elegir","recordar","romper","prender","perder","copiar","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
 "querer","formar","traer","trozar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar","andar","repasar","trozar","dictar","ver","regalar","operar", "nadar", "cocinar","bañar"];
 
 let preposiciones = ["a","del","al","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
