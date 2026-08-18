@@ -27,7 +27,7 @@ let pictogramas = {
 	"bombacha": "https://static.arasaac.org/pictograms/2289/2289_300.png",
 	"ropa interior": "https://static.arasaac.org/pictograms/25680/25680_300.png",
 	"vestido": "https://static.arasaac.org/pictograms/2613/2613_300.png",
-	"buzo": "",
+	"buzo": "https://i.ibb.co/h17h1YCC/file-0000000033fc820e90250a187f024a15.png",
 	"suéter":"https://static.arasaac.org/pictograms/2436/2436_300.png",
 	"ponerse": "https://static.arasaac.org/pictograms/6627/6627_300.png",
 	"día": "https://static.arasaac.org/pictograms/26799/26799_300.png",
