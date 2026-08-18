@@ -2551,6 +2551,36 @@ let verbosConjugados = {
 "habrá pensado": "pensar",
 "habremos pensado": "pensar",
 "habrán pensado": "pensar",
+
+// ===== VERBO PONER =====
+
+// PRESENTE HABITUAL
+"pongo": "poner",
+"pones": "poner",
+"pone": "poner",
+"ponemos": "poner",
+"ponen": "poner",
+
+// PRETÉRITO PERFECTO SIMPLE
+"puse": "poner",
+"pusiste": "poner",
+"puso": "poner",
+"pusimos": "poner",
+"pusieron": "poner",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he puesto": "poner",
+"has puesto": "poner",
+"ha puesto": "poner",
+"hemos puesto": "poner",
+"han puesto": "poner",
+
+// FUTURO COMPUESTO
+"voy a poner": "poner",
+"vas a poner": "poner",
+"va a poner": "poner",
+"vamos a poner": "poner",
+"van a poner": "poner",
 };
 
 // Adjetivos, pronombres, preposiciones.
@@ -2565,7 +2595,7 @@ let pronombres = ["yo","vos","él","ella","nosotros","nosotras","ustedes","ellos
 
 let relacionantes = ["porque","y"];
 
-let verbosBase = ["ponerse","pensar","llamarse","comer","llevar","encerrar","elegir","recordar","romper","prender","perder","copiar","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
+let verbosBase = ["poner""ponerse","pensar","llamarse","comer","llevar","encerrar","elegir","recordar","romper","prender","perder","copiar","contestar","despegar","viajar","ordenar","dormir","andar","bailar","escribir","mirar","completar","pintarse","meterse","meter","caerse","unir","tomar","jugar","pintar","pintarse","comprar","cortar","lavar","ir","hacer","ver","dar","saber","encender","apagar","caer","responder","leer","festejar","decir","venir","volver","vestir","compartir",
 "querer","formar","traer","trozar","tachar","dormir","pegar","subrayar","unir","ser","haber","matar","estar","empezar","trabajar","saltar","andar","repasar","trozar","dictar","ver","regalar","operar", "nadar", "cocinar","bañar"];
 
 let preposiciones = ["a","del","al","ante","bajo","cabe","con","contra","de","desde","durante","en","entre","hacia","hasta","mediante","para","por","segun","sin","sobre","tras"];
