@@ -535,6 +535,10 @@ let verbosConjugados = {
 
 // ===== VERBO PONERSE =====
 
+"ponernos": "ponerse",
+"ponerte": "ponerse",
+"ponerme": "ponerse",
+
 // PRESENTE HABITUAL
 "pongo": "ponerse",
 "pones": "ponerse",
