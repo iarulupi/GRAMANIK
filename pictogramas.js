@@ -16,7 +16,7 @@ const aliasNormalizacion = {
 // Imágenes
 let pictogramas = {
 
-	
+"pelota": "https://static.arasaac.org/pictograms/3241/3241_300.png",	
  "pensar": "https://static.arasaac.org/pictograms/38796/38796_300.png",
 	"remera":"https://static.arasaac.org/pictograms/2309/2309_nocolor_500.png",
 	"nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
