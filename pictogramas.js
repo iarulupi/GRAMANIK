@@ -15,12 +15,25 @@ const aliasNormalizacion = {
 };  
 // Imágenes
 let pictogramas = {
-"ponerse": "https://static.arasaac.org/pictograms/6627/6627_300.png",
+
+	"ropa": "https://static.arasaac.org/pictograms/7233/7233_300.png",
+	"remera":"https://static.arasaac.org/pictograms/2309/2309_nocolor_500.png",
+	"pantalón":"https://static.arasaac.org/pictograms/24222/24222_300.png",
+	"campera":"https://static.arasaac.org/pictograms/27978/27978_300.png",
+	"gorro":"https://static.arasaac.org/pictograms/2412/2412_300.png",
+	"guantes":"https://static.arasaac.org/pictograms/7122/7122_300.png",
+	"medias": "https://static.arasaac.org/pictograms/2298/2298_300.png",
+	"calzoncillo":  "https://static.arasaac.org/pictograms/2303/2303_300.png",
+	"bombacha": "https://static.arasaac.org/pictograms/2289/2289_300.png",
+	"ropa interior": "https://static.arasaac.org/pictograms/25680/25680_300.png",
+	"vestido": "https://static.arasaac.org/pictograms/2613/2613_300.png",
+	"buzo": "",
+	"suéter":"https://static.arasaac.org/pictograms/2436/2436_300.png",
+	"ponerse": "https://static.arasaac.org/pictograms/6627/6627_300.png",
 	"día": "https://static.arasaac.org/pictograms/26799/26799_300.png",
 	"noche": "https://static.arasaac.org/pictograms/26997/26997_300.png",
 "pelota": "https://static.arasaac.org/pictograms/3241/3241_300.png",	
  "pensar": "https://static.arasaac.org/pictograms/38796/38796_300.png",
-	"remera":"https://static.arasaac.org/pictograms/2309/2309_nocolor_500.png",
 	"nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
 	"llamarse": "https://static.arasaac.org/pictograms/27353/27353_300.png",
 	"soldado": "https://static.arasaac.org/pictograms/2797/2797_300.png",
