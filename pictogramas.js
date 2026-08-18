@@ -15,7 +15,7 @@ const aliasNormalizacion = {
 };  
 // Imágenes
 let pictogramas = {
-
+"ponerse": "https://static.arasaac.org/pictograms/6627/6627_300.png",
 	"día": "https://static.arasaac.org/pictograms/26799/26799_300.png",
 	"noche": "https://static.arasaac.org/pictograms/26997/26997_300.png",
 "pelota": "https://static.arasaac.org/pictograms/3241/3241_300.png",	
@@ -520,7 +520,36 @@ let verbosConjugados = {
 "habremos nacido": "nacer",
 "habrán nacido": "nacer",
 
+// ===== VERBO PONERSE =====
 
+// PRESENTE HABITUAL
+"pongo": "ponerse",
+"pones": "ponerse",
+"pone": "ponerse",
+"ponemos": "ponerse",
+"ponen": "ponerse",
+
+// PRETÉRITO PERFECTO SIMPLE
+"puse": "ponerse",
+"pusiste": "ponerse",
+"puso": "ponerse",
+"pusimos": "ponerse",
+"pusieron": "ponerse",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"me he puesto": "ponerse",
+"te has puesto": "ponerse",
+"se ha puesto": "ponerse",
+"nos hemos puesto": "ponerse",
+"se han puesto": "ponerse",
+
+// FUTURO COMPUESTO
+"voy a ponerme": "ponerse",
+"vas a ponerte": "ponerse",
+"va a ponerse": "ponerse",
+"vamos a ponernos": "ponerse",
+"van a ponerse": "ponerse",
+	
 // ===== VERBO MORIR =====
 
 // PRESENTE HABITUAL
