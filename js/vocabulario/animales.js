@@ -49,6 +49,7 @@ const vocabularioAnimales = {
     "camello": "https://static.arasaac.org/pictograms/2305/2305_300.png",
     "canguro", "https://static.arasaac.org/pictograms/2313/2313_300.png",
     "cebra": "https://static.arasaac.org/pictograms/2324/2324_300.png",
+    "mono": "https://static.arasaac.org/pictograms/2477/2477_300.png",
 };
 
 Object.assign(pictogramas, vocabularioAnimales);
