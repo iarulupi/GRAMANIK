@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head> 
+<meta charset="UTF-8"> 
+<title>Gramanick ®</title> 
+ 
+<!-- FUENTES -->
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/estilos.css">  
+
+<!-- HTML2CANVAS -->
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+<!-- JAVASCRIPT BASE -->
+<script src="js/simbolos.js"></script>
+
+<!-- VOCABULARIO -->
+<script src="js/vocabulario/verbos.js"></script>
+<script src="js/vocabulario/adjetivos.js"></script>
+<script src="js/vocabulario/pronombres.js"></script>
+<script src="js/vocabulario/relacionantes.js"></script>
+<script src="js/vocabulario/preposiciones.js"></script>
+<script src="js/vocabulario/reflexivos.js"></script>
+<script src="js/vocabulario/animales.js"></script>
+<script src="js/vocabulario/bebidas.js"></script>
+<script src="js/vocabulario/calendario.js"></script>
+<script src="js/vocabulario/clima.js"></script>
+<script src="js/vocabulario/colores.js"></script>
+<script src="js/vocabulario/comidas.js"></script>
+<script src="js/vocabulario/deportes.js"></script>
+<script src="js/vocabulario/electronica.js"></script>
+<script src="js/vocabulario/encabezadores.js"></script>
+<script src="js/vocabulario/escuela.js"></script>
+<script src="js/vocabulario/juegos.js"></script>
+<script src="js/vocabulario/juguetes.js"></script>
+<script src="js/vocabulario/lugares.js"></script>
+<script src="js/vocabulario/negocios.js"></script>
+<script src="js/vocabulario/otros.js"></script>
+<script src="js/vocabulario/personas.js"></script>
+<script src="js/vocabulario/ropa.js"></script>
+<script src="js/vocabulario/transportes.js"></script>
+
+<!-- FUNCIONES DEL PROGRAMA -->
+<script src="js/funciones.js"></script>
+</head>
+
+<body>
+
+  <!-- Título con logo -->
+  <h1 class="titulo">
+    GramaNick 
+    <img src="https://i.ibb.co/wNLn4TGc/Documento-A4-Horizontal-Notas-Ornamental-Minimalista-Elegante-Sencillo-Blanco-y-Negro-1.png" alt="Logo">
+  </h1>
+
+  <!-- Área de texto y botones -->
+  <textarea id="texto" placeholder="Un cafecito y a seguir ♡..."></textarea>
+
+  <div class="acciones-principales">
+    <button onclick="mostrarPictos()">Crear</button>
+    <button onclick="descargarImagen()">Descargar imagen</button>
+  </div>
+
+  <div class="acciones-toggles">
+    <button id="btnSimbolos" class="boton-on" onclick="toggleSimbolos()">Símbolos ON</button>
+    <button id="btnPictos" class="boton-on" onclick="togglePictos()">Pictogramas ON</button>
+    <button id="btnColor" class="boton-on" onclick="toggleColor()">Color ON</button>
+  </div>
+
+  <!-- Área donde se muestran los resultados -->
+  <div id="resultado"></div>
+
+  <!-- Footer -->
+  <footer class="firma">Hecho con amor por Iara Lupi ❤</footer>
+
+</body>
+</html>
