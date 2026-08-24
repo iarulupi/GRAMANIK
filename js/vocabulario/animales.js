@@ -16,18 +16,18 @@ const vocabularioAnimales = {
     "https://static.arasaac.org/pictograms/7114/7114_300.png",
     "https://static.arasaac.org/pictograms/9881/9881_300.png",
     "https://static.arasaac.org/pictograms/9879/9879_300.png",
-    "https://static.arasaac.org/pictograms/38968/38968_300.png"
+    "https://static.arasaac.org/pictograms/38968/38968_300.png",
 ],
 "perro": [
     "https://static.arasaac.org/pictograms/2517/2517_300.png",
     "https://static.arasaac.org/pictograms/7202/7202_300.png",
     "https://static.arasaac.org/pictograms/38967/38967_300.png",
     "https://static.arasaac.org/pictograms/26302/26302_300.png",
-    "https://static.arasaac.org/pictograms/35997/35997_300.png"
+    "https://static.arasaac.org/pictograms/35997/35997_300.png",
     "https://static.arasaac.org/pictograms/9016/9016_300.png",
     "https://static.arasaac.org/pictograms/36424/36424_300.png",
     "https://static.arasaac.org/pictograms/29738/29738_300.png",
-     "https://static.arasaac.org/pictograms/10145/10145_300.png"    
+     "https://static.arasaac.org/pictograms/10145/10145_300.png",    
 ], 
     "gatito": "https://static.arasaac.org/pictograms/34082/34082_300.png",
     "caballo": [
@@ -47,7 +47,7 @@ const vocabularioAnimales = {
     "lobo marino": "https://static.arasaac.org/pictograms/27501/27501_300.png",
     "pato": "https://static.arasaac.org/pictograms/28477/28477_300.png",
     "camello": "https://static.arasaac.org/pictograms/2305/2305_300.png",
-    "canguro", "https://static.arasaac.org/pictograms/2313/2313_300.png",
+    "canguro": "https://static.arasaac.org/pictograms/2313/2313_300.png",
     "cebra": "https://static.arasaac.org/pictograms/2324/2324_300.png",
     "mono": "https://static.arasaac.org/pictograms/2477/2477_300.png",
 };
