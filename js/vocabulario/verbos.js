@@ -4,6 +4,14 @@
 
 const vocabularioVerbos = {
 
+
+"pasear": [
+    "https://static.arasaac.org/pictograms/8649/8649_300.png",
+    "https://static.arasaac.org/pictograms/29951/29951_300.png",
+    "https://static.arasaac.org/pictograms/38286/38286_300.png",
+    "https://static.arasaac.org/pictograms/37345/37345_300.png",
+    "https://static.arasaac.org/pictograms/31839/31839_300.png"
+],
 "ponerse": "https://static.arasaac.org/pictograms/6627/6627_300.png",
 "pensar": "https://static.arasaac.org/pictograms/38796/38796_300.png",
 "nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
@@ -115,6 +123,7 @@ let verbosBase = [
     "encerrar",
     "elegir",
     "recordar",
+    "pasear",
     "romper",
     "prender",
     "perder",
@@ -373,7 +382,36 @@ let verbosConjugados = {
 "vamos a ver": "ver",
 "van a ver": "ver",
 
+// ===== VERBO PASEAR =====
 
+// PRESENTE HABITUAL
+"paseo": "pasear",
+"paseas": "pasear",
+"pasea": "pasear",
+"paseamos": "pasear",
+"pasean": "pasear",
+
+// PRETÉRITO PERFECTO SIMPLE
+"paseé": "pasear",
+"paseaste": "pasear",
+"paseó": "pasear",
+"paseamos": "pasear",
+"pasearon": "pasear",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he paseado": "pasear",
+"has paseado": "pasear",
+"ha paseado": "pasear",
+"hemos paseado": "pasear",
+"han paseado": "pasear",
+
+// FUTURO
+"voy a pasear": "pasear",
+"vas a pasear": "pasear",
+"va a pasear": "pasear",
+"vamos a pasear": "pasear",
+"van a pasear": "pasear",
+    
 // == regalar ==
 
 // PRESENTE HABITUAL
