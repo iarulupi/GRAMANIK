@@ -203,6 +203,37 @@ function crearPictoSeleccionable(opciones) {
 
     contenedor.appendChild(img);
 
+// ==================== BOTÓN ELIMINAR PICTOGRAMA ====================
+
+const botonEliminar = document.createElement("button");
+botonEliminar.type = "button";
+botonEliminar.className = "eliminar-picto no-descargar";
+botonEliminar.innerText = "×";
+
+botonEliminar.addEventListener("click", evento => {
+    evento.stopPropagation();
+
+    // Ocultar únicamente el pictograma de esta aparición
+    img.style.display = "none";
+
+    // Ocultar también la flecha si existe
+    const flecha = contenedor.querySelector(".flecha-picto");
+    if (flecha) {
+        flecha.style.display = "none";
+    }
+
+    // Cerrar el menú de opciones si estaba abierto
+    const menu = contenedor.querySelector(".menu-pictos");
+    if (menu) {
+        menu.classList.remove("menu-pictos-abierto");
+    }
+
+    // Ocultar la propia cruz
+    botonEliminar.style.display = "none";
+});
+
+contenedor.appendChild(botonEliminar);
+
     // Si solo hay una imagen, no hace falta selector
     if (opciones.length <= 1) {
         return contenedor;
