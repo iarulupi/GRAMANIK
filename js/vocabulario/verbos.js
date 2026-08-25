@@ -77,7 +77,6 @@ const vocabularioVerbos = {
 "llevar": "https://static.arasaac.org/pictograms/6553/6553_300.png",
 "viajar": "https://static.arasaac.org/pictograms/39445/39445_300.png",
 "caminar": "https://static.arasaac.org/pictograms/6044/6044_300.png",
-"pasear": "",
 "salir": "",
 "venir": "",
 "volver": "https://static.arasaac.org/pictograms/6630/6630_300.png",
