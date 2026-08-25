@@ -1,0 +1,261 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#texto {
+    width: 80%;
+    max-width: 800px;
+    height: 100px;
+    font-size: 20px;
+    display: block;
+    margin: 20px auto;   /* 👈 esto lo centra */
+}
+
+#resultado {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    flex-grow: 1;
+  padding-bottom: 120px;
+    
+}
+
+.palabra {
+    display: inline-flex;       /* permite que varias palabras estén en línea */
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+    max-width: 220px;           /* ancho máximo para palabras largas */
+    min-width: 100px;           /* ancho mínimo para palabras cortas */
+    white-space: nowrap;         /* evita que se rompa el texto */
+}
+
+.palabra img {
+    width: 65px;       /* tamaño fijo de la imagen */
+    height: 65px;      /* tamaño fijo de la imagen */
+    object-fit: contain; 
+    flex-shrink: 0;    /* evita que la imagen se estire o encoja */
+}
+
+
+.fila-picto {
+    height: 75px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.fila-texto {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 40px;
+}
+
+.fila-simbolo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.preposicion { 
+    color: blue; 
+    font-weight: bold; 
+}
+
+/* ESTILO PARA EL TÍTULO */
+.titulo {
+    color: #FF69B4; 
+    font-family: 'Permanent Marker', sans-serif; /* Letra divertida */
+    font-size: 80px; /* Tamaño grande */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo img {
+    width: 100px; /* Tamaño del logo */
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.boton-on {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+.boton-off {
+    background-color: #dc3545;
+    color: red;
+    border: none;
+}
+
+button {
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.firma {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #000000;
+  background: pink;
+  padding: 6px 0;
+}
+
+.contenedor-linea {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 10px;
+    width: max-content;
+}
+
+.palabra img,
+.fila-simbolo img,
+.fila-picto img {
+    max-width: 100%;   /* nunca más ancho que la palabra */
+    height: auto;      /* mantiene la proporción original */
+    object-fit: contain; /* evita que se deformen */
+}
+
+/* ==================== SELECTOR DE PICTOGRAMAS ==================== */
+
+.picto-seleccionable {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flecha-picto {
+    position: absolute;
+    right: -8px;
+    bottom: -4px;
+
+    padding: 1px 4px;
+
+    font-size: 12px;
+    line-height: 1;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #eeeeee;
+    color: #333333;
+
+    cursor: pointer;
+}
+
+.menu-pictos {
+    display: none;
+
+    position: absolute;
+    top: 70px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: white;
+
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+
+    z-index: 1000;
+
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+
+    /* SCROLL INTERNO DEL MENÚ */
+    max-height: 380px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.menu-pictos-abierto {
+    display: grid;
+    grid-template-columns: repeat(6, 70px);
+    gap: 8px;
+}
+
+.menu-pictos .opcion-picto {
+    width: 70px;
+    height: 70px;
+
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.menu-pictos .opcion-picto:hover {
+    transform: scale(1.1);
+}
+
+/* ==================== FRASES COMPUESTAS ==================== */
+
+.frase-compuesta {
+    max-width: none;      /* no limitar el ancho */
+    min-width: auto;
+    width: max-content;   /* ocupa exactamente lo que necesita */
+}
+
+.frase-compuesta .fila-texto {
+    white-space: nowrap;  /* toda la frase en una línea */
+    padding: 0 8px;
+    text-align: center;
+}
+
+/* ==================== ELIMINAR PICTOGRAMA ==================== */
+
+.eliminar-picto {
+    position: absolute;
+
+    top: -8px;
+    right: -8px;
+
+    width: 20px;
+    height: 20px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #eeeeee;
+    color: #555555;
+
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.eliminar-picto:hover {
+    background: #dddddd;
+}
