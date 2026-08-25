@@ -5,6 +5,8 @@ const vocabularioAnimales = {
     "animal": "https://static.arasaac.org/pictograms/8025/8025_300.png",
     "pez": "https://static.arasaac.org/pictograms/2520/2520_300.png",
     "murciélago": "https://static.arasaac.org/pictograms/2903/2903_300.png",
+    "vaca": "https://static.arasaac.org/pictograms/2609/2609_300.png",
+    "toro": "https://static.arasaac.org/pictograms/2595/2595_300.png",
     "cocodrilo": "https://static.arasaac.org/pictograms/2343/2343_300.png",
     "ornitorrinco": "https://static.arasaac.org/pictograms/13090/13090_300.png",
     "perezoso": "https://static.arasaac.org/pictograms/22039/22039_300.png",
