@@ -13,6 +13,7 @@ const vocabularioEncabezadores = {
     "por": "https://i.ibb.co/tMSZ8wKj/por-qu.png",
     "pregunta": "https://i.ibb.co/5gSLP4ht/pregunta.png",
     "quiénes": "https://i.ibb.co/S71JzRkZ/quienes.png",
+    "por qué": "https://static.arasaac.org/pictograms/36719/36719_300.png",
 };
 
 Object.assign(pictogramas, vocabularioEncabezadores);
