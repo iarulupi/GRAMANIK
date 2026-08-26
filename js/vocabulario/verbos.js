@@ -1451,7 +1451,6 @@ let verbosConjugados = {
 
 // PRESENTE HABITUAL
 "corto": "cortar",
-"cortas": "cortar",
 "cortás": "cortar",
 "corta": "cortar",
 "cortamos": "cortar",
