@@ -18,8 +18,7 @@ let preposiciones = [
     "hasta",
     "mediante",
     "para",
-    "por",
-    "segun",
+    "según",
     "sin",
     "sobre",
     "tras"
