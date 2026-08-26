@@ -7,17 +7,33 @@ const vocabularioRopa = {
     "https://static.arasaac.org/pictograms/25908/25908_300.png",
     "https://static.arasaac.org/pictograms/2310/2310_300.png"
 ],
+    "remeras": [
+    "https://static.arasaac.org/pictograms/2309/2309_nocolor_500.png",
+    "https://static.arasaac.org/pictograms/25908/25908_300.png",
+    "https://static.arasaac.org/pictograms/2310/2310_300.png"
+],
     "manga larga": "https://i.ibb.co/Y4yF3tHh/file-0000000061ec820e8f615f67c473e74b.png",
+    "mangas largas": "https://i.ibb.co/Y4yF3tHh/file-0000000061ec820e8f615f67c473e74b.png",
     "manga corta": "https://i.ibb.co/PGQ61nNy/file-00000000f764820eb950f071cf6ca467.png",
+    "mangas cortas": "https://i.ibb.co/PGQ61nNy/file-00000000f764820eb950f071cf6ca467.png",
     "musculosa": "https://static.arasaac.org/pictograms/2310/2310_300.png",
+    "musculosas": "https://static.arasaac.org/pictograms/2310/2310_300.png",
     "sin mangas": "https://static.arasaac.org/pictograms/2310/2310_300.png",
     "camisa": "https://static.arasaac.org/pictograms/13640/13640_300.png",
+    "camisas": "https://static.arasaac.org/pictograms/13640/13640_300.png",
     "pantalón": "https://static.arasaac.org/pictograms/24222/24222_300.png",
+    "pantalónes": "https://static.arasaac.org/pictograms/24222/24222_300.png",
     "short": "https://static.arasaac.org/pictograms/13638/13638_300.png",
+    "shorts": "https://static.arasaac.org/pictograms/13638/13638_300.png",
     "pollera": "https://static.arasaac.org/pictograms/2391/2391_300.png",
+     "polleras": "https://static.arasaac.org/pictograms/2391/2391_300.png",
     "vestido": "https://static.arasaac.org/pictograms/2613/2613_300.png",
+     "vestidos": "https://static.arasaac.org/pictograms/2613/2613_300.png",
     "buzo": "https://i.ibb.co/h17h1YCC/file-0000000033fc820e90250a187f024a15.png",
+    "buzos": "https://i.ibb.co/h17h1YCC/file-0000000033fc820e90250a187f024a15.png",
     "suéter": "https://static.arasaac.org/pictograms/2436/2436_300.png",
+    "suéters": "https://static.arasaac.org/pictograms/2436/2436_300.png",
+    "camperas": "https://static.arasaac.org/pictograms/27978/27978_300.png",
     "campera": "https://static.arasaac.org/pictograms/27978/27978_300.png",
 
     // ROPA INTERIOR
