@@ -2,7 +2,15 @@ const vocabularioRopa = {
 
     // PRENDAS DE VESTIR
     "ropa": "https://static.arasaac.org/pictograms/7233/7233_300.png",
-    "remera": "https://static.arasaac.org/pictograms/2309/2309_nocolor_500.png",
+    "remera": [
+    "https://static.arasaac.org/pictograms/2309/2309_nocolor_500.png",
+    "https://static.arasaac.org/pictograms/25908/25908_300.png",
+    "https://static.arasaac.org/pictograms/2310/2310_300.png"
+],
+    "manga larga": "https://i.ibb.co/Y4yF3tHh/file-0000000061ec820e8f615f67c473e74b.png",
+    "manga corta": "https://i.ibb.co/PGQ61nNy/file-00000000f764820eb950f071cf6ca467.png",
+    "musculosa": "https://static.arasaac.org/pictograms/2310/2310_300.png",
+    "sin mangas": "https://static.arasaac.org/pictograms/2310/2310_300.png",
     "camisa": "https://static.arasaac.org/pictograms/13640/13640_300.png",
     "pantalón": "https://static.arasaac.org/pictograms/24222/24222_300.png",
     "short": "https://static.arasaac.org/pictograms/13638/13638_300.png",
