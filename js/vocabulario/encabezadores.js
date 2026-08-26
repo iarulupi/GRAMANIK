@@ -1,6 +1,7 @@
 // ==================== ENCABEZADORES ====================
 
 const vocabularioEncabezadores = {
+    "por qué": "https://static.arasaac.org/pictograms/36719/36719_300.png",
 "quién": "https://i.ibb.co/xKDrXbtt/quien.png",
     "qué": "https://i.ibb.co/N6ByscQZ/que.png",
     "cómo": "https://i.ibb.co/GvWxf1x8/como.png",
@@ -13,7 +14,7 @@ const vocabularioEncabezadores = {
     "por": "https://i.ibb.co/tMSZ8wKj/por-qu.png",
     "pregunta": "https://i.ibb.co/5gSLP4ht/pregunta.png",
     "quiénes": "https://i.ibb.co/S71JzRkZ/quienes.png",
-    "por qué": "https://static.arasaac.org/pictograms/36719/36719_300.png",
+    
 };
 
 Object.assign(pictogramas, vocabularioEncabezadores);
