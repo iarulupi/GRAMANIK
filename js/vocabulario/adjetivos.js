@@ -3,12 +3,40 @@
 // PICTOGRAMAS
 
 const vocabularioAdjetivos = {
+    "adjetivos": "https://static.arasaac.org/pictograms/32584/32584_300.png",
 
     "bien": "https://static.arasaac.org/pictograms/5397/5397_300.png",
     "mal": "https://static.arasaac.org/pictograms/5504/5504_300.png",
 
-    "lindo": "https://static.arasaac.org/pictograms/11194/11194_300.png",
-    "linda": "https://static.arasaac.org/pictograms/11194/11194_300.png",
+    "lindo": [
+    "https://static.arasaac.org/pictograms/11194/11194_300.png",
+    "https://static.arasaac.org/pictograms/26114/26114_300.png",
+    "https://static.arasaac.org/pictograms/4660/4660_300.png",
+    "https://static.arasaac.org/pictograms/26114/26114_300.png",
+    "URL LINDO 5"
+],
+    "linda": [
+    "https://static.arasaac.org/pictograms/11194/11194_300.png",
+    "https://static.arasaac.org/pictograms/26114/26114_300.png",
+    "https://static.arasaac.org/pictograms/4659/4659_300.png",
+    "https://static.arasaac.org/pictograms/26114/26114_300.png",
+    "URL LINDA 5"
+],
+    "feo": [
+    "https://static.arasaac.org/pictograms/26090/26090_300.png",
+    "https://static.arasaac.org/pictograms/4648/4648_300.png",
+    "URL FEO 3",
+    "URL FEO 4",
+    "URL FEO 5"
+],
+
+    "fea": [
+    "https://static.arasaac.org/pictograms/4647/4647_300.png",
+    "URL FEA 2",
+    "URL FEA 3",
+    "URL FEA 4",
+    "URL FEA 5"
+],
 
     "contento": "https://static.arasaac.org/pictograms/31923/31923_300.png",
     "contenta": "https://static.arasaac.org/pictograms/28647/28647_300.png",
