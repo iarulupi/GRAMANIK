@@ -100,6 +100,8 @@ const vocabularioAdjetivos = {
     "larga": "https://static.arasaac.org/pictograms/26162/26162_300.png",
 
     "corto": "https://static.arasaac.org/pictograms/26002/26002_300.png",
+    "cortos": "https://static.arasaac.org/pictograms/26002/26002_300.png",
+    "cortas": "https://static.arasaac.org/pictograms/26002/26002_300.png",
     "corta": "https://static.arasaac.org/pictograms/26002/26002_300.png",
 
     "prendido": "https://static.arasaac.org/pictograms/26753/26753_300.png",
@@ -225,8 +227,12 @@ let adjetivos = [
     "enferma",
 
     "largo",
+    "largos",
+    "largas",
     "larga",
     "corto",
+    "cortos",
+    "cortas",
     "corta",
 
     "prendido",
