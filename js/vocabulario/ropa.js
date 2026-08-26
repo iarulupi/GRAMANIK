@@ -50,6 +50,7 @@ const vocabularioRopa = {
     "bikini": "https://static.arasaac.org/pictograms/2279/2279_300.png",
     "cordón": "https://static.arasaac.org/pictograms/15363/15363_300.png",
     "patines": "https://static.arasaac.org/pictograms/30600/30600_300.png",
+    "escudo": "https://static.arasaac.org/pictograms/5610/5610_300.png",
 
 };
 
