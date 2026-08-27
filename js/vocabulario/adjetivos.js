@@ -74,9 +74,50 @@ const vocabularioAdjetivos = {
     "enojado": "",
     "enojada": "",
 
-    "lluvioso": "https://static.arasaac.org/pictograms/7148/7148_300.png",
-    "soleado": "https://static.arasaac.org/pictograms/2796/2796_300.png",
-    "nublado": "https://static.arasaac.org/pictograms/2882/2882_300.png",
+    "soleado": "URL SOLEADO",
+    "soleada": "URL SOLEADO",
+    "soleados": "URL SOLEADO",
+    "soleadas": "URL SOLEADO",
+
+    "nublado": "URL NUBLADO",
+    "nublada": "URL NUBLADO",
+    "nublados": "URL NUBLADO",
+    "nubladas": "URL NUBLADO",
+
+    "lluvioso": "URL LLUVIOSO",
+    "lluviosa": "URL LLUVIOSO",
+    "lluviosos": "URL LLUVIOSO",
+    "lluviosas": "URL LLUVIOSO",
+
+    "ventoso": "URL VENTOSO",
+    "ventosa": "URL VENTOSO",
+    "ventosos": "URL VENTOSO",
+    "ventosas": "URL VENTOSO",
+
+    "nevado": "URL NEVADO",
+    "nevada": "URL NEVADO",
+    "nevados": "URL NEVADO",
+    "nevadas": "URL NEVADO",
+
+    "caluroso": "URL CALUROSO",
+    "calurosa": "URL CALUROSO",
+    "calurosos": "URL CALUROSO",
+    "calurosas": "URL CALUROSO",
+
+    "frío": "URL FRÍO",
+    "fría": "URL FRÍO",
+    "fríos": "URL FRÍO",
+    "frías": "URL FRÍO",
+
+    "húmedo": "URL HÚMEDO",
+    "húmeda": "URL HÚMEDO",
+    "húmedos": "URL HÚMEDO",
+    "húmedas": "URL HÚMEDO",
+
+    "seco": "URL SECO",
+    "seca": "URL SECO",
+    "secos": "URL SECO",
+    "secas": "URL SECO"    
 
     "gordo": "https://static.arasaac.org/pictograms/25133/25133_300.png",
     "gorda": "https://static.arasaac.org/pictograms/25133/25133_300.png",
@@ -205,9 +246,52 @@ let adjetivos = [
     "enojado",
     "enojada",
 
-    "lluvioso",
-    "soleado",
-    "nublado",
+// ==================== ADJETIVOS DEL CLIMA ====================
+
+"soleado",
+"soleada",
+"soleados",
+"soleadas",
+
+"nublado",
+"nublada",
+"nublados",
+"nubladas",
+
+"lluvioso",
+"lluviosa",
+"lluviosos",
+"lluviosas",
+
+"ventoso",
+"ventosa",
+"ventosos",
+"ventosas",
+
+"nevado",
+"nevada",
+"nevados",
+"nevadas",
+
+"caluroso",
+"calurosa",
+"calurosos",
+"calurosas",
+
+"frío",
+"fría",
+"fríos",
+"frías",
+
+"húmedo",
+"húmeda",
+"húmedos",
+"húmedas",
+
+"seco",
+"seca",
+"secos",
+"secas"
 
     "gordo",
     "gorda",
