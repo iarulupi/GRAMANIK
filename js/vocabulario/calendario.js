@@ -68,7 +68,7 @@ const vocabularioCalendario = {
     "noviembre":  [
         "https://i.ibb.co/ymHLFH7h/19.png",
     "https://static.arasaac.org/pictograms/35927/35927_300.png",
-        ]
+        ],
 
     "diciembre": [
         "https://i.ibb.co/wNy7zVtn/2.png",
@@ -122,7 +122,7 @@ const vocabularioCalendario = {
 
     "próximo año": "https://static.arasaac.org/pictograms/39732/39732_300.png",
 
-    "año próximo": "https://static.arasaac.org/pictograms/39731/39732_300.png",
+    "año próximo": "https://static.arasaac.org/pictograms/39732/39732_300.png",
 
     "año pasado": "https://static.arasaac.org/pictograms/39731/39731_300.png",
 
