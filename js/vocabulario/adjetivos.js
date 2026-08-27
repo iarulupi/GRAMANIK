@@ -3,31 +3,34 @@
 // PICTOGRAMAS
 
 const vocabularioAdjetivos = {
+
     "adjetivos": "https://static.arasaac.org/pictograms/32584/32584_300.png",
 
     "bien": "https://static.arasaac.org/pictograms/5397/5397_300.png",
     "mal": "https://static.arasaac.org/pictograms/5504/5504_300.png",
 
     "lindo": [
-    "https://static.arasaac.org/pictograms/11194/11194_300.png",
-    "https://static.arasaac.org/pictograms/26114/26114_300.png",
-    "https://static.arasaac.org/pictograms/4660/4660_300.png",
-],
+        "https://static.arasaac.org/pictograms/11194/11194_300.png",
+        "https://static.arasaac.org/pictograms/26114/26114_300.png",
+        "https://static.arasaac.org/pictograms/4660/4660_300.png"
+    ],
+
     "linda": [
-    "https://static.arasaac.org/pictograms/11194/11194_300.png",
-    "https://static.arasaac.org/pictograms/26114/26114_300.png",
-    "https://static.arasaac.org/pictograms/4659/4659_300.png",
-],
+        "https://static.arasaac.org/pictograms/11194/11194_300.png",
+        "https://static.arasaac.org/pictograms/26114/26114_300.png",
+        "https://static.arasaac.org/pictograms/4659/4659_300.png"
+    ],
+
     "feo": [
-    "https://static.arasaac.org/pictograms/26090/26090_300.png",
-    "https://static.arasaac.org/pictograms/4648/4648_300.png",
-    "https://i.ibb.co/0pt1HfkB/feo.jpg",
-],
+        "https://static.arasaac.org/pictograms/26090/26090_300.png",
+        "https://static.arasaac.org/pictograms/4648/4648_300.png",
+        "https://i.ibb.co/0pt1HfkB/feo.jpg"
+    ],
 
     "fea": [
-    "https://static.arasaac.org/pictograms/4647/4647_300.png",
-    "https://static.arasaac.org/pictograms/26090/26090_300.png",
-],
+        "https://static.arasaac.org/pictograms/4647/4647_300.png",
+        "https://static.arasaac.org/pictograms/26090/26090_300.png"
+    ],
 
     "contento": "https://static.arasaac.org/pictograms/31923/31923_300.png",
     "contenta": "https://static.arasaac.org/pictograms/28647/28647_300.png",
@@ -74,6 +77,9 @@ const vocabularioAdjetivos = {
     "enojado": "",
     "enojada": "",
 
+
+    // ==================== ADJETIVOS DEL CLIMA ====================
+
     "soleado": "URL SOLEADO",
     "soleada": "URL SOLEADO",
     "soleados": "URL SOLEADO",
@@ -104,20 +110,23 @@ const vocabularioAdjetivos = {
     "calurosos": "URL CALUROSO",
     "calurosas": "URL CALUROSO",
 
-    "frío": "URL FRÍO",
-    "fría": "URL FRÍO",
-    "fríos": "URL FRÍO",
-    "frías": "URL FRÍO",
+    "frío": "https://static.arasaac.org/pictograms/26865/26865_300.png",
+    "fría": "https://static.arasaac.org/pictograms/26865/26865_300.png",
+    "fríos": "https://static.arasaac.org/pictograms/26865/26865_300.png",
+    "frías": "https://static.arasaac.org/pictograms/26865/26865_300.png",
 
     "húmedo": "URL HÚMEDO",
     "húmeda": "URL HÚMEDO",
     "húmedos": "URL HÚMEDO",
     "húmedas": "URL HÚMEDO",
 
-    "seco": "URL SECO",
-    "seca": "URL SECO",
-    "secos": "URL SECO",
-    "secas": "URL SECO"    
+    "seco": "https://static.arasaac.org/pictograms/25437/25437_300.png",
+    "seca": "https://static.arasaac.org/pictograms/25437/25437_300.png",
+    "secos": "https://static.arasaac.org/pictograms/25437/25437_300.png",
+    "secas": "https://static.arasaac.org/pictograms/25437/25437_300.png",
+
+
+    // ==================== OTROS ADJETIVOS ====================
 
     "gordo": "https://static.arasaac.org/pictograms/25133/25133_300.png",
     "gorda": "https://static.arasaac.org/pictograms/25133/25133_300.png",
@@ -127,9 +136,6 @@ const vocabularioAdjetivos = {
 
     "mojado": "https://static.arasaac.org/pictograms/25253/25253_300.png",
     "mojada": "https://static.arasaac.org/pictograms/25253/25253_300.png",
-
-    "seco": "https://static.arasaac.org/pictograms/25437/25437_300.png",
-    "seca": "https://static.arasaac.org/pictograms/25437/25437_300.png",
 
     "sano": "https://static.arasaac.org/pictograms/12293/12293_300.png",
     "sana": "https://static.arasaac.org/pictograms/29648/29648_300.png",
@@ -163,9 +169,6 @@ const vocabularioAdjetivos = {
     "caliente": "https://static.arasaac.org/pictograms/26716/26716_300.png",
     "calor": "https://static.arasaac.org/pictograms/35561/35561_300.png",
 
-    "frío": "https://static.arasaac.org/pictograms/26865/26865_300.png",
-    "fría": "https://static.arasaac.org/pictograms/26865/26865_300.png",
-
     "distraido": "https://static.arasaac.org/pictograms/8551/8551_300.png",
     "distraida": "https://static.arasaac.org/pictograms/28635/28635_300.png",
 
@@ -192,9 +195,7 @@ const vocabularioAdjetivos = {
     "algunas": "https://static.arasaac.org/pictograms/5374/5374_300.png",
 
     "último": "https://i.ibb.co/VYTXCW52/ultimo.jpg",
-    "primero": "https://i.ibb.co/Q7GrdmNj/primero.jpg",
-
-
+    "primero": "https://i.ibb.co/Q7GrdmNj/primero.jpg"
 
 };
 
@@ -202,6 +203,7 @@ const vocabularioAdjetivos = {
 // ==================== LISTA DE ADJETIVOS ====================
 
 let adjetivos = [
+
     "dulce",
     "salado",
     "dulces",
@@ -246,60 +248,62 @@ let adjetivos = [
     "enojado",
     "enojada",
 
-// ==================== ADJETIVOS DEL CLIMA ====================
 
-"soleado",
-"soleada",
-"soleados",
-"soleadas",
+    // ==================== ADJETIVOS DEL CLIMA ====================
 
-"nublado",
-"nublada",
-"nublados",
-"nubladas",
+    "soleado",
+    "soleada",
+    "soleados",
+    "soleadas",
 
-"lluvioso",
-"lluviosa",
-"lluviosos",
-"lluviosas",
+    "nublado",
+    "nublada",
+    "nublados",
+    "nubladas",
 
-"ventoso",
-"ventosa",
-"ventosos",
-"ventosas",
+    "lluvioso",
+    "lluviosa",
+    "lluviosos",
+    "lluviosas",
 
-"nevado",
-"nevada",
-"nevados",
-"nevadas",
+    "ventoso",
+    "ventosa",
+    "ventosos",
+    "ventosas",
 
-"caluroso",
-"calurosa",
-"calurosos",
-"calurosas",
+    "nevado",
+    "nevada",
+    "nevados",
+    "nevadas",
 
-"frío",
-"fría",
-"fríos",
-"frías",
+    "caluroso",
+    "calurosa",
+    "calurosos",
+    "calurosas",
 
-"húmedo",
-"húmeda",
-"húmedos",
-"húmedas",
+    "frío",
+    "fría",
+    "fríos",
+    "frías",
 
-"seco",
-"seca",
-"secos",
-"secas"
+    "húmedo",
+    "húmeda",
+    "húmedos",
+    "húmedas",
+
+    "seco",
+    "seca",
+    "secos",
+    "secas",
+
+
+    // ==================== OTROS ====================
 
     "gordo",
     "gorda",
     "flaco",
     "flaca",
 
-    "seco",
-    "seca",
     "mojado",
     "mojada",
 
@@ -333,8 +337,6 @@ let adjetivos = [
     "fácil",
     "dificil",
     "caliente",
-    "frío",
-    "fría",
 
     "atento",
     "atenta",
@@ -582,79 +584,80 @@ let adjetivos = [
     "aquellos",
     "aquellas",
 
+
     // ==================== COLORES ====================
 
-"rojo",
-"roja",
-"rojos",
-"rojas",
+    "rojo",
+    "roja",
+    "rojos",
+    "rojas",
 
-"azul",
-"azules",
+    "azul",
+    "azules",
 
-"amarillo",
-"amarilla",
-"amarillos",
-"amarillas",
+    "amarillo",
+    "amarilla",
+    "amarillos",
+    "amarillas",
 
-"verde",
-"verdes",
+    "verde",
+    "verdes",
 
-"naranja",
-"naranjas",
+    "naranja",
+    "naranjas",
 
-"violeta",
-"violetas",
+    "violeta",
+    "violetas",
 
-"morado",
-"morada",
-"morados",
-"moradas",
+    "morado",
+    "morada",
+    "morados",
+    "moradas",
 
-"rosa",
-"rosas",
+    "rosa",
+    "rosas",
 
-"celeste",
-"celestes",
+    "celeste",
+    "celestes",
 
-"blanco",
-"blanca",
-"blancos",
-"blancas",
+    "blanco",
+    "blanca",
+    "blancos",
+    "blancas",
 
-"negro",
-"negra",
-"negros",
-"negras",
+    "negro",
+    "negra",
+    "negros",
+    "negras",
 
-"gris",
-"grises",
+    "gris",
+    "grises",
 
-"marrón",
-"marrones",
+    "marrón",
+    "marrones",
 
-"beige",
-"beiges",
+    "beige",
+    "beiges",
 
-"dorado",
-"dorada",
-"dorados",
-"doradas",
+    "dorado",
+    "dorada",
+    "dorados",
+    "doradas",
 
-"plateado",
-"plateada",
-"plateados",
-"plateadas",
+    "plateado",
+    "plateada",
+    "plateados",
+    "plateadas",
 
-"turquesa",
-"turquesas",
+    "turquesa",
+    "turquesas",
 
-"fucsia",
-"fucsias",
+    "fucsia",
+    "fucsias",
 
-"lila",
-"lilas"
-    
+    "lila",
+    "lilas"
+
 ];
 
 
