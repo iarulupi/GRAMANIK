@@ -1974,6 +1974,7 @@ let verbosConjugados = {
 "va a ponerse": "ponerse",
 "vamos a ponernos": "ponerse",
 "van a ponerse": "ponerse",
+"podemos ponernos": "ponerse",
 
 
 // ===== MORIR =====
