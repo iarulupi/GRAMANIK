@@ -84,7 +84,10 @@ const vocabularioTransportes = {
 
     "camioneta": "URL CAMIONETA",
 
-    "ambulancia": "https://static.arasaac.org/pictograms/6899/6899_300.png",
+    "ambulancia": [
+        "https://static.arasaac.org/pictograms/6899/6899_300.png",
+    "https://static.arasaac.org/pictograms/2251/2251_300.png",
+        ],
 
     "patrullero": "https://static.arasaac.org/pictograms/3426/3426_300.png",
 
