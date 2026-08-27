@@ -57,7 +57,7 @@ const vocabularioCalendario = {
 
     "septiembre": [
         "https://i.ibb.co/PssDKksh/17.png",
-        "https://static.arasaac.org/pictograms/35927/35927_300.png"
+        "https://static.arasaac.org/pictograms/35929/35929_300.png"
     ],
 
     "octubre": [
