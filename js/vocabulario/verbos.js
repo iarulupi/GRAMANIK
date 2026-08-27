@@ -65,8 +65,16 @@ const vocabularioVerbos = {
 "completar": "https://static.arasaac.org/pictograms/13078/13078_300.png",
 "elegir": "https://static.arasaac.org/pictograms/30510/30510_300.png",
 "responder": "https://i.ibb.co/8gM7nspj/responder.jpg",
-"festejar": "https://i.ibb.co/wNSGsdSp/festejar.jpg",
-"leer": "https://i.ibb.co/6c0yJDWJ/vocabulario.png",
+"festejar": [
+    "https://static.arasaac.org/pictograms/16649/16649_300.png",
+    "https://static.arasaac.org/pictograms/16475/16475_300.png",
+    "https://static.arasaac.org/pictograms/6969/6969_300.png"
+],
+"leer": [
+    "https://static.arasaac.org/pictograms/7141/7141_300.png",
+    "https://static.arasaac.org/pictograms/28643/28643_300.png",
+    "https://static.arasaac.org/pictograms/31680/31680_300.png"
+],
 "señar": "https://i.ibb.co/7tV4dRG4/se-ar.jpg",
 "señalar": "https://i.ibb.co/Wpknv2zk/9.png",
 "decir": "https://i.ibb.co/4g8yYrDJ/8.png",
@@ -76,7 +84,7 @@ const vocabularioVerbos = {
 "viajar": "https://static.arasaac.org/pictograms/39445/39445_300.png",
 "caminar": "https://static.arasaac.org/pictograms/6044/6044_300.png",
 "salir": "",
-"venir": "",
+"venir": "https://static.arasaac.org/pictograms/32669/32669_300.png",
 "volver": "https://static.arasaac.org/pictograms/6630/6630_300.png",
 "lastimarse": "https://i.ibb.co/4RQ30C5n/Whats-App-Image-2026-02-28-at-11-20-42-PM.jpg",
 "doler": "https://static.arasaac.org/pictograms/30620/30620_300.png",
