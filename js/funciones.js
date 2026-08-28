@@ -72,9 +72,38 @@ const palabrasAmbiguas = {
             base: "corto",
             picto: "corto"
         }
+    ],
+
+    "chico": [
+        {
+            tipo: "sustantivo",
+            etiqueta: "SUSTANTIVO",
+            base: "chico",
+            picto: "chico"
+        },
+        {
+            tipo: "adjetivo",
+            etiqueta: "ADJETIVO",
+            base: "chico",
+            picto: "chico"
+        }
+    ],
+
+    "chica": [
+        {
+            tipo: "sustantivo",
+            etiqueta: "SUSTANTIVO",
+            base: "chica",
+            picto: "chica"
+        },
+        {
+            tipo: "adjetivo",
+            etiqueta: "ADJETIVO",
+            base: "chica",
+            picto: "chica"
+        }
     ]
 };
-
 const eleccionesAmbiguas = {};
 
 function obtenerOpcionesAmbiguas(palabra) {
