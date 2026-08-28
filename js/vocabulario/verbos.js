@@ -30,7 +30,7 @@ const vocabularioVerbos = {
    "https://static.arasaac.org/pictograms/27353/27353_300.png",
    "https://static.arasaac.org/pictograms/36305/36305_300.png",
    "https://static.arasaac.org/pictograms/36306/36306_300.png",
-   ]
+   ],
 "luchar": "https://i.ibb.co/1YCwJ05D/file-000000009fe8820e8825f8d9599d5832.png",
 "morir": "https://static.arasaac.org/pictograms/29863/29863_300.png",
 "cruzar": "https://static.arasaac.org/pictograms/37087/37087_300.png",
@@ -2215,6 +2215,7 @@ let verbosConjugados = {
 // ===== VERBO LLAMAR =====
 
 // PRESENTE HABITUAL
+"llamás": "llamar",
 "llamo": "llamar",
 "llamas": "llamar",
 "llama": "llamar",
