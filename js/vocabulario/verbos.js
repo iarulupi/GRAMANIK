@@ -10,7 +10,7 @@ const vocabularioVerbos = {
     "https://static.arasaac.org/pictograms/32298/32298_300.png"
 ],
 
-"reirse": [
+"reir": [
     "https://static.arasaac.org/pictograms/30393/30393_300.png",
     "https://static.arasaac.org/pictograms/38792/38792_300.png"
 ],
@@ -250,6 +250,23 @@ let verbosBase = [
     "enfriar",
     "reir",
     "llorar",
+   "nacer",
+"morir",
+"luchar",
+"cruzar",
+"doler",
+   "buscar",
+"contar",
+"señar",
+"señalar",
+"armar",
+"caminar",
+"salir",
+"lastimarse",
+   "poder",
+"gustar",
+"tener",
+"doler",
 ];
 
 let verbosConjugados = {
