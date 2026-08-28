@@ -298,7 +298,11 @@ let adjetivos = [
 
 
     // ==================== OTROS ====================
-
+"próximo ", 
+    "próximos",
+    "pasado",
+    "pasados",
+    
     "gordo",
     "gorda",
     "flaco",
