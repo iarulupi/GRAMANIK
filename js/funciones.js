@@ -227,6 +227,21 @@ function renderizarInterpretacionAmbigua({
             filaSimbolo.appendChild(imgSimbolo);
         }
 
+        if (opcion.tipo === "sustantivo") {
+
+    if (mostrarImagenes) {
+        const opcionesPicto = obtenerPictos(opcion.picto);
+
+        if (opcionesPicto.length) {
+            filaPicto.appendChild(
+                crearPictoAmbiguoSeleccionable(opcionesPicto)
+            );
+        }
+    }
+
+    return;
+}
+
         if (mostrarImagenes) {
             const opcionesPicto = obtenerPictos(opcion.picto);
             if (opcionesPicto.length) {
