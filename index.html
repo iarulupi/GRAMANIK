@@ -62,7 +62,13 @@
 
   <div class="acciones-principales">
     <button onclick="mostrarPictos()">Crear</button>
-    <button onclick="subrayarSeleccion()">Subrayar</button>
+
+    <button
+        onmousedown="event.preventDefault()"
+        onclick="subrayarSeleccion()">
+        Subrayar
+    </button>
+
     <button onclick="descargarImagen()">Descargar imagen</button>
 </div>
  
