@@ -271,6 +271,8 @@ let verbosBase = [
    "poder",
 "gustar",
 "tener",
+   "ser",
+   "estar",
 ];
 
 let verbosConjugados = {
@@ -1185,6 +1187,52 @@ let verbosConjugados = {
 "vamos a saber": "saber",
 "van a saber": "saber",
 
+// ===== SER =====
+
+// PRESENTE HABITUAL
+"soy": "ser",
+"eres": "ser",
+"es": "ser",
+"somos": "ser",
+"son": "ser",
+
+// PRETÉRITO PERFECTO SIMPLE
+"fui": "ser",
+"fuiste": "ser",
+"fue": "ser",
+"fuimos": "ser",
+"fueron": "ser",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a ser": "ser",
+"vas a ser": "ser",
+"va a ser": "ser",
+"vamos a ser": "ser",
+"van a ser": "ser",
+
+
+// ===== ESTAR =====
+
+// PRESENTE HABITUAL
+"estoy": "estar",
+"estás": "estar",
+"está": "estar",
+"estamos": "estar",
+"están": "estar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"estuve": "estar",
+"estuviste": "estar",
+"estuvo": "estar",
+"estuvimos": "estar",
+"estuvieron": "estar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a estar": "estar",
+"vas a estar": "estar",
+"va a estar": "estar",
+"vamos a estar": "estar",
+"van a estar": "estar",
 
 // ===== QUERER =====
 
