@@ -58,7 +58,12 @@ const reflexivosExactos = normalizarListaExacta(pronombresReflexivosCuasiReflejo
 // Permite elegir manualmente la categoría cuando una misma forma escrita
 // puede funcionar de más de una manera.
 
+// ==================== PALABRAS AMBIGUAS ====================
+// Permite elegir manualmente la categoría cuando una misma forma escrita
+// puede funcionar de más de una manera.
+
 const palabrasAmbiguas = {
+
     "corto": [
         {
             tipo: "verbo",
@@ -74,35 +79,37 @@ const palabrasAmbiguas = {
         }
     ],
 
-  "chico": [
-    {
-        tipo: "sustantivo",
-        etiqueta: "SUSTANTIVO",
-        base: "chico",
-        picto: "chico sustantivo"
-    },
-    {
-        tipo: "adjetivo",
-        etiqueta: "ADJETIVO",
-        base: "chico",
-        picto: "chico adjetivo"
-    }
-],
+    "chico": [
+        {
+            tipo: "sustantivo",
+            etiqueta: "SUSTANTIVO",
+            base: "chico",
+            picto: "chico sustantivo"
+        },
+        {
+            tipo: "adjetivo",
+            etiqueta: "ADJETIVO",
+            base: "chico",
+            picto: "chico adjetivo"
+        }
+    ],
 
-"chica": [
-    {
-        tipo: "sustantivo",
-        etiqueta: "SUSTANTIVO",
-        base: "chica",
-        picto: "chica sustantivo"
-    },
-    {
-        tipo: "adjetivo",
-        etiqueta: "ADJETIVO",
-        base: "chica",
-        picto: "chica adjetivo"
-    }
-]
+    "chica": [
+        {
+            tipo: "sustantivo",
+            etiqueta: "SUSTANTIVO",
+            base: "chica",
+            picto: "chica sustantivo"
+        },
+        {
+            tipo: "adjetivo",
+            etiqueta: "ADJETIVO",
+            base: "chica",
+            picto: "chica adjetivo"
+        }
+    ]
+
+};
 
 const eleccionesAmbiguas = {};
 
