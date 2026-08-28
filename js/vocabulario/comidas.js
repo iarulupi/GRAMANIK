@@ -18,6 +18,8 @@ const vocabularioComidas = {
   "torta de cumpleaños": "https://static.arasaac.org/pictograms/2579/2579_300.png",
     "torta": "https://static.arasaac.org/pictograms/10234/10234_300.png",
     "torta de chocolate": "https://static.arasaac.org/pictograms/29226/29226_300.png",
+    "caramelo":"https://static.arasaac.org/pictograms/2686/2686_300.png",
+    "caramelos":"https://static.arasaac.org/pictograms/2686/2686_300.png",
 };
 
 Object.assign(pictogramas, vocabularioComidas);
