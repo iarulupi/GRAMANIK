@@ -301,6 +301,7 @@ let verbosConjugados = {
 "encerrá": "encerrar",
 "leé": "leer",
 "pensá": "pensar",
+"cortá": "cortar",
 
 // ===== FRASES VERBALES =====
 
