@@ -16,21 +16,20 @@ const vocabularioClima = {
     "nubes": "https://static.arasaac.org/pictograms/2883/2883_300.png",
 
     "lluvia": "https://static.arasaac.org/pictograms/7148/7148_300.png",
-    "llovizna": "URL LLOVIZNA",
+   
+    "tormenta": "https://static.arasaac.org/pictograms/34296/34296_300.png",
+    "tormenta eléctrica": "https://static.arasaac.org/pictograms/34296/34296_300.png",
 
-    "tormenta": "URL TORMENTA",
-    "tormenta eléctrica": "URL TORMENTA ELÉCTRICA",
+    "rayo": "https://static.arasaac.org/pictograms/2819/2819_300.png",
+    "rayos": "https://static.arasaac.org/pictograms/2819/2819_300.png",
 
-    "rayo": "https://static.arasaac.org/pictograms/24721/24721_300.png",
-    "rayos": "https://static.arasaac.org/pictograms/24721/24721_300.png",
+    "relámpago": "https://static.arasaac.org/pictograms/2819/2819_300.png",
+    "relámpagos": "https://static.arasaac.org/pictograms/2819/2819_300.png",
 
-    "relámpago": "URL RELÁMPAGO",
-    "relámpagos": "URL RELÁMPAGOS",
+    "trueno": "https://static.arasaac.org/pictograms/3225/3225_300.png",
+    "truenos": "https://static.arasaac.org/pictograms/3225/3225_300.png",
 
-    "trueno": "URL TRUENO",
-    "truenos": "URL TRUENOS",
-
-    "viento": "URL VIENTO",
+    "viento": "https://static.arasaac.org/pictograms/7259/7259_300.png",
 
     "niebla": "URL NIEBLA",
 
