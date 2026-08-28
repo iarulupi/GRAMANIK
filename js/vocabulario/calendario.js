@@ -65,15 +65,15 @@ const vocabularioCalendario = {
         "https://static.arasaac.org/pictograms/35943/35943_300.png"
     ],
 
-    "noviembre":  [
-        "https://i.ibb.co/ymHLFH7h/19.png",
-    "https://static.arasaac.org/pictograms/35927/35927_300.png",
-        ],
+    "noviembre": [
+    "https://i.ibb.co/ymHLFH7h/19.png",
+    "https://static.arasaac.org/pictograms/35927/35927_300.png"
+],
 
-    "diciembre": [
-        "https://i.ibb.co/wNy7zVtn/2.png",
-        "https://static.arasaac.org/pictograms/35937/35937_300.png"
-    ],
+"diciembre": [
+    "https://i.ibb.co/wNy7zVtn/2.png",
+    "https://static.arasaac.org/pictograms/35937/35937_300.png"
+],
 
 
     // ==================== MOMENTOS Y TIEMPO ====================
