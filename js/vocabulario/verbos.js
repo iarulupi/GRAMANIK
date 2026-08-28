@@ -1989,13 +1989,18 @@ let verbosConjugados = {
 "tuvimos": "tener",
 "tuvieron": "tener",
 
+// PRETÉRITO IMPERFECTO DEL INDICATIVO
+"tenía": "tener",
+"tenías": "tener",
+"teníamos": "tener",
+"tenían": "tener",
+
 // FUTURO PRÓXIMO O PERIFRÁSTICO
 "voy a tener": "tener",
 "vas a tener": "tener",
 "va a tener": "tener",
 "vamos a tener": "tener",
 "van a tener": "tener",
-
 
 // ===== CONTESTAR =====
 
