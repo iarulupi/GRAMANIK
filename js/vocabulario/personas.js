@@ -19,6 +19,8 @@ const vocabularioPersonas = {
     "mujer": "",
     "chico": "https://static.arasaac.org/pictograms/4673/4673_300.png",
     "chica": "https://static.arasaac.org/pictograms/10206/10206_300.png",
+"chico sustantivo": "https://static.arasaac.org/pictograms/4673/4673_300.png",
+    "chica sustantivo": "https://static.arasaac.org/pictograms/10206/10206_300.png",
 
     "mamá": "https://static.arasaac.org/pictograms/2458/2458_300.png",
     "papá": "https://static.arasaac.org/pictograms/31146/31146_300.png",
