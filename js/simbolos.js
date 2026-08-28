@@ -9,11 +9,11 @@ const simboloReflexivosCuasiReflejos = "https://i.ibb.co/vC9pXdML/Whats-App-Imag
 // palabras que pueden escribirse diferente y las reconoce igual
 const aliasNormalizacion = {
     "cafecito": "café",
-    "cafés": "café":,
+    "cafés": "café",
     "tele": "television",
     "verbos": "verbo",
     "dispositivos móviles": "dispositivos electrónicos",
-    "oración": "oraciones",
+    "oración": "oraciones"
 };
 
 
