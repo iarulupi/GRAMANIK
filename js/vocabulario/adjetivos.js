@@ -110,7 +110,9 @@ const vocabularioAdjetivos = {
     "calurosos": "URL CALUROSO",
     "calurosas": "URL CALUROSO",
 
-    "frío": "https://static.arasaac.org/pictograms/26865/26865_300.png",
+    "frío": 
+    ["https://static.arasaac.org/pictograms/26865/26865_300.png",
+    "https://static.arasaac.org/pictograms/35561/35561_300.png", ]
     "fría": "https://static.arasaac.org/pictograms/26865/26865_300.png",
     "fríos": "https://static.arasaac.org/pictograms/26865/26865_300.png",
     "frías": "https://static.arasaac.org/pictograms/26865/26865_300.png",
