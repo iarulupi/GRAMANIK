@@ -74,36 +74,35 @@ const palabrasAmbiguas = {
         }
     ],
 
-    "chico": [
-        {
-            tipo: "sustantivo",
-            etiqueta: "SUSTANTIVO",
-            base: "chico",
-            picto: "chico"
-        },
-        {
-            tipo: "adjetivo",
-            etiqueta: "ADJETIVO",
-            base: "chico",
-            picto: "chico"
-        }
-    ],
+  "chico": [
+    {
+        tipo: "sustantivo",
+        etiqueta: "SUSTANTIVO",
+        base: "chico",
+        picto: "chico sustantivo"
+    },
+    {
+        tipo: "adjetivo",
+        etiqueta: "ADJETIVO",
+        base: "chico",
+        picto: "chico adjetivo"
+    }
+],
 
-    "chica": [
-        {
-            tipo: "sustantivo",
-            etiqueta: "SUSTANTIVO",
-            base: "chica",
-            picto: "chica"
-        },
-        {
-            tipo: "adjetivo",
-            etiqueta: "ADJETIVO",
-            base: "chica",
-            picto: "chica"
-        }
-    ]
-};
+"chica": [
+    {
+        tipo: "sustantivo",
+        etiqueta: "SUSTANTIVO",
+        base: "chica",
+        picto: "chica sustantivo"
+    },
+    {
+        tipo: "adjetivo",
+        etiqueta: "ADJETIVO",
+        base: "chica",
+        picto: "chica adjetivo"
+    }
+]
 
 const eleccionesAmbiguas = {};
 
