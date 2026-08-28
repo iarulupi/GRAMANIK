@@ -113,7 +113,37 @@ const vocabularioVerbos = {
     "https://static.arasaac.org/pictograms/8103/8103_300.png",
     "https://static.arasaac.org/pictograms/8555/8555_300.png"
 ],
+// ==================== VERBOS DE CLIMA ====================
 
+"llover": "URL LLOVER",
+
+"lloviznar": "URL LLOVIZNAR",
+
+"relampaguear": "URL RELAMPAGUEAR",
+
+"tronar": "URL TRONAR",
+
+"soplar": "URL SOPLAR",
+
+"nevar": "URL NEVAR",
+
+"granizar": "URL GRANIZAR",
+
+"inundar": "URL INUNDAR",
+
+"secar": "URL SECAR",
+
+"temblar": "URL TEMBLAR",
+
+"erupcionar": "URL ERUPCIONAR",
+
+"incendiar": "URL INCENDIAR",
+
+"extinguir": "URL EXTINGUIR",
+
+"calentar": "URL CALENTAR",
+
+"enfriar": "URL ENFRIAR",
 
 
 };
@@ -190,7 +220,23 @@ let verbosBase = [
     "operar",
     "nadar",
     "cocinar",
-    "bañar"
+    "bañar",
+    "llover",
+    "lloviznar",
+    "relampaguear",
+    "tronar",
+    "soplar",
+    "nevar",
+    "granizar",
+    "inundar",
+    "secar",
+    "temblar",
+    "erupcionar",
+    "deslizarse",
+    "incendiar",
+    "extinguir",
+    "calentar",
+    "enfriar"
 ];
 
 let verbosConjugados = {
@@ -220,6 +266,87 @@ let verbosConjugados = {
 "podemos prender": "prender",
 
 
+// ==================== VERBOS DE CLIMA ====================
+
+
+// == llover ==
+
+"llueve": "llover",
+"llovió": "llover",
+"va a llover": "llover",
+
+
+// == lloviznar ==
+
+"llovizna": "lloviznar",
+"lloviznó": "lloviznar",
+"va a lloviznar": "lloviznar",
+
+
+// == relampaguear ==
+
+"relampaguea": "relampaguear",
+"relampagueó": "relampaguear",
+"va a relampaguear": "relampaguear",
+
+
+// == tronar ==
+
+"truena": "tronar",
+"tronó": "tronar",
+"va a tronar": "tronar",
+
+
+// == nevar ==
+
+"nieva": "nevar",
+"nevó": "nevar",
+"va a nevar": "nevar",
+
+
+// == granizar ==
+
+"graniza": "granizar",
+"granizó": "granizar",
+"va a granizar": "granizar",
+
+
+// == inundar ==
+
+"inunda": "inundar",
+"inundó": "inundar",
+"va a inundar": "inundar",
+
+
+
+// == temblar ==
+
+"tiembla": "temblar",
+"tembló": "temblar",
+"va a temblar": "temblar",
+
+
+// == erupcionar ==
+
+"erupciona": "erupcionar",
+"erupcionó": "erupcionar",
+"va a erupcionar": "erupcionar",
+
+
+// == incendiar ==
+
+"incendia": "incendiar",
+"incendió": "incendiar",
+"va a incendiar": "incendiar",
+
+
+// == extinguir ==
+
+"extingue": "extinguir",
+"extinguió": "extinguir",
+"va a extinguir": "extinguir",
+
+    
 // == decir ==
 
 // PRESENTE HABITUAL
