@@ -54,7 +54,10 @@ const vocabularioVerbos = {
     "https://static.arasaac.org/pictograms/5540/5540_300.png"
 ],
 "comprar": "https://static.arasaac.org/pictograms/8986/8986_300.png",
-"cortar": "https://static.arasaac.org/pictograms/2547/2547_300.png",
+"cortar": [
+   "https://static.arasaac.org/pictograms/2547/2547_300.png",
+   "corto": "https://static.arasaac.org/pictograms/26002/26002_300.png",
+]
 "lavar": "https://static.arasaac.org/pictograms/34826/34826_300.png",
 "ir": "https://static.arasaac.org/pictograms/8142/8142_300.png",
 "hacer": "https://i.ibb.co/Pv6RMqJj/Chat-GPT-Image-26-feb-2026-06-30-47-p-m.png",
