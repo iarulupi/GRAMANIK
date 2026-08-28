@@ -70,6 +70,7 @@ const vocabularioPersonas = {
 
     "iara": "https://i.ibb.co/kzrCTcF/iara.jpg",
     "marina": "https://i.ibb.co/DPN4wf61/Whats-App-Image-2026-03-24-at-4-40-18-PM.jpg",
+    "tobi": "https://i.ibb.co/twGzggKx/file-000000001c8c820ead24f5142ffad644.png",
 
     
     "jesús": "https://static.arasaac.org/pictograms/24135/24135_300.png",
