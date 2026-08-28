@@ -701,8 +701,11 @@ function extraerPuntuacionFinal(texto) {
 function mostrarPictos() {
     const texto = document.getElementById("texto").value || "";
     const resultado = document.getElementById("resultado");
-    resultado.innerHTML = "";
 
+    seleccionGuardada = null;
+
+    resultado.innerHTML = "";
+    
     texto.split("\n").forEach((linea, indiceLinea) => {
         const contenedorLinea = document.createElement("div");
         contenedorLinea.className = "contenedor-linea";
