@@ -78,7 +78,7 @@ const vocabularioEscuela = {
     "témpera": "https://static.arasaac.org/pictograms/35793/35793_300.png",
     "témperas": "https://static.arasaac.org/pictograms/35793/35793_300.png",
 
-    "cartuchera": "",
+    "cartuchera": "https://globalsymbols.com/uploads/production/image/imagefile/18496/17_18497_297d0228-7baf-48fb-9350-33c4ecde58c6.png",
 
     "mochila": [
         "https://static.arasaac.org/pictograms/2475/2475_300.png",
