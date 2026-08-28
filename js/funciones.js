@@ -571,6 +571,126 @@ let mostrarImagenes = true;
 let mostrarColores = true;
 let tipografiaActual = "'Dreaming Outloud Pro', cursive";
 
+// Guardamos la última selección hecha dentro del resultado
+let seleccionGuardada = null;
+
+
+// ==================== SUBRAYADO ====================
+
+// Guardar la selección aunque después toquemos el botón SUBRAYAR
+document.addEventListener("selectionchange", () => {
+
+    const resultado = document.getElementById("resultado");
+    const seleccion = window.getSelection();
+
+    if (!resultado) return;
+    if (!seleccion.rangeCount) return;
+    if (seleccion.isCollapsed) return;
+
+    const rango = seleccion.getRangeAt(0);
+
+    // Solo guardar selecciones hechas dentro del resultado
+    if (resultado.contains(rango.commonAncestorContainer)) {
+        seleccionGuardada = rango.cloneRange();
+    }
+});
+
+
+function subrayarSeleccion() {
+
+    const resultado = document.getElementById("resultado");
+
+    if (!seleccionGuardada || seleccionGuardada.collapsed) {
+        return;
+    }
+
+    const rango = seleccionGuardada.cloneRange();
+
+    // Buscar únicamente textos de las palabras,
+    // no botones, selectores ni símbolos.
+    const walker = document.createTreeWalker(
+        resultado,
+        NodeFilter.SHOW_TEXT
+    );
+
+    const fragmentos = [];
+
+    while (walker.nextNode()) {
+
+        const nodo = walker.currentNode;
+
+        const filaTexto =
+            nodo.parentElement &&
+            nodo.parentElement.closest(".fila-texto");
+
+        if (!filaTexto) continue;
+
+        // Ver si este texto está dentro de la selección
+        if (!rango.intersectsNode(nodo)) continue;
+
+        let inicio = 0;
+        let fin = nodo.textContent.length;
+
+        // Si la selección comienza dentro de este texto
+        if (nodo === rango.startContainer) {
+            inicio = rango.startOffset;
+        }
+
+        // Si la selección termina dentro de este texto
+        if (nodo === rango.endContainer) {
+            fin = rango.endOffset;
+        }
+
+        if (inicio < fin) {
+            fragmentos.push({
+                nodo,
+                inicio,
+                fin
+            });
+        }
+    }
+
+    // Procesar de atrás hacia adelante para no alterar
+    // las posiciones de los otros textos.
+    fragmentos.reverse().forEach(fragmento => {
+
+        const nodo = fragmento.nodo;
+        const inicio = fragmento.inicio;
+        const fin = fragmento.fin;
+
+        // Separar la parte posterior
+        if (fin < nodo.textContent.length) {
+            nodo.splitText(fin);
+        }
+
+        let textoSeleccionado = nodo;
+
+        // Separar la parte anterior
+        if (inicio > 0) {
+            textoSeleccionado = nodo.splitText(inicio);
+        }
+
+        const subrayado = document.createElement("span");
+
+        subrayado.className = "subrayado-manual";
+
+        textoSeleccionado.parentNode.insertBefore(
+            subrayado,
+            textoSeleccionado
+        );
+
+        subrayado.appendChild(textoSeleccionado);
+    });
+
+    // Limpiar selección visual
+    const seleccion = window.getSelection();
+
+    if (seleccion) {
+        seleccion.removeAllRanges();
+    }
+
+    seleccionGuardada = null;
+}
 // ==================== FUNCIONES ====================
 
 function extraerPuntuacionFinal(texto) {
