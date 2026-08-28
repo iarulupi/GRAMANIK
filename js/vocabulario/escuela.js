@@ -34,11 +34,11 @@ const vocabularioEscuela = {
 
 "verbo": "https://static.arasaac.org/pictograms/32604/32604_300.png",
 
-    "lápiz": "",
-    "lápices": "",
+    "lápiz": "https://static.arasaac.org/pictograms/2440/2440_300.png",
+    "lápices": "https://static.arasaac.org/pictograms/17016/17016_300.png",
 
-    "lapicera": "",
-    "birome": "",
+    "lapicera": "https://static.arasaac.org/pictograms/10313/10313_300.png",
+    "lapiceras": "https://static.arasaac.org/pictograms/36620/36620_300.png",
 
     "goma": "",
     "sacapuntas": "",
@@ -50,30 +50,19 @@ const vocabularioEscuela = {
 
     "pegamento": "",
     "plasticola": "",
-
-    "marcador": "",
-    "marcadores": "",
-
-    "resaltador": "",
-    "resaltadores": "",
+    "voligoma": "",
 
     "crayón": "",
-    "crayones": "",
+    "crayones": "https://static.arasaac.org/pictograms/16855/16855_300.png",
 
-    "lápiz de color": "",
-    "lápices de colores": "",
-
-    "fibra": "",
-    "fibras": "",
+    "marcadores": "https://static.arasaac.org/pictograms/39103/39103_300.png",
+    "marcador": "",
 
     "pincel": "",
     "pinceles": "",
 
     "témpera": "",
     "témperas": "",
-
-    "acuarela": "",
-    "acuarelas": "",
 
     "cartuchera": "",
     "mochila": "",
@@ -85,19 +74,7 @@ const vocabularioEscuela = {
     "hojas": "",
 
     "libro": "",
-    "manual": "",
-
-    "agenda": "",
-    "anotador": "",
-
-    "block": "",
-
-    "folio": "",
-    "folios": "",
-
-    "separador": "",
-    "separadores": "",
-
+    
     "abrochadora": "",
 
     "broche": "",
@@ -117,8 +94,6 @@ const vocabularioEscuela = {
 
     "calculadora": "",
 
-    "diccionario": "",
-
     "mapa": "",
     "globo terráqueo": "",
 
@@ -126,8 +101,6 @@ const vocabularioEscuela = {
     "tiza": "",
     "borrador": "",
 
-    "fibrón": "",
-    "fibrones": ""
-};
+ };
 
 Object.assign(pictogramas, vocabularioEscuela);
