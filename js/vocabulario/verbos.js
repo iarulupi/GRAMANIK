@@ -284,7 +284,6 @@ let verbosBase = [
     "recordar",
     "romper",
     "prender",
-    "perder",
     "copiar",
     "contestar",
     "despegar",
