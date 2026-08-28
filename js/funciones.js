@@ -56,7 +56,7 @@ const reflexivosExactos = normalizarListaExacta(pronombresReflexivosCuasiReflejo
 
 // ==================== PALABRAS AMBIGUAS ====================
 // Permite elegir manualmente la categoría cuando una misma forma escrita
-// puede funcionar de más de una manera (por ejemplo: "corto").
+// puede funcionar de más de una manera.
 
 const palabrasAmbiguas = {
     "corto": [
@@ -104,6 +104,7 @@ const palabrasAmbiguas = {
         }
     ]
 };
+
 const eleccionesAmbiguas = {};
 
 function obtenerOpcionesAmbiguas(palabra) {
@@ -135,7 +136,9 @@ function crearSelectorAmbiguedad(opciones, seleccionActual, alCambiar) {
 
         item.addEventListener("click", evento => {
             evento.stopPropagation();
+
             menu.classList.remove("menu-ambiguedad-abierto");
+
             alCambiar(opcion);
         });
 
@@ -166,17 +169,19 @@ document.addEventListener("click", evento => {
     if (!evento.target.closest(".selector-ambiguedad")) {
         document
             .querySelectorAll(".menu-ambiguedad-abierto")
-            .forEach(menu => menu.classList.remove("menu-ambiguedad-abierto"));
+            .forEach(menu => {
+                menu.classList.remove("menu-ambiguedad-abierto");
+            });
     }
 });
 
 function crearPictoAmbiguoSeleccionable(opciones) {
     const picto = crearPictoSeleccionable(opciones);
 
-    // En palabras ambiguas el selector gramatical ocupa la esquina derecha.
-    // Movemos la × del pictograma a la izquierda para que ambos controles
-    // convivan sin taparse. Esto sirve para CUALQUIER palabra ambigua.
+    // El selector gramatical ocupa la esquina superior derecha.
+    // La × del pictograma se mueve a la izquierda para que no se tapen.
     const botonEliminar = picto.querySelector(".eliminar-picto");
+
     if (botonEliminar) {
         botonEliminar.style.right = "auto";
         botonEliminar.style.left = "-8px";
@@ -191,6 +196,7 @@ function renderizarInterpretacionAmbigua({
     filaSimbolo,
     filaTexto
 }) {
+    // Limpiar lo que hubiera de la opción anterior
     filaPicto.innerHTML = "";
     filaSimbolo.innerHTML = "";
 
@@ -228,9 +234,11 @@ function renderizarInterpretacionAmbigua({
 
         if (mostrarSimbolos) {
             const imgSimbolo = document.createElement("img");
+
             imgSimbolo.src = simboloAdjetivo;
             imgSimbolo.style.width = "40px";
             imgSimbolo.style.height = "40px";
+
             filaSimbolo.appendChild(imgSimbolo);
         }
 
@@ -250,6 +258,9 @@ function renderizarInterpretacionAmbigua({
     // ==================== SUSTANTIVO ====================
     if (opcion.tipo === "sustantivo") {
 
+        // El sustantivo por ahora no lleva símbolo gramatical especial.
+        // Solo conserva su pictograma.
+
         if (mostrarImagenes) {
             const opcionesPicto = obtenerPictos(opcion.picto);
 
@@ -262,8 +273,7 @@ function renderizarInterpretacionAmbigua({
 
         return;
     }
-}
-// ==================== FUNCIONES AUX ====================
+}// ==================== FUNCIONES AUX ====================
 
 function resolverPalabraExactaOAlias(palabra) {
     const exacta = normalizarTextoExacto(palabra);
