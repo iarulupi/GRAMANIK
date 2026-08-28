@@ -197,7 +197,9 @@ function renderizarInterpretacionAmbigua({
     filaTexto.style.color = "";
     filaTexto.style.fontWeight = "";
 
+    // ==================== VERBO ====================
     if (opcion.tipo === "verbo") {
+
         if (mostrarColores) {
             filaTexto.style.color = "red";
             filaTexto.style.fontWeight = "bold";
@@ -210,15 +212,20 @@ function renderizarInterpretacionAmbigua({
 
         if (mostrarImagenes) {
             const opcionesPicto = obtenerPictos(opcion.picto);
+
             if (opcionesPicto.length) {
-                filaPicto.appendChild(crearPictoAmbiguoSeleccionable(opcionesPicto));
+                filaPicto.appendChild(
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
+                );
             }
         }
 
         return;
     }
 
+    // ==================== ADJETIVO ====================
     if (opcion.tipo === "adjetivo") {
+
         if (mostrarSimbolos) {
             const imgSimbolo = document.createElement("img");
             imgSimbolo.src = simboloAdjetivo;
@@ -227,30 +234,35 @@ function renderizarInterpretacionAmbigua({
             filaSimbolo.appendChild(imgSimbolo);
         }
 
-        if (opcion.tipo === "sustantivo") {
+        if (mostrarImagenes) {
+            const opcionesPicto = obtenerPictos(opcion.picto);
 
-    if (mostrarImagenes) {
-        const opcionesPicto = obtenerPictos(opcion.picto);
-
-        if (opcionesPicto.length) {
-            filaPicto.appendChild(
-                crearPictoAmbiguoSeleccionable(opcionesPicto)
-            );
+            if (opcionesPicto.length) {
+                filaPicto.appendChild(
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
+                );
+            }
         }
+
+        return;
     }
 
-    return;
-}
+    // ==================== SUSTANTIVO ====================
+    if (opcion.tipo === "sustantivo") {
 
         if (mostrarImagenes) {
             const opcionesPicto = obtenerPictos(opcion.picto);
+
             if (opcionesPicto.length) {
-                filaPicto.appendChild(crearPictoAmbiguoSeleccionable(opcionesPicto));
+                filaPicto.appendChild(
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
+                );
             }
         }
+
+        return;
     }
 }
-
 // ==================== FUNCIONES AUX ====================
 
 function resolverPalabraExactaOAlias(palabra) {
