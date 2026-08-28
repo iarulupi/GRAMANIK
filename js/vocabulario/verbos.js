@@ -97,7 +97,6 @@ const vocabularioVerbos = {
 "compartir": "https://static.arasaac.org/pictograms/38900/38900_300.png",
 "despegar": "https://static.arasaac.org/pictograms/7018/7018_300.png",
 "prender": "https://static.arasaac.org/pictograms/21818/21818_300.png",
-"encender": "https://static.arasaac.org/pictograms/21818/21818_300.png",
 "apagar": "https://static.arasaac.org/pictograms/21365/21365_300.png",
 "recordar": "https://static.arasaac.org/pictograms/37369/37369_300.png",
 "romper": "https://static.arasaac.org/pictograms/32388/32388_300.png",
