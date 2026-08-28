@@ -376,5 +376,10 @@ button {
 .subrayado-manual {
     text-decoration: underline;
     text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+}
+
+/* Solo mientras se genera la imagen */
+.modo-descarga .subrayado-manual {
     text-underline-offset: 8px;
 }
