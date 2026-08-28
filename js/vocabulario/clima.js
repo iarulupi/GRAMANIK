@@ -48,42 +48,47 @@ const vocabularioClima = {
 
     "calor": "https://static.arasaac.org/pictograms/35561/35561_300.png",
 
-    "frío": "URL FRÍO",
+    "temperatura":[
+        "https://static.arasaac.org/pictograms/8230/8230_300.png",
+        "https://static.arasaac.org/pictograms/34898/34898_300.png",
+        "https://static.arasaac.org/pictograms/38752/38752_300.png",
+        "https://static.arasaac.org/pictograms/36973/36973_300.png",
+        "https://static.arasaac.org/pictograms/36852/36852_300.png",
+        "https://static.arasaac.org/pictograms/27735/27735_300.png",
+        "https://static.arasaac.org/pictograms/36853/36853_300.png",
+        "https://static.arasaac.org/pictograms/36854/36854_300.png",
+        "https://static.arasaac.org/pictograms/28027/28027_300.png",
+        "https://static.arasaac.org/pictograms/27644/27644_300.png",
+    ]
 
-    "temperatura": "URL TEMPERATURA",
-
-    "termómetro": "URL TERMÓMETRO",
-
+    "termómetro": [
+    "https://static.arasaac.org/pictograms/37478/37478_300.png",
+    "https://static.arasaac.org/pictograms/36848/36848_300.png",
+    "https://static.arasaac.org/pictograms/2789/2789_300.png",
+    "https://static.arasaac.org/pictograms/32051/32051_300.png",
+]
 
     // ==================== FENÓMENOS NATURALES ====================
 
-    "inundación": "URL INUNDACIÓN",
+    "inundación": "https://static.arasaac.org/pictograms/4669/4669_300.png",
 
-    "sequía": "URL SEQUÍA",
+    "sequía": "https://static.arasaac.org/pictograms/5580/5580_300.png",
 
-    "tornado": "URL TORNADO",
+    "tornado": "https://static.arasaac.org/pictograms/5598/5598_300.png",
 
-    "huracán": "URL HURACÁN",
-
-    "ciclón": "URL CICLÓN",
+    "huracán": "https://static.arasaac.org/pictograms/8606/8606_300.png",
 
     "terremoto": "https://static.arasaac.org/pictograms/37580/37580_300.png",
 
-    "temblor": "URL TEMBLOR",
+    "temblor": "https://static.arasaac.org/pictograms/4755/4755_300.png",
 
-    "tsunami": "URL TSUNAMI",
+    "tsunami": "https://static.arasaac.org/pictograms/4669/4669_300.png",
 
-    "volcán": "URL VOLCÁN",
+    "volcán": "https://static.arasaac.org/pictograms/6247/6247_300.png",
 
-    "erupción": "URL ERUPCIÓN",
+    "erupción": "https://static.arasaac.org/pictograms/26834/26834_300.png",
 
-    "erupción volcánica": "URL ERUPCIÓN VOLCÁNICA",
-
-    "avalancha": "URL AVALANCHA",
-
-    "alud": "URL ALUD",
-
-    "incendio forestal": "URL INCENDIO FORESTAL"
+    "incendio forestal": "https://static.arasaac.org/pictograms/21929/21929_300.png"
 
 };
 
