@@ -2556,4 +2556,4 @@ let verbosConjugados = {
 
 };
 
-Object.assign(pictogramas, vocabularioVerbos);
+
