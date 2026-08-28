@@ -3,6 +3,18 @@
 // PICTOGRAMAS
 
 const vocabularioVerbos = {
+   "llorar": [
+    "https://static.arasaac.org/pictograms/7147/7147_300.png",
+    "https://static.arasaac.org/pictograms/3239/3239_300.png",
+    "https://static.arasaac.org/pictograms/28645/28645_300.png",
+    "https://static.arasaac.org/pictograms/32298/32298_300.png"
+],
+
+"reirse": [
+    "https://static.arasaac.org/pictograms/30393/30393_300.png",
+    "https://static.arasaac.org/pictograms/38792/38792_300.png"
+],
+    
 "pasear": [
     "https://static.arasaac.org/pictograms/8649/8649_300.png",
     "https://static.arasaac.org/pictograms/29951/29951_300.png",
@@ -235,7 +247,9 @@ let verbosBase = [
     "incendiar",
     "extinguir",
     "calentar",
-    "enfriar"
+    "enfriar",
+    "reir",
+    "llorar",
 ];
 
 let verbosConjugados = {
@@ -369,7 +383,52 @@ let verbosConjugados = {
 "vamos a decir": "decir",
 "van a decir": "decir",
 
+// ===== REÍR =====
 
+// PRESENTE HABITUAL
+"río": "reír",
+"ríes": "reír",
+"ríe": "reír",
+"reímos": "reír",
+"ríen": "reír",
+
+// PRETÉRITO PERFECTO SIMPLE
+"reí": "reír",
+"reíste": "reír",
+"rió": "reír",
+"reímos": "reír",
+"rieron": "reír",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a reír": "reír",
+"vas a reír": "reír",
+"va a reír": "reír",
+"vamos a reír": "reír",
+"van a reír": "reír",
+    
+// ===== LLORAR =====
+
+// PRESENTE HABITUAL
+"lloro": "llorar",
+"lloras": "llorar",
+"llora": "llorar",
+"lloramos": "llorar",
+"lloran": "llorar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"lloré": "llorar",
+"lloraste": "llorar",
+"lloró": "llorar",
+"lloramos": "llorar",
+"lloraron": "llorar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a llorar": "llorar",
+"vas a llorar": "llorar",
+"va a llorar": "llorar",
+"vamos a llorar": "llorar",
+"van a llorar": "llorar",
+    
 // == dictar ==
 
 // PRESENTE HABITUAL
