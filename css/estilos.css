@@ -370,3 +370,11 @@ button {
 .opcion-ambiguedad:hover {
     background: #e5e5e5;
 }
+
+/* ==================== SUBRAYADO MANUAL ==================== */
+
+.subrayado-manual {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
