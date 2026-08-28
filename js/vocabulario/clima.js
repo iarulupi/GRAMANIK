@@ -31,13 +31,13 @@ const vocabularioClima = {
 
     "viento": "https://static.arasaac.org/pictograms/7259/7259_300.png",
 
-    "niebla": "URL NIEBLA",
+    "niebla": "https://static.arasaac.org/pictograms/35049/35049_300.png",
 
     "granizo": "https://static.arasaac.org/pictograms/3110/3110_300.png",
 
     "nieve": "https://static.arasaac.org/pictograms/7172/7172_300.png",
 
-    "arcoíris": "URL ARCOÍRIS",
+    "arcoíris": "https://static.arasaac.org/pictograms/2986/2986_300.png",
 
     "meteorito": "https://static.arasaac.org/pictograms/35001/35001_300.png",
 
@@ -46,7 +46,7 @@ const vocabularioClima = {
 
     // ==================== TEMPERATURA ====================
 
-    "calor": "URL CALOR",
+    "calor": "https://static.arasaac.org/pictograms/35561/35561_300.png",
 
     "frío": "URL FRÍO",
 
