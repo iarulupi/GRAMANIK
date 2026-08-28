@@ -273,6 +273,7 @@ let verbosBase = [
 "tener",
 "ser",
 "estar",
+   "llamar",
 ];
 
 let verbosConjugados = {
@@ -2206,6 +2207,35 @@ let verbosConjugados = {
 "vamos a perder": "perder",
 "van a perder": "perder",
 
+// ===== VERBO LLAMAR =====
+
+// PRESENTE HABITUAL
+"llamo": "llamar",
+"llamas": "llamar",
+"llama": "llamar",
+"llamamos": "llamar",
+"llaman": "llamar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"llamé": "llamar",
+"llamaste": "llamar",
+"llamó": "llamar",
+"llamamos": "llamar",
+"llamaron": "llamar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he llamado": "llamar",
+"has llamado": "llamar",
+"ha llamado": "llamar",
+"hemos llamado": "llamar",
+"han llamado": "llamar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a llamar": "llamar",
+"vas a llamar": "llamar",
+"va a llamar": "llamar",
+"vamos a llamar": "llamar",
+"van a llamar": "llamar",
 
 // ===== LLAMARSE =====
 
