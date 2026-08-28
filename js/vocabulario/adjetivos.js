@@ -40,7 +40,11 @@ const vocabularioAdjetivos = {
 
     "chico": "https://static.arasaac.org/pictograms/4716/4716_300.png",
     "chica": "https://static.arasaac.org/pictograms/4716/4716_300.png",
+"chico adjetivo": "https://static.arasaac.org/pictograms/4716/4716_300.png",
+    "chica adjetivo": "https://static.arasaac.org/pictograms/4716/4716_300.png",
 
+
+    
     "alto": "https://static.arasaac.org/pictograms/4557/4557_300.png",
     "alta": "https://static.arasaac.org/pictograms/10193/10193_300.png",
 
