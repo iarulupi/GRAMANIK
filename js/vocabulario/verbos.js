@@ -74,7 +74,12 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/5540/5540_300.png"
     ],
 
-    "comprar": "https://static.arasaac.org/pictograms/8986/8986_300.png",
+    "comprar": [
+        "https://static.arasaac.org/pictograms/8986/8986_300.png",
+        "https://i.ibb.co/4ZhdyCYs/VERBO-ELEGIR-20260510-182323-0000.png",
+],
+
+        "vender": "https://i.ibb.co/spM0jb7L/NOSOTROS-VENDEMOS-DI-LOGOS-GRUPO-P-20260514-094947-0000.jpg",
 
     "cortar": [
         "https://static.arasaac.org/pictograms/2547/2547_300.png",
@@ -383,6 +388,7 @@ let verbosBase = [
    "ganar",
    "perder",
    "llamar",
+    "vender",
 ];
 
 let verbosConjugados = {
@@ -1915,6 +1921,36 @@ let verbosConjugados = {
 "va a comprar": "comprar",
 "vamos a comprar": "comprar",
 "van a comprar": "comprar",
+
+// ===== VENDER =====
+
+// PRESENTE HABITUAL
+"vendo": "vender",
+"vendes": "vender",
+"vende": "vender",
+"vendemos": "vender",
+"venden": "vender",
+
+// PRETÉRITO PERFECTO SIMPLE
+"vendí": "vender",
+"vendiste": "vender",
+"vendió": "vender",
+"vendimos": "vender",
+"vendieron": "vender",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he vendido": "vender",
+"has vendido": "vender",
+"ha vendido": "vender",
+"hemos vendido": "vender",
+"han vendido": "vender",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a vender": "vender",
+"vas a vender": "vender",
+"va a vender": "vender",
+"vamos a vender": "vender",
+"van a vender": "vender",
 
 
 // ===== CORTAR =====
