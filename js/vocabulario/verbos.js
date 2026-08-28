@@ -130,7 +130,28 @@ const vocabularioVerbos = {
     "https://static.arasaac.org/pictograms/4639/4639_300.png",
     "https://static.arasaac.org/pictograms/29142/29142_300.png",
     "https://static.arasaac.org/pictograms/8103/8103_300.png",
-    "https://static.arasaac.org/pictograms/8555/8555_300.png"
+    "https://static.arasaac.org/pictograms/8555/8555_300.png",
+   ],
+   "ganar": [
+   "https://static.arasaac.org/pictograms/38986/38986_300.png",
+   "https://static.arasaac.org/pictograms/7218/7218_300.png",
+   "https://static.arasaac.org/pictograms/36541/36541_300.png",
+   "https://static.arasaac.org/pictograms/10155/10155_300.png",
+   "https://static.arasaac.org/pictograms/19531/19531_300.png",
+   ],
+   "perder": [
+   "https://static.arasaac.org/pictograms/22031/22031_300.png",
+   "https://static.arasaac.org/pictograms/19533/19533_300.png",
+      "https://static.arasaac.org/pictograms/38987/38987_300.png",
+      "https://static.arasaac.org/pictograms/24779/24779_300.png",
+      "https://static.arasaac.org/pictograms/6175/6175_300.png",
+      "https://static.arasaac.org/pictograms/24760/24760_300.png",
+      "https://static.arasaac.org/pictograms/31894/31894_300.png",
+      "https://static.arasaac.org/pictograms/24759/24759_300.png",
+      "https://static.arasaac.org/pictograms/24780/24780_300.png",
+      "https://static.arasaac.org/pictograms/26314/26314_300.png",
+      "https://static.arasaac.org/pictograms/22033/22033_300.png",
+   
 ],
 // ==================== VERBOS DE CLIMA ====================
 
@@ -278,6 +299,8 @@ let verbosBase = [
 "tener",
 "ser",
 "estar",
+   "ganar",
+   "perder",
    "llamar",
 ];
 
@@ -495,6 +518,67 @@ let verbosConjugados = {
 "vamos a estar": "estar",
 "van a estar": "estar",
 
+// ==================== VERBO GANAR ====================
+
+// PRESENTE HABITUAL
+"gano": "ganar",
+"ganas": "ganar",
+"gana": "ganar",
+"ganamos": "ganar",
+"ganan": "ganar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"gané": "ganar",
+"ganaste": "ganar",
+"ganó": "ganar",
+"ganamos": "ganar",
+"ganaron": "ganar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he ganado": "ganar",
+"has ganado": "ganar",
+"ha ganado": "ganar",
+"hemos ganado": "ganar",
+"han ganado": "ganar",
+
+// FUTURO COMPUESTO
+"voy a ganar": "ganar",
+"vas a ganar": "ganar",
+"va a ganar": "ganar",
+"vamos a ganar": "ganar",
+"van a ganar": "ganar",
+
+
+// ==================== VERBO PERDER ====================
+
+// PRESENTE HABITUAL
+"pierdo": "perder",
+"pierdes": "perder",
+"pierde": "perder",
+"perdemos": "perder",
+"pierden": "perder",
+
+// PRETÉRITO PERFECTO SIMPLE
+"perdí": "perder",
+"perdiste": "perder",
+"perdió": "perder",
+"perdimos": "perder",
+"perdieron": "perder",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he perdido": "perder",
+"has perdido": "perder",
+"ha perdido": "perder",
+"hemos perdido": "perder",
+"han perdido": "perder",
+
+// FUTURO COMPUESTO
+"voy a perder": "perder",
+"vas a perder": "perder",
+"va a perder": "perder",
+"vamos a perder": "perder",
+"van a perder": "perder",
+   
 // ===== REÍR =====
 
 // PRESENTE HABITUAL
