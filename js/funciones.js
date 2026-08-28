@@ -1150,22 +1150,42 @@ function toggleColor() {
 // ==================== DESCARGA ====================
 
 function descargarImagen() {
-    html2canvas(document.getElementById("resultado"), {
-        useCORS: true,
-        allowTaint: false,
-        backgroundColor: "#ffffff",
-        scale: 2,
 
-        // No incluir controles de edición en la imagen descargada
-        ignoreElements: (elemento) => {
-            return elemento.classList &&
-                   elemento.classList.contains("no-descargar");
-        }
+    const resultado = document.getElementById("resultado");
 
-    }).then(canvas => {
-        const link = document.createElement("a");
-        link.download = "gramanick.png";
-        link.href = canvas.toDataURL("image/png");
-        link.click();
+    // Ajustes especiales SOLO para la imagen descargada
+    resultado.classList.add("modo-descarga");
+
+    // Esperar a que el navegador aplique el cambio
+    requestAnimationFrame(() => {
+
+        html2canvas(resultado, {
+            useCORS: true,
+            allowTaint: false,
+            backgroundColor: "#ffffff",
+            scale: 2,
+
+            ignoreElements: (elemento) => {
+                return elemento.classList &&
+                       elemento.classList.contains("no-descargar");
+            }
+
+        }).then(canvas => {
+
+            // Volver inmediatamente al aspecto normal
+            resultado.classList.remove("modo-descarga");
+
+            const link = document.createElement("a");
+            link.download = "gramanick.png";
+            link.href = canvas.toDataURL("image/png");
+            link.click();
+
+        }).catch(error => {
+
+            resultado.classList.remove("modo-descarga");
+            console.error(error);
+
+        });
+
     });
 }
