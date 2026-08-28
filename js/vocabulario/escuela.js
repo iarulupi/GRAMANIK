@@ -34,8 +34,100 @@ const vocabularioEscuela = {
 
 "verbo": "https://static.arasaac.org/pictograms/32604/32604_300.png",
 
-    "jesús": "https://static.arasaac.org/pictograms/24135/24135_300.png",
-    "la virgen maría": "https://static.arasaac.org/pictograms/7301/7301_300.png",
+    "lápiz": "",
+    "lápices": "",
+
+    "lapicera": "",
+    "birome": "",
+
+    "goma": "",
+    "sacapuntas": "",
+
+    "regla": "",
+
+    "tijera": "",
+    "tijeras": "",
+
+    "pegamento": "",
+    "plasticola": "",
+
+    "marcador": "",
+    "marcadores": "",
+
+    "resaltador": "",
+    "resaltadores": "",
+
+    "crayón": "",
+    "crayones": "",
+
+    "lápiz de color": "",
+    "lápices de colores": "",
+
+    "fibra": "",
+    "fibras": "",
+
+    "pincel": "",
+    "pinceles": "",
+
+    "témpera": "",
+    "témperas": "",
+
+    "acuarela": "",
+    "acuarelas": "",
+
+    "cartuchera": "",
+    "mochila": "",
+
+    "cuaderno": "",
+    "carpeta": "",
+
+    "hoja": "",
+    "hojas": "",
+
+    "libro": "",
+    "manual": "",
+
+    "agenda": "",
+    "anotador": "",
+
+    "block": "",
+
+    "folio": "",
+    "folios": "",
+
+    "separador": "",
+    "separadores": "",
+
+    "abrochadora": "",
+
+    "broche": "",
+    "broches": "",
+
+    "clip": "",
+    "clips": "",
+
+    "cinta adhesiva": "",
+    "cinta": "",
+
+    "corrector": "",
+
+    "compás": "",
+    "transportador": "",
+    "escuadra": "",
+
+    "calculadora": "",
+
+    "diccionario": "",
+
+    "mapa": "",
+    "globo terráqueo": "",
+
+    "pizarrón": "",
+    "tiza": "",
+    "borrador": "",
+
+    "fibrón": "",
+    "fibrones": ""
 };
 
 Object.assign(pictogramas, vocabularioEscuela);
