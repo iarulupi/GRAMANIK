@@ -2,14 +2,20 @@
 
 const vocabularioClima = {
 
+    // ==================== CLIMA ====================
+
     "clima": "https://static.arasaac.org/pictograms/24721/24721_300.png",
 
-    "sol": "URL SOL",
+    "cambio climático": "https://static.arasaac.org/pictograms/39081/39081_300.png",
+
+    "desastres naturales": "https://static.arasaac.org/pictograms/34765/34765_300.png",
+
+    "sol": "https://static.arasaac.org/pictograms/7252/7252_300.png",
 
     "nube": "https://static.arasaac.org/pictograms/2883/2883_300.png",
     "nubes": "https://static.arasaac.org/pictograms/2883/2883_300.png",
 
-    "lluvia": "URL LLUVIA",
+    "lluvia": "https://static.arasaac.org/pictograms/7148/7148_300.png",
     "llovizna": "URL LLOVIZNA",
 
     "tormenta": "URL TORMENTA",
@@ -30,21 +36,27 @@ const vocabularioClima = {
 
     "granizo": "https://static.arasaac.org/pictograms/3110/3110_300.png",
 
-    "nieve": "URL NIEVE",
+    "nieve": "https://static.arasaac.org/pictograms/7172/7172_300.png",
 
     "arcoíris": "URL ARCOÍRIS",
 
+    "meteorito": "https://static.arasaac.org/pictograms/35001/35001_300.png",
 
-    // TEMPERATURA
+    "extinción": "https://static.arasaac.org/pictograms/34633/34633_300.png",
+
+
+    // ==================== TEMPERATURA ====================
 
     "calor": "URL CALOR",
+
     "frío": "URL FRÍO",
 
     "temperatura": "URL TEMPERATURA",
+
     "termómetro": "URL TERMÓMETRO",
 
 
-    // FENÓMENOS NATURALES
+    // ==================== FENÓMENOS NATURALES ====================
 
     "inundación": "URL INUNDACIÓN",
 
@@ -56,7 +68,7 @@ const vocabularioClima = {
 
     "ciclón": "URL CICLÓN",
 
-    "terremoto": "URL TERREMOTO",
+    "terremoto": "https://static.arasaac.org/pictograms/37580/37580_300.png",
 
     "temblor": "URL TEMBLOR",
 
@@ -73,6 +85,7 @@ const vocabularioClima = {
     "alud": "URL ALUD",
 
     "incendio forestal": "URL INCENDIO FORESTAL"
+
 };
 
 Object.assign(pictogramas, vocabularioClima);
