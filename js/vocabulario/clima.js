@@ -2,12 +2,12 @@
 
 const vocabularioClima = {
 
-    "clima": "URL CLIMA",
+    "clima": "https://static.arasaac.org/pictograms/24721/24721_300.png",
 
     "sol": "URL SOL",
 
-    "nube": "URL NUBE",
-    "nubes": "URL NUBES",
+    "nube": "https://static.arasaac.org/pictograms/2883/2883_300.png",
+    "nubes": "https://static.arasaac.org/pictograms/2883/2883_300.png",
 
     "lluvia": "URL LLUVIA",
     "llovizna": "URL LLOVIZNA",
@@ -15,8 +15,8 @@ const vocabularioClima = {
     "tormenta": "URL TORMENTA",
     "tormenta eléctrica": "URL TORMENTA ELÉCTRICA",
 
-    "rayo": "URL RAYO",
-    "rayos": "URL RAYOS",
+    "rayo": "https://static.arasaac.org/pictograms/24721/24721_300.png",
+    "rayos": "https://static.arasaac.org/pictograms/24721/24721_300.png",
 
     "relámpago": "URL RELÁMPAGO",
     "relámpagos": "URL RELÁMPAGOS",
@@ -28,7 +28,7 @@ const vocabularioClima = {
 
     "niebla": "URL NIEBLA",
 
-    "granizo": "URL GRANIZO",
+    "granizo": "https://static.arasaac.org/pictograms/3110/3110_300.png",
 
     "nieve": "URL NIEVE",
 
