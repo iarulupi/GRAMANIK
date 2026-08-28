@@ -16,7 +16,7 @@ const vocabularioClima = {
     "nubes": "https://static.arasaac.org/pictograms/2883/2883_300.png",
 
     "lluvia": "https://static.arasaac.org/pictograms/7148/7148_300.png",
-   
+
     "tormenta": "https://static.arasaac.org/pictograms/34296/34296_300.png",
     "tormenta eléctrica": "https://static.arasaac.org/pictograms/34296/34296_300.png",
 
@@ -48,7 +48,7 @@ const vocabularioClima = {
 
     "calor": "https://static.arasaac.org/pictograms/35561/35561_300.png",
 
-    "temperatura":[
+    "temperatura": [
         "https://static.arasaac.org/pictograms/8230/8230_300.png",
         "https://static.arasaac.org/pictograms/34898/34898_300.png",
         "https://static.arasaac.org/pictograms/38752/38752_300.png",
@@ -58,15 +58,16 @@ const vocabularioClima = {
         "https://static.arasaac.org/pictograms/36853/36853_300.png",
         "https://static.arasaac.org/pictograms/36854/36854_300.png",
         "https://static.arasaac.org/pictograms/28027/28027_300.png",
-        "https://static.arasaac.org/pictograms/27644/27644_300.png",
-    ]
+        "https://static.arasaac.org/pictograms/27644/27644_300.png"
+    ],
 
     "termómetro": [
-    "https://static.arasaac.org/pictograms/37478/37478_300.png",
-    "https://static.arasaac.org/pictograms/36848/36848_300.png",
-    "https://static.arasaac.org/pictograms/2789/2789_300.png",
-    "https://static.arasaac.org/pictograms/32051/32051_300.png",
-]
+        "https://static.arasaac.org/pictograms/37478/37478_300.png",
+        "https://static.arasaac.org/pictograms/36848/36848_300.png",
+        "https://static.arasaac.org/pictograms/2789/2789_300.png",
+        "https://static.arasaac.org/pictograms/32051/32051_300.png"
+    ],
+
 
     // ==================== FENÓMENOS NATURALES ====================
 
