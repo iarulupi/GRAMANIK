@@ -7,6 +7,7 @@ const vocabularioBebidas = {
         "https://static.arasaac.org/pictograms/26626/26626_300.png"
     ],
 
+    "limonada": "https://static.arasaac.org/pictograms/6551/6551_300.png",
     "cerveza": [
         "https://static.arasaac.org/pictograms/2330/2330_300.png",
         "https://static.arasaac.org/pictograms/39624/39624_300.png"
