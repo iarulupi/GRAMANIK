@@ -233,10 +233,9 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/24780/24780_300.png",
         "https://static.arasaac.org/pictograms/26314/26314_300.png",
         "https://static.arasaac.org/pictograms/22033/22033_300.png",
-
-        "necesitar":"https://static.arasaac.org/pictograms/37160/37160_300.png",
     ],
 
+     "necesitar":"https://static.arasaac.org/pictograms/37160/37160_300.png",
 
     // ==================== FALTABAN EN TU VOCABULARIO ====================
 
