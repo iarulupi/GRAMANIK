@@ -232,7 +232,9 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/24759/24759_300.png",
         "https://static.arasaac.org/pictograms/24780/24780_300.png",
         "https://static.arasaac.org/pictograms/26314/26314_300.png",
-        "https://static.arasaac.org/pictograms/22033/22033_300.png"
+        "https://static.arasaac.org/pictograms/22033/22033_300.png",
+
+        "necesitar":"https://static.arasaac.org/pictograms/37160/37160_300.png",
     ],
 
 
@@ -280,6 +282,7 @@ Object.assign(pictogramas, vocabularioVerbos);
 let verbosBase = [
     "poner",
     "ponerse",
+    "necesitar",
     "pensar",
     "llamarse",
     "comer",
@@ -2588,6 +2591,30 @@ let verbosConjugados = {
 "va a cruzar": "cruzar",
 "vamos a cruzar": "cruzar",
 "van a cruzar": "cruzar",
+
+// ===== NECESITAR =====
+
+// PRESENTE HABITUAL
+"necesito": "necesitar",
+"necesitas": "necesitar",
+"necesitás": "necesitar",
+"necesita": "necesitar",
+"necesitamos": "necesitar",
+"necesitan": "necesitar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"necesité": "necesitar",
+"necesitaste": "necesitar",
+"necesitó": "necesitar",
+"necesitamos": "necesitar",
+"necesitaron": "necesitar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a necesitar": "necesitar",
+"vas a necesitar": "necesitar",
+"va a necesitar": "necesitar",
+"vamos a necesitar": "necesitar",
+"van a necesitar": "necesitar",
 
 };
 
