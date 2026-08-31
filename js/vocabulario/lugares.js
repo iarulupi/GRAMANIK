@@ -90,6 +90,8 @@ const vocabularioLugares = {
     "clínica": "",
     "consultorio": "",
     "veterinaria": "",
+   "campo": "https://static.arasaac.org/pictograms/2683/2683_300.png",
+   "ciudad": "https://static.arasaac.org/pictograms/2704/2704_300.png",
 
 };
 
