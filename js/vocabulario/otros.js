@@ -20,9 +20,15 @@ const vocabularioOtros = {
     "planta": "https://static.arasaac.org/pictograms/3143/3143_300.png",
     "semilla": "https://static.arasaac.org/pictograms/8689/8689_300.png",
 "flores": "https://static.arasaac.org/pictograms/7105/7105_300.png",
+    "flor":"https://static.arasaac.org/pictograms/7104/7104_300.png",
+    "maceta": "https://static.arasaac.org/pictograms/3126/3126_300.png",
+    
 
  "luna": "https://static.arasaac.org/pictograms/10294/10294_300.png",
-    "Tierra": "https://static.arasaac.org/pictograms/30014/30014_300.png",
+    "Tierra": [
+        "https://static.arasaac.org/pictograms/30014/30014_300.png",
+        "https://static.arasaac.org/pictograms/3126/3126_300.png",
+        ],
     "nave espacial": "https://static.arasaac.org/pictograms/2344/2344_300.png",
 
    
