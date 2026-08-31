@@ -396,6 +396,7 @@ let verbosBase = [
    "llamar",
     "vender",
     "repasar",
+    "enojarse",
 ];
 
 let verbosConjugados = {
@@ -541,6 +542,28 @@ let verbosConjugados = {
 "extinguió": "extinguir",
 "va a extinguir": "extinguir",
 
+// ===== VERBO ENOJARSE =====
+
+// PRESENTE HABITUAL
+"enojo": "enojarse",
+"enojas": "enojarse",
+"enoja": "enojarse",
+"enojamos": "enojarse",
+"enojan": "enojarse",
+
+// PRETÉRITO PERFECTO SIMPLE
+"enojé": "enojarse",
+"enojaste": "enojarse",
+"enojó": "enojarse",
+"enojamos": "enojarse",
+"enojaron": "enojarse",
+
+// FUTURO
+"enojar": "enojarse",
+"enojar": "enojarse",
+"enojar": "enojarse",
+"enojar": "enojarse",
+"enojar": "enojarse",
     
 // == decir ==
 
