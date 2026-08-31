@@ -32,8 +32,16 @@ const vocabularioAdjetivos = {
         "https://static.arasaac.org/pictograms/26090/26090_300.png"
     ],
 
-    "contento": "https://static.arasaac.org/pictograms/31923/31923_300.png",
-    "contenta": "https://static.arasaac.org/pictograms/28647/28647_300.png",
+    "contento": [
+        "https://static.arasaac.org/pictograms/35547/35547_300.png",
+        "https://static.arasaac.org/pictograms/32123/32123_300.png",
+        "https://static.arasaac.org/pictograms/3245/3245_300.png",
+        "https://static.arasaac.org/pictograms/31923/31923_300.png",
+        ],
+    "contenta": [
+        "https://static.arasaac.org/pictograms/39814/39814_300.png",
+"https://static.arasaac.org/pictograms/28647/28647_300.png",
+    ],
 
     "grande": "https://static.arasaac.org/pictograms/4658/4658_300.png",
     "gigante": "https://i.ibb.co/q33pwrHG/Whats-App-Image-2026-04-08-at-6-36-32-PM.jpg",
