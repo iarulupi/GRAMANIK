@@ -84,11 +84,11 @@ const vocabularioAdjetivos = {
         "https://static.arasaac.org/pictograms/31884/31884_300.png",
         "https://static.arasaac.org/pictograms/35539/35539_300.png",
         "https://static.arasaac.org/pictograms/21820/21820_300.png",
-        ]
+        ],
     "enojada": [
         "https://static.arasaac.org/pictograms/31101/31101_300.png",
         "https://static.arasaac.org/pictograms/28671/28671_300.png",
-        ]
+        ],
 
 
     // ==================== ADJETIVOS DEL CLIMA ====================
