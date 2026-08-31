@@ -33,6 +33,11 @@ const vocabularioOtros = {
 
   
     "carpa": "https://static.arasaac.org/pictograms/4756/4756_300.png",
+    
+    "silla": "https://static.arasaac.org/pictograms/3155/3155_300.png",
+    "mesa":"https://static.arasaac.org/pictograms/3129/3129_300.png",
+    
+    "dedo":"https://static.arasaac.org/pictograms/3298/3298_300.png",
 };
 
 Object.assign(pictogramas, vocabularioOtros);
