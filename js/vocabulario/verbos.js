@@ -395,6 +395,7 @@ let verbosBase = [
    "perder",
    "llamar",
     "vender",
+    "repasar",
 ];
 
 let verbosConjugados = {
@@ -564,6 +565,36 @@ let verbosConjugados = {
 "vamos a decir": "decir",
 "van a decir": "decir",
 
+// ===== VERBO REPASAR =====
+
+// PRESENTE HABITUAL
+"repaso": "repasar",
+"repasas": "repasar",
+"repasa": "repasar",
+"repasamos": "repasar",
+"repasan": "repasar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"repasé": "repasar",
+"repasaste": "repasar",
+"repasó": "repasar",
+"repasamos": "repasar",
+"repasaron": "repasar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he repasado": "repasar",
+"has repasado": "repasar",
+"ha repasado": "repasar",
+"hemos repasado": "repasar",
+"han repasado": "repasar",
+
+// FUTURO COMPUESTO
+"voy a repasar": "repasar",
+"vas a repasar": "repasar",
+"va a repasar": "repasar",
+"vamos a repasar": "repasar",
+"van a repasar": "repasar",
+    
 // ===== SER =====
 
 // PRESENTE HABITUAL
