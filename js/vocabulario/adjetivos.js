@@ -66,7 +66,13 @@ const vocabularioAdjetivos = {
     "mala": "https://static.arasaac.org/pictograms/32526/32526_300.png",
 
     "feliz": "https://static.arasaac.org/pictograms/9907/9907_300.png",
-    "triste": "https://static.arasaac.org/pictograms/35545/35545_300.png",
+    
+    "triste": [
+        "https://static.arasaac.org/pictograms/35545/35545_300.png",
+        "https://static.arasaac.org/pictograms/11959/11959_300.png",
+        "https://static.arasaac.org/pictograms/2606/2606_300.png",
+        "https://static.arasaac.org/pictograms/31939/31939_300.png",
+        ],
 
     "rápido": "https://static.arasaac.org/pictograms/37850/37850_300.png",
     "rápida": "https://static.arasaac.org/pictograms/37850/37850_300.png",
