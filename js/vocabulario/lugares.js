@@ -80,7 +80,14 @@ const vocabularioLugares = {
     "casa": "https://static.arasaac.org/pictograms/2317/2317_300.png",
     "cine": "https://static.arasaac.org/pictograms/30387/30387_300.png",
     "pileta": "https://static.arasaac.org/pictograms/3142/3142_300.png",
-    "lugar": "https://static.arasaac.org/pictograms/9819/9819_300.png",
+    "lugar": [
+       "https://static.arasaac.org/pictograms/9819/9819_300.png",
+       "https://static.arasaac.org/pictograms/32598/32598_300.png",
+              ],
+   "lugares": [
+      "https://static.arasaac.org/pictograms/32598/32598_300.png",
+      "https://static.arasaac.org/pictograms/9819/9819_300.png",
+   ],
     "colonia": "https://static.arasaac.org/pictograms/11222/11222_300.png",
     "río": "https://static.arasaac.org/pictograms/2811/2811_300.png",
     "montaña": "https://static.arasaac.org/pictograms/2909/2909_300.png",
