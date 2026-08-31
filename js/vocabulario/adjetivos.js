@@ -78,8 +78,17 @@ const vocabularioAdjetivos = {
     "viejo": "https://static.arasaac.org/pictograms/11394/11394_300.png",
     "vieja": "https://static.arasaac.org/pictograms/11394/11394_300.png",
 
-    "enojado": "",
-    "enojada": "",
+    "enojado": [
+        "https://static.arasaac.org/pictograms/38936/38936_300.png",
+        "https://static.arasaac.org/pictograms/2374/2374_300.png",
+        "https://static.arasaac.org/pictograms/31884/31884_300.png",
+        "https://static.arasaac.org/pictograms/35539/35539_300.png",
+        "https://static.arasaac.org/pictograms/21820/21820_300.png",
+        ]
+    "enojada": [
+        "https://static.arasaac.org/pictograms/31101/31101_300.png",
+        "https://static.arasaac.org/pictograms/28671/28671_300.png",
+        ]
 
 
     // ==================== ADJETIVOS DEL CLIMA ====================
@@ -186,6 +195,11 @@ const vocabularioAdjetivos = {
 
     "antiguo": "https://static.arasaac.org/pictograms/32806/32806_300.png",
     "moderno": "",
+
+    "floreado":"https://static.arasaac.org/pictograms/11264/11264_300.png",
+    "floreada": "https://static.arasaac.org/pictograms/11264/11264_300.png",
+    "rayado": "https://static.arasaac.org/pictograms/7225/7225_300.png",
+    "rayada": "https://static.arasaac.org/pictograms/7225/7225_300.png",
 
     "adelante": "https://i.ibb.co/qFRxYZHT/adelante.jpg",
     "atras": "https://i.ibb.co/217Nv9R7/atras.jpg",
