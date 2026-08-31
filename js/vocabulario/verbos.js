@@ -3,7 +3,7 @@
 // PICTOGRAMAS
 
 const vocabularioVerbos = {
-
+    "batir": "https://static.arasaac.org/pictograms/5924/5924_300.png",
     "llorar": [
         "https://static.arasaac.org/pictograms/7147/7147_300.png",
         "https://static.arasaac.org/pictograms/3239/3239_300.png",
@@ -283,6 +283,7 @@ const vocabularioVerbos = {
 Object.assign(pictogramas, vocabularioVerbos);
 
 let verbosBase = [
+    "batir",
     "poner",
     "ponerse",
     "necesitar",
@@ -795,7 +796,35 @@ let verbosConjugados = {
 "vamos a dictar": "dictar",
 "van a dictar": "dictar",
 
+// ===== BATIR =====
 
+// PRESENTE HABITUAL
+"bato": "batir",
+"bates": "batir",
+"bate": "batir",
+"batimos": "batir",
+"baten": "batir",
+
+// PRETÉRITO PERFECTO SIMPLE
+"batí": "batir",
+"batiste": "batir",
+"batió": "batir",
+"batimos": "batir",
+"batieron": "batir",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he batido": "batir",
+"has batido": "batir",
+"ha batido": "batir",
+"hemos batido": "batir",
+"han batido": "batir",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a batir": "batir",
+"vas a batir": "batir",
+"va a batir": "batir",
+"vamos a batir": "batir",
+"van a batir": "batir",
 // == venir ==
 
 // PRESENTE HABITUAL
