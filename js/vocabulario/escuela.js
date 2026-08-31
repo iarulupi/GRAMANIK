@@ -26,6 +26,7 @@ const vocabularioEscuela = {
     "diálogo": "https://static.arasaac.org/pictograms/23402/23402_300.png",
     "composición": "https://i.ibb.co/XrF4G9mD/composion.jpg",
     "oración": "https://i.ibb.co/Cp0276jq/oracion.jpg",
+     "oraciones": "https://i.ibb.co/Cp0276jq/oracion.jpg",
     "relato": "https://i.ibb.co/MDB0HdKK/relato.jpg",
     "palabra": "https://i.ibb.co/fVkvCxqB/palabra.jpg",
     "párrafo": "https://i.ibb.co/FbZ1SH5C/parrafo.jpg",
