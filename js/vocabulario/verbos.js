@@ -24,7 +24,11 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/31839/31839_300.png"
     ],
 
-    "poner": "",
+    "poner": [ 
+        "https://static.arasaac.org/pictograms/6989/6989_300.png",
+        "https://static.arasaac.org/pictograms/32757/32757_300.png",
+        "https://static.arasaac.org/pictograms/6627/6627_300.png",
+              ],
     "ponerse": "https://static.arasaac.org/pictograms/6627/6627_300.png",
 
     "pensar": "https://static.arasaac.org/pictograms/38796/38796_300.png",
