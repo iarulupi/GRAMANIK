@@ -472,7 +472,7 @@ const vocabularioComidas = {
         "https://static.arasaac.org/pictograms/36988/36988_300.png"
     ],
 
-    "miel": "https://static.arasaac.org/pictograms/2832/2832_300.png"
+    "miel": "https://static.arasaac.org/pictograms/2911/2911_300.png"
 
 };
 
