@@ -323,6 +323,8 @@ let adjetivos = [
     "próximos",
     "pasado",
     "pasados",
+    "pasada",
+    "pasadas",
     
     "gordo",
     "gorda",
