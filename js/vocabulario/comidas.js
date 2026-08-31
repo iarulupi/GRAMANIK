@@ -203,6 +203,7 @@ const vocabularioComidas = {
         "https://static.arasaac.org/pictograms/2995/2995_300.png"
     ],
 
+    "pionono": "https://static.arasaac.org/pictograms/32476/32476_300.png",
 
     // ==================== COMIDAS PRINCIPALES ====================
 
@@ -473,7 +474,11 @@ const vocabularioComidas = {
     ],
 
     "miel": "https://static.arasaac.org/pictograms/2911/2911_300.png"
-
+        
+"receta": "https://static.arasaac.org/pictograms/7805/7805_300.png",
+    "ingredientes": "https://static.arasaac.org/pictograms/24119/24119_300.png",
+    "lista": "https://static.arasaac.org/pictograms/7144/7144_300.png",
+"bowl": "https://static.arasaac.org/pictograms/3257/3257_300.png",
 };
 
 Object.assign(pictogramas, vocabularioComidas);
