@@ -46,7 +46,7 @@ const vocabularioComidas = {
     ],
     "duraznos": "https://static.arasaac.org/pictograms/2468/2468_300.png",
 
-    "frutilla": "",
+    "frutilla": "https://static.arasaac.org/pictograms/2400/2400_300.png",
     "frutillas": "https://static.arasaac.org/pictograms/2400/2400_300.png",
 
     "uva": [
