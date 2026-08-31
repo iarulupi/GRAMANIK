@@ -473,7 +473,7 @@ const vocabularioComidas = {
         "https://static.arasaac.org/pictograms/36988/36988_300.png"
     ],
 
-    "miel": "https://static.arasaac.org/pictograms/2911/2911_300.png"
+    "miel": "https://static.arasaac.org/pictograms/2911/2911_300.png",
         
 "receta": "https://static.arasaac.org/pictograms/7805/7805_300.png",
     "ingredientes": "https://static.arasaac.org/pictograms/24119/24119_300.png",
