@@ -200,6 +200,8 @@ const vocabularioAdjetivos = {
     "floreada": "https://static.arasaac.org/pictograms/11264/11264_300.png",
     "rayado": "https://static.arasaac.org/pictograms/7225/7225_300.png",
     "rayada": "https://static.arasaac.org/pictograms/7225/7225_300.png",
+    "rayados": "https://static.arasaac.org/pictograms/7225/7225_300.png",
+    "rayadas": "https://static.arasaac.org/pictograms/7225/7225_300.png",
 
     "adelante": "https://i.ibb.co/qFRxYZHT/adelante.jpg",
     "atras": "https://i.ibb.co/217Nv9R7/atras.jpg",
