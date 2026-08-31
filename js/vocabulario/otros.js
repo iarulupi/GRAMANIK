@@ -27,7 +27,7 @@ const vocabularioOtros = {
  "luna": "https://static.arasaac.org/pictograms/10294/10294_300.png",
     "Tierra": [
         "https://static.arasaac.org/pictograms/30014/30014_300.png",
-        "https://static.arasaac.org/pictograms/3126/3126_300.png",
+        "https://static.arasaac.org/pictograms/3160/3160_300.png",
         ],
     "nave espacial": "https://static.arasaac.org/pictograms/2344/2344_300.png",
 
