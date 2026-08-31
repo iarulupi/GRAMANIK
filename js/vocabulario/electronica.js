@@ -146,15 +146,19 @@ const vocabularioElectronica = {
 
     "aire acondicionado": "",
 
-    "microondas": "",
+    "microondas": "https://static.arasaac.org/pictograms/2473/2473_300.png",
 
-    "heladera": "",
+    "heladera": "https://static.arasaac.org/pictograms/4876/4876_300.png",
 
     "freezer": "",
 
     "lavarropas": "",
 
     "secador de pelo": "",
+
+    "batidora": "https://static.arasaac.org/pictograms/2274/2274_300.png",
+
+    "horno": "https://static.arasaac.org/pictograms/10135/10135_300.png", 
 
     // ==================== PARTES Y ELEMENTOS ====================
 
