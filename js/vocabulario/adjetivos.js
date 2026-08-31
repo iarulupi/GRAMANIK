@@ -270,6 +270,10 @@ let adjetivos = [
     "vieja",
     "enojado",
     "enojada",
+    "rayadas",
+    "rayada",
+    "floreadas",
+    "floreada",
 
 
     // ==================== ADJETIVOS DEL CLIMA ====================
