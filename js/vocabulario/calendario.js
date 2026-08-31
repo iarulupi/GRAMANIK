@@ -107,6 +107,10 @@ const vocabularioCalendario = {
 
     "mes": "https://static.arasaac.org/pictograms/37724/37724_300.png",
 
+"semana pasada":"https://static.arasaac.org/pictograms/39735/39735_300.png",
+    "semana próxima":"https://static.arasaac.org/pictograms/39736/39736_300.png",
+    "próxima semana":"https://static.arasaac.org/pictograms/39736/39736_300.png",
+    
     "semana": [
         "https://static.arasaac.org/pictograms/37732/37732_300.png",
         "https://static.arasaac.org/pictograms/7244/7244_300.png",
