@@ -22,7 +22,16 @@ const vocabularioEscuela = {
     "rectángulo": "https://static.arasaac.org/pictograms/4731/4731_300.png",
     "círculo": "https://static.arasaac.org/pictograms/4603/4603_300.png",
 
-    "noticia": "",
+    "noticia": [
+        "https://static.arasaac.org/pictograms/6517/6517_300.png",
+        "https://static.arasaac.org/pictograms/7784/7784_300.png",
+        "https://static.arasaac.org/pictograms/8229/8229_300.png",
+        "https://static.arasaac.org/pictograms/35389/35389_300.png",
+        ],
+    "información": [
+        "https://static.arasaac.org/pictograms/2845/2845_300.png",
+        "https://static.arasaac.org/pictograms/2845/2845_300.png",
+        ],
     "diálogo": "https://static.arasaac.org/pictograms/23402/23402_300.png",
     "composición": "https://i.ibb.co/XrF4G9mD/composion.jpg",
     "oración": "https://i.ibb.co/Cp0276jq/oracion.jpg",
