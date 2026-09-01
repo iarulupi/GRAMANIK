@@ -1228,8 +1228,6 @@ let verbosConjugados = {
 // == unir ==
 
 // PRESENTE HABITUAL
-"uno": "unir",
-"unes": "unir",
 "une": "unir",
 "unimos": "unir",
 "unen": "unir",
