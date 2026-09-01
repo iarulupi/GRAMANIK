@@ -28,10 +28,7 @@ const vocabularioEscuela = {
         "https://static.arasaac.org/pictograms/8229/8229_300.png",
         "https://static.arasaac.org/pictograms/35389/35389_300.png",
         ],
-    "información": [
-        "https://static.arasaac.org/pictograms/2845/2845_300.png",
-        "https://static.arasaac.org/pictograms/2845/2845_300.png",
-        ],
+    "información":"https://static.arasaac.org/pictograms/2845/2845_300.png",
     "diálogo": "https://static.arasaac.org/pictograms/23402/23402_300.png",
     "composición": "https://i.ibb.co/XrF4G9mD/composion.jpg",
     "oración": "https://i.ibb.co/Cp0276jq/oracion.jpg",
