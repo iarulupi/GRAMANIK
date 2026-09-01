@@ -65,7 +65,14 @@ const vocabularioNegocios = {
         "https://static.arasaac.org/pictograms/3255/3255_300.png",
         ],
     "correo": "https://static.arasaac.org/pictograms/3086/3086_300.png",
-    
+    "veterinaria": [
+        "https://static.arasaac.org/pictograms/38623/38623_300.png",
+        "https://static.arasaac.org/pictograms/2780/2780_300.png",
+        ],
+    "veterinario": [
+        "https://static.arasaac.org/pictograms/11392/11392_300.png",
+        "https://static.arasaac.org/pictograms/38623/38623_300.png",
+        ],
 
     "estación de servicio": [
         "https://static.arasaac.org/pictograms/38336/38336_300.png",
