@@ -4,140 +4,104 @@ const vocabularioDeportes = {
 
     // ==================== GENERAL ====================
 
-    "deporte": "",
-    "deportes": "",
+    "deporte": "https://static.arasaac.org/pictograms/7010/7010_300.png",
+    "deportes": "https://static.arasaac.org/pictograms/7010/7010_300.png",
 
-    "equipo": "",
-    "equipos": "",
+    "equipo": [
+        "https://static.arasaac.org/pictograms/15264/15264_300.png",
+        "https://static.arasaac.org/pictograms/15262/15262_300.png",
+        "https://static.arasaac.org/pictograms/39791/39791_300.png",
+        ],
+    "equipos": "https://static.arasaac.org/pictograms/26821/26821_300.png",
 
-    "jugador": "",
-    "jugadora": "",
-    "jugadores": "",
-    "jugadoras": "",
+    "jugador": "https://static.arasaac.org/pictograms/39276/39276_300.png",
+    "jugadora": "https://static.arasaac.org/pictograms/39279/39279_300.png",
+    "jugadores": "https://static.arasaac.org/pictograms/15264/15264_300.png",
+    "jugadoras": "https://static.arasaac.org/pictograms/15262/15262_300.png",
 
-    "entrenador": "",
-    "entrenadora": "",
+    "entrenador": "https://static.arasaac.org/pictograms/5991/5991_300.png",
+    "entrenadora": "https://static.arasaac.org/pictograms/36529/36529_300.png",
 
-    "árbitro": "",
-    "árbitra": "",
+    "árbitro": "https://static.arasaac.org/pictograms/4564/4564_300.png",
+    "árbitra": "https://static.arasaac.org/pictograms/11181/11181_300.png",
 
-    "partido": "",
-    "partidos": "",
+    "partido": "https://static.arasaac.org/pictograms/6170/6170_300.png",
+    "partidos": "https://static.arasaac.org/pictograms/6170/6170_300.png",
 
-    "competencia": "",
-    "competencias": "",
-
-    "torneo": "",
-    "torneos": "",
-
-    "campeonato": "",
-    "campeonatos": "",
-
-    "copa": "",
-    "medalla": "",
-    "medallas": "",
-    "trofeo": "",
-    "trofeos": "",
+    "copa": [
+        "https://static.arasaac.org/pictograms/3162/3162_300.png",
+        "https://static.arasaac.org/pictograms/2356/2356_300.png",
+        ],
+    "medalla": "https://static.arasaac.org/pictograms/3128/3128_300.png",
+    "medallas": "https://static.arasaac.org/pictograms/3128/3128_300.png",
+    "trofeo": "https://static.arasaac.org/pictograms/3162/3162_300.png",
+    "trofeos": "https://static.arasaac.org/pictograms/3162/3162_300.png",
 
     // ==================== FÚTBOL ====================
 
-    "fútbol": "",
+    "fútbol": "https://static.arasaac.org/pictograms/35255/35255_300.png",
 
-    "futbolista": "",
-    "futbolistas": "",
+    "futbolista": [
+        "https://static.arasaac.org/pictograms/3199/3199_300.png",
+        "https://static.arasaac.org/pictograms/36229/36229_300.png",
+        ],
+    "futbolistas": "https://static.arasaac.org/pictograms/26821/26821_300.png",
 
-    "pelota de fútbol": "",
+    "arco": "https://static.arasaac.org/pictograms/2535/2535_300.png",
+    "arcos": "https://static.arasaac.org/pictograms/2535/2535_300.png",
 
-    "arco": "",
-    "arcos": "",
+    "arquera": "https://static.arasaac.org/pictograms/39837/39837_300.png",
+    "arquero": "https://static.arasaac.org/pictograms/9015/9015_300.png",
 
-    "arquero": "",
-    "arquera": "",
+    "gol": "https://static.arasaac.org/pictograms/6007/6007_300.png",
+    "goles": "https://static.arasaac.org/pictograms/6007/6007_300.png",
 
-    "gol": "",
-    "goles": "",
+    "penal": "https://static.arasaac.org/pictograms/27021/27021_300.png",
+    "penales": "https://static.arasaac.org/pictograms/27021/27021_300.png",
 
-    "penal": "",
-    "penales": "",
-
-    "cancha de fútbol": "",
-
-    "camiseta de fútbol": "",
-
-    "botines": "",
+    "cancha": "https://static.arasaac.org/pictograms/6186/6186_300.png",
 
     // ==================== BÁSQUET ====================
 
     "básquet": "",
-    "básquetbol": "",
-
-    "pelota de básquet": "",
-
-    "aro de básquet": "",
-
-    "cancha de básquet": "",
 
     // ==================== VÓLEY ====================
 
-    "vóley": "",
-    "voleibol": "",
-
-    "pelota de vóley": "",
-
-    "red de vóley": "",
-
-    "cancha de vóley": "",
+    "vóley": "https://static.arasaac.org/pictograms/10167/10167_300.png",
 
     // ==================== TENIS ====================
 
-    "tenis": "",
-
-    "tenista": "",
-    "tenistas": "",
+    "tenis": "https://static.arasaac.org/pictograms/10158/10158_300.png",
 
     "raqueta": "",
     "raquetas": "",
 
-    "pelota de tenis": "",
-
-    "cancha de tenis": "",
-
     // ==================== PÁDEL ====================
 
-    "pádel": "",
+    "pádel": "https://static.arasaac.org/pictograms/28609/28609_300.png",
 
-    "paleta de pádel": "",
-    "pelota de pádel": "",
 
     // ==================== HOCKEY ====================
 
-    "hockey": "",
+    "hockey": "https://static.arasaac.org/pictograms/10161/10161_300.png",
 
     "palo de hockey": "",
-    "pelota de hockey": "",
-
-    "cancha de hockey": "",
-
+   
     // ==================== HANDBALL ====================
 
-    "handball": "",
-    "balonmano": "",
-
-    "pelota de handball": "",
+    "handball": "https://static.arasaac.org/pictograms/10159/10159_300.png",
 
     // ==================== RUGBY ====================
 
-    "rugby": "",
-
-    "pelota de rugby": "",
+    "rugby": "https://static.arasaac.org/pictograms/21949/21949_300.png",
 
     // ==================== NATACIÓN ====================
 
     "natación": "",
 
-    "nadador": "",
+    "nadador": "https://static.arasaac.org/pictograms/28703/28703_300.png",
     "nadadora": "",
-    "nadadores": "",
+    "nadadores": "https://static.arasaac.org/pictograms/28703/28703_300.png",
     "nadadoras": "",
 
     "pileta": "",
@@ -154,18 +118,9 @@ const vocabularioDeportes = {
     "carrera": "",
     "carreras": "",
 
-    "maratón": "",
-
-    "salto en largo": "",
-    "salto en alto": "",
-
-    "lanzamiento": "",
-
     // ==================== GIMNASIA ====================
 
     "gimnasia": "",
-    "gimnasia artística": "",
-    "gimnasia rítmica": "",
 
     "gimnasta": "",
     "gimnastas": "",
@@ -186,10 +141,9 @@ const vocabularioDeportes = {
 
     "patinaje": "",
     "patín": "",
-    "patines": "",
 
     "patinador": "",
-    "patinadora": "",
+    "patinadora": "https://static.arasaac.org/pictograms/3213/3213_300.png",
 
     // ==================== BOXEO ====================
 
@@ -212,72 +166,19 @@ const vocabularioDeportes = {
 
     "karateca": "",
 
-    // ==================== DEPORTES DE MESA ====================
-
-    "ping pong": "",
-    "tenis de mesa": "",
-
-    "paleta de ping pong": "",
-    "pelota de ping pong": "",
-
     // ==================== DEPORTES ACUÁTICOS ====================
 
     "surf": "",
     "tabla de surf": "",
 
-    "remo": "",
-    "remo deportivo": "",
-
-    "kayak": "",
-
-    "vela": "",
-
-    // ==================== DEPORTES DE INVIERNO ====================
-
-    "esquí": "",
-    "esquiador": "",
-    "esquiadora": "",
-
-    "snowboard": "",
 
     // ==================== OTROS DEPORTES ====================
 
-    "golf": "",
-    "palo de golf": "",
-    "pelota de golf": "",
-
-    "béisbol": "",
-    "bate": "",
-    "pelota de béisbol": "",
-
-    "softbol": "",
-
-    "equitación": "",
-    "caballo": "",
-
-    "escalada": "",
-
-    "skate": "",
-    "skateboard": "",
+    "golf": "https://static.arasaac.org/pictograms/10160/10160_300.png",
 
     // ==================== ELEMENTOS DEPORTIVOS ====================
 
-    "pelota": "",
-    "pelotas": "",
-
-    "red": "",
-    "redes": "",
-
-    "cono": "",
-    "conos": "",
-
     "silbato": "",
-
-    "pechera": "",
-    "pecheras": "",
-
-    "colchoneta": "",
-    "colchonetas": "",
 
     "soga": "",
     "sogas": "",
@@ -286,14 +187,6 @@ const vocabularioDeportes = {
     "aros": "",
 
     // ==================== LUGARES ====================
-
-    "cancha": "",
-    "canchas": "",
-
-    "estadio": "",
-    "estadios": "",
-
-    "gimnasio": "",
 
     "vestuario": "",
     "vestuarios": "",
