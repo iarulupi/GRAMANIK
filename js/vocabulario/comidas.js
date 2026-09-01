@@ -6,6 +6,8 @@ const vocabularioComidas = {
 
     "comida": "https://static.arasaac.org/pictograms/4610/4610_300.png",
     "comidas": "https://static.arasaac.org/pictograms/4610/4610_300.png",
+    "alimento": "https://static.arasaac.org/pictograms/4610/4610_300.png",
+    "alimentos": "https://static.arasaac.org/pictograms/4610/4610_300.png",
 
     "desayuno": "https://static.arasaac.org/pictograms/4626/4626_300.png",
 
