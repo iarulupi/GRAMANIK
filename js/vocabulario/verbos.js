@@ -1,4 +1,4 @@
-// ==================== VERBOS ====================
+,// ==================== VERBOS ====================
 
 // PICTOGRAMAS
 
@@ -44,6 +44,8 @@ const vocabularioVerbos = {
     ],
 
     "luchar": "https://i.ibb.co/1YCwJ05D/file-000000009fe8820e8825f8d9599d5832.png",
+
+    "crear": "https://static.arasaac.org/pictograms/6531/6531_300.png",
 
     "morir": "https://static.arasaac.org/pictograms/29863/29863_300.png",
 
@@ -408,6 +410,7 @@ let verbosBase = [
     "vender",
     "repasar",
     "enojarse",
+    "crear",
 ];
 
 let verbosConjugados = {
@@ -676,6 +679,36 @@ let verbosConjugados = {
 "vamos a estar": "estar",
 "van a estar": "estar",
 
+// ===== VERBO CREAR =====
+
+// PRESENTE HABITUAL
+"creo": "crear",
+"creas": "crear",
+"crea": "crear",
+"creamos": "crear",
+"crean": "crear",
+
+// PRETÉRITO PERFECTO SIMPLE
+"creé": "crear",
+"creaste": "crear",
+"creó": "crear",
+"creamos": "crear",
+"crearon": "crear",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he creado": "crear",
+"has creado": "crear",
+"ha creado": "crear",
+"hemos creado": "crear",
+"han creado": "crear",
+
+// FUTURO
+"voy a crear": "crear",
+"vas a crear": "crear",
+"va a crear": "crear",
+"vamos a crear": "crear",
+"van a crear": "crear",
+    
 // ==================== VERBO GANAR ====================
 
 // PRESENTE HABITUAL
