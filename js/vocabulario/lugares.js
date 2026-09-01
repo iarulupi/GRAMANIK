@@ -60,6 +60,7 @@ const vocabularioLugares = {
     // ==================== LUGARES ====================
 
     "escuela": "https://static.arasaac.org/pictograms/3082/3082_300.png",
+   "escuelas": "https://static.arasaac.org/pictograms/3082/3082_300.png",
     "plaza": "https://static.arasaac.org/pictograms/2859/2859_300.png",
     "casa": "https://static.arasaac.org/pictograms/2317/2317_300.png",
     "cine": "https://static.arasaac.org/pictograms/30387/30387_300.png",
