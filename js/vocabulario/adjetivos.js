@@ -6,6 +6,17 @@ const vocabularioAdjetivos = {
 
     "adjetivos": "https://static.arasaac.org/pictograms/32584/32584_300.png",
 
+    "uno": "https://static.arasaac.org/pictograms/4889/4889_300.png",
+    "dos": "https://static.arasaac.org/pictograms/4890/4890_300.png",
+    "tres": "https://static.arasaac.org/pictograms/4891/4891_300.png",
+    "cuatro": "https://static.arasaac.org/pictograms/4892/4892_300.png",
+    "cinco": "https://static.arasaac.org/pictograms/4893/4893_300.png",
+    "seis": "https://static.arasaac.org/pictograms/4894/4894_300.png",
+    "siete": "https://static.arasaac.org/pictograms/4895/4895_300.png",
+    "ocho": "https://static.arasaac.org/pictograms/4896/4896_300.png",
+    "nueve": "https://static.arasaac.org/pictograms/4897/4897_300.png",
+    "diez": "https://static.arasaac.org/pictograms/7025/7025_300.png",
+
     "bien": "https://static.arasaac.org/pictograms/5397/5397_300.png",
     "mal": "https://static.arasaac.org/pictograms/5504/5504_300.png",
 
