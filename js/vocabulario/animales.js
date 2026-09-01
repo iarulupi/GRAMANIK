@@ -2,7 +2,10 @@
 
 const vocabularioAnimales = {
     "animales": "https://static.arasaac.org/pictograms/6901/6901_300.png",
-    "animal": "https://static.arasaac.org/pictograms/8025/8025_300.png",
+    "animal": [
+        "https://static.arasaac.org/pictograms/8025/8025_300.png",
+        "https://static.arasaac.org/pictograms/6901/6901_300.png",
+        ],
     "pez": "https://static.arasaac.org/pictograms/2520/2520_300.png",
      "vaca": "https://static.arasaac.org/pictograms/2609/2609_300.png",
     "toro": "https://static.arasaac.org/pictograms/2595/2595_300.png",
