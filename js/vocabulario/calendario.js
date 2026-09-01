@@ -163,6 +163,11 @@ const vocabularioCalendario = {
 
     "reloj": "https://static.arasaac.org/pictograms/7229/7229_300.png",
 
+    "en punto": "https://i.ibb.co/SDXbmzzF/Chat-GPT-Image-1-sept-2026-12-21-11-a-m.png",
+    "y cuarto": "https://i.ibb.co/dsRCRGbN/Chat-GPT-Image-1-sept-2026-12-23-45-a-m.png",
+    "y media": "https://i.ibb.co/HD8VZGnY/Chat-GPT-Image-1-sept-2026-12-16-41-a-m.png",
+    "menos cuarto": "https://i.ibb.co/XxqvLnJX/Chat-GPT-Image-1-sept-2026-12-19-17-a-m.png",
+
     "tarde": [
         "https://static.arasaac.org/pictograms/37780/37780_300.png",
         "https://static.arasaac.org/pictograms/7268/7268_300.png"
