@@ -90,7 +90,17 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/26002/26002_300.png"
     ],
 
-    "lavar": "https://static.arasaac.org/pictograms/34826/34826_300.png",
+    "lavar": [
+        "https://static.arasaac.org/pictograms/34826/34826_300.png",
+        "https://static.arasaac.org/pictograms/8977/8977_300.png",
+        "https://static.arasaac.org/pictograms/5496/5496_300.png",
+        "https://static.arasaac.org/pictograms/34777/34777_300.png",
+        "https://static.arasaac.org/pictograms/8616/8616_300.png",
+        "https://static.arasaac.org/pictograms/38611/38611_300.png",
+        "https://static.arasaac.org/pictograms/39545/39545_300.png",
+        "https://static.arasaac.org/pictograms/6971/6971_300.png",
+        "https://static.arasaac.org/pictograms/36552/36552_300.png",
+        ],
 
     "ir": "https://static.arasaac.org/pictograms/8142/8142_300.png",
 
