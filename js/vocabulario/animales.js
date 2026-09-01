@@ -41,6 +41,7 @@ const vocabularioAnimales = {
         "https://static.arasaac.org/pictograms/27627/27627_300.png"
     ],
 
+    "jirafa":"https://static.arasaac.org/pictograms/2437/2437_300.png",
     "serpiente": "https://static.arasaac.org/pictograms/2568/2568_300.png",
     "anaconda": "https://static.arasaac.org/pictograms/38634/38634_300.png",
     "loro": "https://static.arasaac.org/pictograms/2562/2562_300.png",
