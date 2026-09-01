@@ -7,9 +7,6 @@ const vocabularioElectronica = {
     "dispositivo electrónico": "https://static.arasaac.org/pictograms/34906/34906_300.png",
     "dispositivos electrónicos": "https://static.arasaac.org/pictograms/34906/34906_300.png",
 
-    "tecnología": "",
-    "electrónica": "",
-
     // ==================== COMPUTADORAS ====================
 
     "computadora": "https://static.arasaac.org/pictograms/7190/7190_300.png",
@@ -18,40 +15,38 @@ const vocabularioElectronica = {
     "notebook": "https://static.arasaac.org/pictograms/7214/7214_300.png",
     "notebooks": "https://static.arasaac.org/pictograms/7214/7214_300.png",
 
-    "monitor": "",
-    "monitores": "",
+    "monitor": "https://static.arasaac.org/pictograms/25498/25498_300.png",
+    "monitores": "https://static.arasaac.org/pictograms/25498/25498_300.png",
 
-    "pantalla": "",
-    "pantallas": "",
+    "pantalla": "https://static.arasaac.org/pictograms/25498/25498_300.png",
+    "pantallas": "https://static.arasaac.org/pictograms/25498/25498_300.png",
 
-    "teclado": "",
-    "teclados": "",
+    "teclado": "https://static.arasaac.org/pictograms/2793/2793_300.png",
+    "teclados": "https://static.arasaac.org/pictograms/2793/2793_300.png",
 
-    "mouse": "",
-    "ratón": "",
+    "mouse": "https://static.arasaac.org/pictograms/2820/2820_300.png",
 
-    "impresora": "",
-    "impresoras": "",
+    "impresora": "https://static.arasaac.org/pictograms/2970/2970_300.png",
+    "impresoras": "https://static.arasaac.org/pictograms/2970/2970_300.png",
 
-    "parlante": "",
-    "parlantes": "",
+    "parlante": "https://static.arasaac.org/pictograms/37438/37438_300.png",
+    "parlantes": "https://static.arasaac.org/pictograms/37438/37438_300.png",
 
-    "auricular": "",
-    "auriculares": "",
+    "auriculares": [
+        "https://static.arasaac.org/pictograms/11208/11208_300.png",
+        "https://static.arasaac.org/pictograms/5915/5915_300.png",
+        ],
 
-    "micrófono": "",
-    "micrófonos": "",
-
-    "cámara web": "",
-    "webcam": "",
+    "micrófono": "https://static.arasaac.org/pictograms/37404/37404_300.png",
+    "micrófonos": "https://static.arasaac.org/pictograms/37404/37404_300.png",
 
     // ==================== CELULARES Y TABLETS ====================
 
     "celular": "https://static.arasaac.org/pictograms/25269/25269_300.png",
     "celulares": "https://static.arasaac.org/pictograms/25269/25269_300.png",
 
-    "teléfono": "",
-    "teléfonos": "",
+    "teléfono": "https://static.arasaac.org/pictograms/26479/26479_300.png",
+    "teléfonos": "https://static.arasaac.org/pictograms/26479/26479_300.png",
 
     "teléfono celular": "https://static.arasaac.org/pictograms/25269/25269_300.png",
 
@@ -66,75 +61,48 @@ const vocabularioElectronica = {
     "televisión": "https://static.arasaac.org/pictograms/25498/25498_300.png",
     "tele": "https://static.arasaac.org/pictograms/25498/25498_300.png",
 
-    "control remoto": "",
-    "controles remotos": "",
+    "control remoto": "https://static.arasaac.org/pictograms/11299/11299_300.png",
+    "controles remotos": "https://static.arasaac.org/pictograms/11299/11299_300.png",
 
     // ==================== AUDIO ====================
 
-    "radio": "",
-
-    "equipo de música": "",
-
-    "grabador": "",
+    "radio": "https://static.arasaac.org/pictograms/11354/11354_300.png",
 
     // ==================== VIDEO Y FOTOGRAFÍA ====================
 
-    "cámara": "",
-    "cámaras": "",
+    "cámara": "https://static.arasaac.org/pictograms/2680/2680_300.png",
+    "cámaras": "https://static.arasaac.org/pictograms/2680/2680_300.png",
 
-    "cámara de fotos": "",
-    "cámara de video": "",
+    "cámara de fotos": "https://static.arasaac.org/pictograms/2680/2680_300.png",
+    "cámara de video": "https://static.arasaac.org/pictograms/3409/3409_300.png",
 
-    // ==================== VIDEOJUEGOS ====================
-
-    "videojuego": "",
-    "videojuegos": "",
-
-    "consola": "",
-    "consolas": "",
-
-    "joystick": "",
-    "joysticks": "",
-
-    "control": "",
-    "controles": "",
-
+    
     // ==================== INTERNET ====================
 
-    "internet": "",
-    "wifi": "",
-    "wi-fi": "",
+    "internet": "https://static.arasaac.org/pictograms/5492/5492_300.png",
+    "wifi": "https://static.arasaac.org/pictograms/35503/35503_300.png",
+    "wi-fi": "https://static.arasaac.org/pictograms/35503/35503_300.png",
 
-    "router": "",
 
     // ==================== ACCESORIOS ====================
 
-    "cargador": "",
-    "cargadores": "",
+    "cargador": "https://static.arasaac.org/pictograms/27651/27651_300.png",
+    "cargadores": "https://static.arasaac.org/pictograms/27651/27651_300.png",
 
-    "cable": "",
-    "cables": "",
+    "cable": "https://static.arasaac.org/pictograms/6948/6948_300.png",
+    "cables": "https://static.arasaac.org/pictograms/6948/6948_300.png",
 
-    "enchufe": "",
-    "enchufes": "",
+    "enchufe": "https://static.arasaac.org/pictograms/2373/2373_300.png",
+    "enchufes": "https://static.arasaac.org/pictograms/2373/2373_300.png",
 
-    "adaptador": "",
-    "adaptadores": "",
+    "pendrive": "https://static.arasaac.org/pictograms/9800/9800_300.png",
+    "pendrives": "https://static.arasaac.org/pictograms/9800/9800_300.png",
 
-    "pendrive": "",
-    "pendrives": "",
+    "batería": "https://static.arasaac.org/pictograms/24282/24282_300.png",
+    "baterías": "https://static.arasaac.org/pictograms/24282/24282_300.png",
 
-    "memoria": "",
-    "tarjeta de memoria": "",
-
-    "disco rígido": "",
-    "disco externo": "",
-
-    "batería": "",
-    "baterías": "",
-
-    "pila": "",
-    "pilas": "",
+    "pila": "https://static.arasaac.org/pictograms/8320/8320_300.png",
+    "pilas": "https://static.arasaac.org/pictograms/3141/3141_300.png",
 
     // ==================== HOGAR ====================
 
@@ -144,32 +112,20 @@ const vocabularioElectronica = {
     "ventilador": "https://static.arasaac.org/pictograms/2612/2612_300.png",
     "ventiladores": "https://static.arasaac.org/pictograms/2612/2612_300.png",
 
-    "aire acondicionado": "",
+    "aire acondicionado": "https://static.arasaac.org/pictograms/2640/2640_300.png",
 
     "microondas": "https://static.arasaac.org/pictograms/2473/2473_300.png",
 
     "heladera": "https://static.arasaac.org/pictograms/4876/4876_300.png",
 
-    "freezer": "",
+    "lavarropas": "https://static.arasaac.org/pictograms/2442/2442_300.png",
 
-    "lavarropas": "",
-
-    "secador de pelo": "",
+    "secador de pelo": "https://static.arasaac.org/pictograms/2560/2560_300.png",
 
     "batidora": "https://static.arasaac.org/pictograms/2274/2274_300.png",
 
     "horno": "https://static.arasaac.org/pictograms/10135/10135_300.png", 
 
-    // ==================== PARTES Y ELEMENTOS ====================
-
-    "botón": "",
-    "botones": "",
-
-    "tecla": "",
-    "teclas": "",
-
-    "batería": "",
-    "baterías": ""
 
 };
 
