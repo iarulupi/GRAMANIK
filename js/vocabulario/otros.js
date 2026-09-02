@@ -93,8 +93,13 @@ const vocabularioOtros = {
     "cuchara": [
         "https://static.arasaac.org/pictograms/2362/2362_300.png",
         "https://static.arasaac.org/pictograms/9086/9086_300.png"
-    ]
+    ],
 
+    "sopresa": [
+        "https://static.arasaac.org/pictograms/35565/35565_300.png",
+    "https://static.arasaac.org/pictograms/8517/8517_300.png",
+],
+    
 };
 
 Object.assign(pictogramas, vocabularioOtros);
