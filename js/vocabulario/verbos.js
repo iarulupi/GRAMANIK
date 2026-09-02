@@ -447,6 +447,8 @@ let verbosConjugados = {
 "leé": "leer",
 "pensá": "pensar",
 "cortá": "cortar",
+"guardá": "guardar",
+"poné": "poner",
 
 // ===== FRASES VERBALES =====
 
