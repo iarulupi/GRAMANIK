@@ -135,39 +135,88 @@ const palabrasAmbiguas = {
         }
     ],
 
+    "sobre": [
+        {
+            tipo: "preposicion",
+            etiqueta: "PREPOSICIÓN",
+            base: "sobre",
+            picto: "sobre preposicion"
+        },
+        {
+            tipo: "sustantivo",
+            etiqueta: "SUSTANTIVO",
+            base: "sobre",
+            picto: "sobre sustantivo"
+        }
+    ],
+
     "me": [
-        { tipo: "reflexivo", etiqueta: "REFLEXIVO" },
-        { tipo: "pronombre", etiqueta: "PRONOMBRE" }
+        {
+            tipo: "reflexivo",
+            etiqueta: "REFLEXIVO"
+        },
+        {
+            tipo: "pronombre",
+            etiqueta: "PRONOMBRE"
+        }
     ],
 
     "te": [
-        { tipo: "reflexivo", etiqueta: "REFLEXIVO" },
-        { tipo: "pronombre", etiqueta: "PRONOMBRE" }
+        {
+            tipo: "reflexivo",
+            etiqueta: "REFLEXIVO"
+        },
+        {
+            tipo: "pronombre",
+            etiqueta: "PRONOMBRE"
+        }
     ],
 
     "se": [
-        { tipo: "reflexivo", etiqueta: "REFLEXIVO" },
-        { tipo: "pronombre", etiqueta: "PRONOMBRE" }
+        {
+            tipo: "reflexivo",
+            etiqueta: "REFLEXIVO"
+        },
+        {
+            tipo: "pronombre",
+            etiqueta: "PRONOMBRE"
+        }
     ],
 
     "nos": [
-        { tipo: "reflexivo", etiqueta: "REFLEXIVO" },
-        { tipo: "pronombre", etiqueta: "PRONOMBRE" }
+        {
+            tipo: "reflexivo",
+            etiqueta: "REFLEXIVO"
+        },
+        {
+            tipo: "pronombre",
+            etiqueta: "PRONOMBRE"
+        }
     ]
 
 };
+
+
+// ==================== ELECCIONES AMBIGUAS ====================
+
 const eleccionesAmbiguas = {};
+
 
 function obtenerOpcionesAmbiguas(palabra) {
     const exacta = normalizarTextoExacto(palabra);
     return palabrasAmbiguas[exacta] || null;
 }
 
+
 function claveAparicionAmbigua(indiceLinea, indicePalabra, palabra) {
     return `${indiceLinea}:${indicePalabra}:${normalizarTextoExacto(palabra)}`;
 }
 
+
+// ==================== SELECTOR DE AMBIGÜEDAD ====================
+
 function crearSelectorAmbiguedad(opciones, seleccionActual, alCambiar) {
+
     const contenedor = document.createElement("div");
     contenedor.className = "selector-ambiguedad no-descargar";
 
@@ -180,34 +229,41 @@ function crearSelectorAmbiguedad(opciones, seleccionActual, alCambiar) {
     menu.className = "menu-ambiguedad";
 
     opciones.forEach(opcion => {
+
         const item = document.createElement("button");
         item.type = "button";
         item.className = "opcion-ambiguedad";
         item.innerText = opcion.etiqueta;
 
         item.addEventListener("click", evento => {
+
             evento.stopPropagation();
 
             menu.classList.remove("menu-ambiguedad-abierto");
 
             alCambiar(opcion);
+
         });
 
         menu.appendChild(item);
     });
 
     boton.addEventListener("click", evento => {
+
         evento.stopPropagation();
 
         document
             .querySelectorAll(".menu-ambiguedad-abierto")
             .forEach(otroMenu => {
+
                 if (otroMenu !== menu) {
                     otroMenu.classList.remove("menu-ambiguedad-abierto");
                 }
+
             });
 
         menu.classList.toggle("menu-ambiguedad-abierto");
+
     });
 
     contenedor.appendChild(boton);
@@ -216,17 +272,27 @@ function crearSelectorAmbiguedad(opciones, seleccionActual, alCambiar) {
     return contenedor;
 }
 
+
+// Cerrar selector al tocar afuera
 document.addEventListener("click", evento => {
+
     if (!evento.target.closest(".selector-ambiguedad")) {
+
         document
             .querySelectorAll(".menu-ambiguedad-abierto")
             .forEach(menu => {
                 menu.classList.remove("menu-ambiguedad-abierto");
             });
+
     }
+
 });
 
+
+// ==================== PICTOGRAMA AMBIGUO ====================
+
 function crearPictoAmbiguoSeleccionable(opciones) {
+
     const picto = crearPictoSeleccionable(opciones);
 
     // El selector gramatical ocupa la esquina superior derecha.
@@ -241,12 +307,16 @@ function crearPictoAmbiguoSeleccionable(opciones) {
     return picto;
 }
 
+
+// ==================== RENDERIZAR AMBIGÜEDAD ====================
+
 function renderizarInterpretacionAmbigua({
     opcion,
     filaPicto,
     filaSimbolo,
     filaTexto
 }) {
+
     // Limpiar lo que hubiera de la opción anterior
     filaPicto.innerHTML = "";
     filaSimbolo.innerHTML = "";
@@ -254,6 +324,170 @@ function renderizarInterpretacionAmbigua({
     filaTexto.style.color = "";
     filaTexto.style.fontWeight = "";
 
+
+    // ==================== VERBO ====================
+
+    if (opcion.tipo === "verbo") {
+
+        if (mostrarColores) {
+            filaTexto.style.color = "red";
+            filaTexto.style.fontWeight = "bold";
+        }
+
+        if (mostrarSimbolos) {
+            filaSimbolo.innerText = "=";
+            filaSimbolo.style.color = "red";
+        }
+
+        if (mostrarImagenes) {
+
+            const opcionesPicto = obtenerPictos(opcion.picto);
+
+            if (opcionesPicto.length) {
+
+                filaPicto.appendChild(
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
+                );
+
+            }
+        }
+
+        return;
+    }
+
+
+    // ==================== REFLEXIVO / CUASI REFLEJO ====================
+
+    if (opcion.tipo === "reflexivo") {
+
+        if (mostrarColores) {
+            filaTexto.style.color = "red";
+            filaTexto.style.fontWeight = "bold";
+        }
+
+        if (mostrarSimbolos) {
+
+            const img = document.createElement("img");
+
+            img.src = simboloReflexivosCuasiReflejos;
+            img.style.width = "40px";
+            img.style.height = "40px";
+
+            filaSimbolo.appendChild(img);
+        }
+
+        return;
+    }
+
+
+    // ==================== PRONOMBRE ====================
+
+    if (opcion.tipo === "pronombre") {
+
+        if (mostrarColores) {
+            filaTexto.style.color = "black";
+            filaTexto.style.fontWeight = "normal";
+        }
+
+        if (mostrarSimbolos) {
+
+            const img = document.createElement("img");
+
+            img.src = simboloPronombre;
+            img.style.width = "40px";
+            img.style.height = "40px";
+
+            filaSimbolo.appendChild(img);
+        }
+
+        return;
+    }
+
+
+    // ==================== ADJETIVO ====================
+
+    if (opcion.tipo === "adjetivo") {
+
+        if (mostrarSimbolos) {
+
+            const imgSimbolo = document.createElement("img");
+
+            imgSimbolo.src = simboloAdjetivo;
+            imgSimbolo.style.width = "40px";
+            imgSimbolo.style.height = "40px";
+
+            filaSimbolo.appendChild(imgSimbolo);
+        }
+
+        if (mostrarImagenes) {
+
+            const opcionesPicto = obtenerPictos(opcion.picto);
+
+            if (opcionesPicto.length) {
+
+                filaPicto.appendChild(
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
+                );
+
+            }
+        }
+
+        return;
+    }
+
+
+    // ==================== PREPOSICIÓN ====================
+
+    if (opcion.tipo === "preposicion") {
+
+        if (mostrarColores) {
+            filaTexto.style.color = "blue";
+            filaTexto.style.fontWeight = "bold";
+        }
+
+        if (mostrarImagenes) {
+
+            const opcionesPicto = obtenerPictos(opcion.picto);
+
+            if (opcionesPicto.length) {
+
+                filaPicto.appendChild(
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
+                );
+
+            }
+        }
+
+        return;
+    }
+
+
+    // ==================== SUSTANTIVO ====================
+
+    if (opcion.tipo === "sustantivo") {
+
+        if (mostrarColores) {
+            filaTexto.style.color = "black";
+            filaTexto.style.fontWeight = "normal";
+        }
+
+        if (mostrarImagenes) {
+
+            const opcionesPicto = obtenerPictos(opcion.picto);
+
+            if (opcionesPicto.length) {
+
+                filaPicto.appendChild(
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
+                );
+
+            }
+        }
+
+        return;
+    }
+
+}
     // ==================== VERBO ====================
     if (opcion.tipo === "verbo") {
 
