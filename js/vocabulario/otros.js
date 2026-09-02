@@ -95,7 +95,7 @@ const vocabularioOtros = {
         "https://static.arasaac.org/pictograms/9086/9086_300.png"
     ],
 
-    "sopresa": [
+    "sorpresa": [
         "https://static.arasaac.org/pictograms/35565/35565_300.png",
     "https://static.arasaac.org/pictograms/8517/8517_300.png",
 ],
