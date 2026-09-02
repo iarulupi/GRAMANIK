@@ -73,8 +73,6 @@ const reflexivosExactos =
 
 
 // ==================== PALABRAS AMBIGUAS ====================
-// Permite elegir manualmente la categoría cuando una misma forma escrita
-// puede funcionar de más de una manera.
 
 const palabrasAmbiguas = {
 
@@ -156,15 +154,13 @@ const palabrasAmbiguas = {
     "sobre": [
         {
             tipo: "preposicion",
-            etiqueta: "PREPOSICIÓN",
-            base: "sobre",
-            picto: "sobre preposicion"
+            etiqueta: "PREPOSICIÓN"
         },
         {
             tipo: "sustantivo",
             etiqueta: "SUSTANTIVO",
             base: "sobre",
-            picto: "sobre sustantivo"
+            picto: "sobre"
         }
     ],
 
@@ -211,7 +207,6 @@ const palabrasAmbiguas = {
             etiqueta: "PRONOMBRE"
         }
     ]
-
 };
 
 
@@ -224,32 +219,22 @@ function obtenerOpcionesAmbiguas(palabra) {
     return palabrasAmbiguas[exacta] || null;
 }
 
-function claveAparicionAmbigua(
-    indiceLinea,
-    indicePalabra,
-    palabra
-) {
+function claveAparicionAmbigua(indiceLinea, indicePalabra, palabra) {
     return `${indiceLinea}:${indicePalabra}:${normalizarTextoExacto(palabra)}`;
 }
 
 
 // ==================== SELECTOR DE AMBIGÜEDAD ====================
 
-function crearSelectorAmbiguedad(
-    opciones,
-    seleccionActual,
-    alCambiar
-) {
+function crearSelectorAmbiguedad(opciones, seleccionActual, alCambiar) {
 
     const contenedor = document.createElement("div");
-    contenedor.className =
-        "selector-ambiguedad no-descargar";
+    contenedor.className = "selector-ambiguedad no-descargar";
 
     const boton = document.createElement("button");
     boton.type = "button";
     boton.className = "boton-ambiguedad";
-    boton.innerText =
-        `${seleccionActual.etiqueta} ▼`;
+    boton.innerText = `${seleccionActual.etiqueta} ▼`;
 
     const menu = document.createElement("div");
     menu.className = "menu-ambiguedad";
@@ -257,18 +242,14 @@ function crearSelectorAmbiguedad(
     opciones.forEach(opcion => {
 
         const item = document.createElement("button");
-
         item.type = "button";
         item.className = "opcion-ambiguedad";
         item.innerText = opcion.etiqueta;
 
         item.addEventListener("click", evento => {
-
             evento.stopPropagation();
 
-            menu.classList.remove(
-                "menu-ambiguedad-abierto"
-            );
+            menu.classList.remove("menu-ambiguedad-abierto");
 
             alCambiar(opcion);
         });
@@ -277,26 +258,17 @@ function crearSelectorAmbiguedad(
     });
 
     boton.addEventListener("click", evento => {
-
         evento.stopPropagation();
 
         document
-            .querySelectorAll(
-                ".menu-ambiguedad-abierto"
-            )
+            .querySelectorAll(".menu-ambiguedad-abierto")
             .forEach(otroMenu => {
-
                 if (otroMenu !== menu) {
-                    otroMenu.classList.remove(
-                        "menu-ambiguedad-abierto"
-                    );
+                    otroMenu.classList.remove("menu-ambiguedad-abierto");
                 }
-
             });
 
-        menu.classList.toggle(
-            "menu-ambiguedad-abierto"
-        );
+        menu.classList.toggle("menu-ambiguedad-abierto");
     });
 
     contenedor.appendChild(boton);
@@ -310,23 +282,14 @@ function crearSelectorAmbiguedad(
 
 document.addEventListener("click", evento => {
 
-    if (
-        !evento.target.closest(
-            ".selector-ambiguedad"
-        )
-    ) {
+    if (!evento.target.closest(".selector-ambiguedad")) {
 
         document
-            .querySelectorAll(
-                ".menu-ambiguedad-abierto"
-            )
+            .querySelectorAll(".menu-ambiguedad-abierto")
             .forEach(menu => {
-
-                menu.classList.remove(
-                    "menu-ambiguedad-abierto"
-                );
-
+                menu.classList.remove("menu-ambiguedad-abierto");
             });
+
     }
 });
 
@@ -335,8 +298,7 @@ document.addEventListener("click", evento => {
 
 function crearPictoAmbiguoSeleccionable(opciones) {
 
-    const picto =
-        crearPictoSeleccionable(opciones);
+    const picto = crearPictoSeleccionable(opciones);
 
     const botonEliminar =
         picto.querySelector(".eliminar-picto");
@@ -376,10 +338,8 @@ function renderizarInterpretacionAmbigua({
         }
 
         if (mostrarSimbolos) {
-
             filaSimbolo.innerText = "=";
             filaSimbolo.style.color = "red";
-
         }
 
         if (mostrarImagenes) {
@@ -388,13 +348,9 @@ function renderizarInterpretacionAmbigua({
                 obtenerPictos(opcion.picto);
 
             if (opcionesPicto.length) {
-
                 filaPicto.appendChild(
-                    crearPictoAmbiguoSeleccionable(
-                        opcionesPicto
-                    )
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
                 );
-
             }
         }
 
@@ -407,20 +363,15 @@ function renderizarInterpretacionAmbigua({
     if (opcion.tipo === "reflexivo") {
 
         if (mostrarColores) {
-
             filaTexto.style.color = "red";
             filaTexto.style.fontWeight = "bold";
-
         }
 
         if (mostrarSimbolos) {
 
-            const img =
-                document.createElement("img");
+            const img = document.createElement("img");
 
-            img.src =
-                simboloReflexivosCuasiReflejos;
-
+            img.src = simboloReflexivosCuasiReflejos;
             img.style.width = "40px";
             img.style.height = "40px";
 
@@ -436,16 +387,13 @@ function renderizarInterpretacionAmbigua({
     if (opcion.tipo === "pronombre") {
 
         if (mostrarColores) {
-
             filaTexto.style.color = "black";
             filaTexto.style.fontWeight = "normal";
-
         }
 
         if (mostrarSimbolos) {
 
-            const img =
-                document.createElement("img");
+            const img = document.createElement("img");
 
             img.src = simboloPronombre;
             img.style.width = "40px";
@@ -468,13 +416,10 @@ function renderizarInterpretacionAmbigua({
                 document.createElement("img");
 
             imgSimbolo.src = simboloAdjetivo;
-
             imgSimbolo.style.width = "40px";
             imgSimbolo.style.height = "40px";
 
-            filaSimbolo.appendChild(
-                imgSimbolo
-            );
+            filaSimbolo.appendChild(imgSimbolo);
         }
 
         if (mostrarImagenes) {
@@ -483,13 +428,9 @@ function renderizarInterpretacionAmbigua({
                 obtenerPictos(opcion.picto);
 
             if (opcionesPicto.length) {
-
                 filaPicto.appendChild(
-                    crearPictoAmbiguoSeleccionable(
-                        opcionesPicto
-                    )
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
                 );
-
             }
         }
 
@@ -502,27 +443,11 @@ function renderizarInterpretacionAmbigua({
     if (opcion.tipo === "preposicion") {
 
         if (mostrarColores) {
-
             filaTexto.style.color = "blue";
             filaTexto.style.fontWeight = "bold";
-
         }
 
-        if (mostrarImagenes) {
-
-            const opcionesPicto =
-                obtenerPictos(opcion.picto);
-
-            if (opcionesPicto.length) {
-
-                filaPicto.appendChild(
-                    crearPictoAmbiguoSeleccionable(
-                        opcionesPicto
-                    )
-                );
-
-            }
-        }
+        // LAS PREPOSICIONES NO LLEVAN PICTOGRAMA
 
         return;
     }
@@ -533,10 +458,8 @@ function renderizarInterpretacionAmbigua({
     if (opcion.tipo === "sustantivo") {
 
         if (mostrarColores) {
-
             filaTexto.style.color = "black";
             filaTexto.style.fontWeight = "normal";
-
         }
 
         if (mostrarImagenes) {
@@ -545,13 +468,9 @@ function renderizarInterpretacionAmbigua({
                 obtenerPictos(opcion.picto);
 
             if (opcionesPicto.length) {
-
                 filaPicto.appendChild(
-                    crearPictoAmbiguoSeleccionable(
-                        opcionesPicto
-                    )
+                    crearPictoAmbiguoSeleccionable(opcionesPicto)
                 );
-
             }
         }
 
@@ -564,8 +483,7 @@ function renderizarInterpretacionAmbigua({
 
 function resolverPalabraExactaOAlias(palabra) {
 
-    const exacta =
-        normalizarTextoExacto(palabra);
+    const exacta = normalizarTextoExacto(palabra);
 
     return {
         exacta,
@@ -573,10 +491,7 @@ function resolverPalabraExactaOAlias(palabra) {
     };
 }
 
-function estaEnLista(
-    palabra,
-    listaExacta
-) {
+function estaEnLista(palabra, listaExacta) {
 
     const { exacta, alias } =
         resolverPalabraExactaOAlias(palabra);
@@ -586,22 +501,14 @@ function estaEnLista(
     }
 
     if (alias) {
-
-        const aliasExacto =
-            normalizarTextoExacto(alias);
-
-        return listaExacta.includes(
-            aliasExacto
-        );
+        const aliasExacto = normalizarTextoExacto(alias);
+        return listaExacta.includes(aliasExacto);
     }
 
     return false;
 }
 
-function obtenerValorDiccionario(
-    clave,
-    diccionarioExacto
-) {
+function obtenerValorDiccionario(clave, diccionarioExacto) {
 
     const { exacta, alias } =
         resolverPalabraExactaOAlias(clave);
@@ -626,9 +533,7 @@ function obtenerValorDiccionario(
                 aliasExacto
             )
         ) {
-            return diccionarioExacto[
-                aliasExacto
-            ];
+            return diccionarioExacto[aliasExacto];
         }
     }
 
@@ -636,38 +541,23 @@ function obtenerValorDiccionario(
 }
 
 function esPronombre(palabra) {
-    return estaEnLista(
-        palabra,
-        pronombresExactos
-    );
+    return estaEnLista(palabra, pronombresExactos);
 }
 
 function esRelacionante(palabra) {
-    return estaEnLista(
-        palabra,
-        relacionantesExactos
-    );
+    return estaEnLista(palabra, relacionantesExactos);
 }
 
 function esPreposicion(palabra) {
-    return estaEnLista(
-        palabra,
-        preposicionesExactas
-    );
+    return estaEnLista(palabra, preposicionesExactas);
 }
 
 function esAdjetivo(palabra) {
-    return estaEnLista(
-        palabra,
-        adjetivosExactos
-    );
+    return estaEnLista(palabra, adjetivosExactos);
 }
 
 function esReflexivosCuasiReflejos(palabra) {
-    return estaEnLista(
-        palabra,
-        reflexivosExactos
-    );
+    return estaEnLista(palabra, reflexivosExactos);
 }
 
 function obtenerRaizVerbal(palabra) {
@@ -675,23 +565,15 @@ function obtenerRaizVerbal(palabra) {
     const { exacta, alias } =
         resolverPalabraExactaOAlias(palabra);
 
-    if (
-        reflexivosExactos.includes(exacta)
-    ) {
+    if (reflexivosExactos.includes(exacta)) {
         return null;
     }
 
-    if (
-        verbosConjugadosExactos[exacta]
-    ) {
-        return verbosConjugadosExactos[
-            exacta
-        ];
+    if (verbosConjugadosExactos[exacta]) {
+        return verbosConjugadosExactos[exacta];
     }
 
-    if (
-        verbosBaseExactos.includes(exacta)
-    ) {
+    if (verbosBaseExactos.includes(exacta)) {
         return exacta;
     }
 
@@ -700,29 +582,15 @@ function obtenerRaizVerbal(palabra) {
         const aliasExacto =
             normalizarTextoExacto(alias);
 
-        if (
-            reflexivosExactos.includes(
-                aliasExacto
-            )
-        ) {
+        if (reflexivosExactos.includes(aliasExacto)) {
             return null;
         }
 
-        if (
-            verbosConjugadosExactos[
-                aliasExacto
-            ]
-        ) {
-            return verbosConjugadosExactos[
-                aliasExacto
-            ];
+        if (verbosConjugadosExactos[aliasExacto]) {
+            return verbosConjugadosExactos[aliasExacto];
         }
 
-        if (
-            verbosBaseExactos.includes(
-                aliasExacto
-            )
-        ) {
+        if (verbosBaseExactos.includes(aliasExacto)) {
             return aliasExacto;
         }
     }
@@ -731,7 +599,6 @@ function obtenerRaizVerbal(palabra) {
 }
 
 function existePicto(clave) {
-
     return obtenerValorDiccionario(
         clave,
         pictogramasExactos
@@ -746,9 +613,7 @@ function obtenerPictos(clave) {
             pictogramasExactos
         );
 
-    if (!valor) {
-        return [];
-    }
+    if (!valor) return [];
 
     if (Array.isArray(valor)) {
         return valor.filter(Boolean);
@@ -759,8 +624,7 @@ function obtenerPictos(clave) {
 
 function obtenerPicto(clave) {
 
-    const opciones =
-        obtenerPictos(clave);
+    const opciones = obtenerPictos(clave);
 
     return opciones.length
         ? opciones[0]
@@ -776,41 +640,26 @@ function obtenerEstiloPalabraCompuesta(
     siguiente = ""
 ) {
 
-    const limpia =
-        limpiarBordes(palabra);
-
-    const exacta =
-        normalizarTextoExacto(limpia);
-
-    const alias =
-        aplicarAlias(limpia);
-
+    const limpia = limpiarBordes(palabra);
+    const exacta = normalizarTextoExacto(limpia);
+    const alias = aplicarAlias(limpia);
     const aliasExacto =
-        alias
-            ? normalizarTextoExacto(alias)
-            : "";
+        alias ? normalizarTextoExacto(alias) : "";
 
-    const esVerbo =
-        !!obtenerRaizVerbal(limpia);
+    const esVerbo = !!obtenerRaizVerbal(limpia);
 
     if (esVerbo) {
-
         return {
             color: "red",
             negrita: true
         };
-
     }
 
-    if (
-        esReflexivosCuasiReflejos(limpia)
-    ) {
-
+    if (esReflexivosCuasiReflejos(limpia)) {
         return {
             color: "red",
             negrita: true
         };
-
     }
 
     if (esPreposicion(limpia)) {
@@ -828,20 +677,14 @@ function obtenerEstiloPalabraCompuesta(
             limpiarBordes(siguiente);
 
         const siguienteExacta =
-            normalizarTextoExacto(
-                siguienteLimpia
-            );
+            normalizarTextoExacto(siguienteLimpia);
 
         const siguienteAlias =
-            aplicarAlias(
-                siguienteLimpia
-            );
+            aplicarAlias(siguienteLimpia);
 
         const siguienteAliasExacto =
             siguienteAlias
-                ? normalizarTextoExacto(
-                    siguienteAlias
-                )
+                ? normalizarTextoExacto(siguienteAlias)
                 : "";
 
         const siguienteEsInfinitivo =
@@ -860,12 +703,10 @@ function obtenerEstiloPalabraCompuesta(
             raizAnterior &&
             siguienteEsInfinitivo
         ) {
-
             return {
                 color: "red",
                 negrita: true
             };
-
         }
 
         return {
@@ -883,23 +724,18 @@ function obtenerEstiloPalabraCompuesta(
 
 // ==================== MENÚS DE PICTOGRAMAS ====================
 
-function cerrarMenusPictos(
-    menuExcepto = null
-) {
+function cerrarMenusPictos(menuExcepto = null) {
 
     document
-        .querySelectorAll(
-            ".menu-pictos-abierto"
-        )
+        .querySelectorAll(".menu-pictos-abierto")
         .forEach(menu => {
 
             if (menu !== menuExcepto) {
-
                 menu.classList.remove(
                     "menu-pictos-abierto"
                 );
-
             }
+
         });
 }
 
@@ -925,10 +761,8 @@ function crearPictoSeleccionable(opciones) {
         document.createElement("button");
 
     botonEliminar.type = "button";
-
     botonEliminar.className =
         "eliminar-picto no-descargar";
-
     botonEliminar.innerText = "×";
 
     botonEliminar.addEventListener(
@@ -945,8 +779,7 @@ function crearPictoSeleccionable(opciones) {
                 );
 
             if (flecha) {
-                flecha.style.display =
-                    "none";
+                flecha.style.display = "none";
             }
 
             const menu =
@@ -955,11 +788,9 @@ function crearPictoSeleccionable(opciones) {
                 );
 
             if (menu) {
-
                 menu.classList.remove(
                     "menu-pictos-abierto"
                 );
-
             }
 
             botonEliminar.style.display =
@@ -967,12 +798,8 @@ function crearPictoSeleccionable(opciones) {
         }
     );
 
-    contenedor.appendChild(
-        botonEliminar
-    );
+    contenedor.appendChild(botonEliminar);
 
-
-    // Si solo hay una imagen
     if (opciones.length <= 1) {
         return contenedor;
     }
@@ -984,10 +811,8 @@ function crearPictoSeleccionable(opciones) {
         document.createElement("button");
 
     flecha.type = "button";
-
     flecha.className =
         "flecha-picto no-descargar";
-
     flecha.innerText = "▼";
 
     contenedor.appendChild(flecha);
@@ -1007,9 +832,7 @@ function crearPictoSeleccionable(opciones) {
             document.createElement("img");
 
         opcion.src = url;
-
-        opcion.className =
-            "opcion-picto";
+        opcion.className = "opcion-picto";
 
         opcion.addEventListener(
             "click",
@@ -1022,7 +845,6 @@ function crearPictoSeleccionable(opciones) {
                 menu.classList.remove(
                     "menu-pictos-abierto"
                 );
-
             }
         );
 
@@ -1030,7 +852,6 @@ function crearPictoSeleccionable(opciones) {
     });
 
     contenedor.appendChild(menu);
-
 
     flecha.addEventListener(
         "click",
@@ -1046,11 +867,9 @@ function crearPictoSeleccionable(opciones) {
             cerrarMenusPictos(menu);
 
             if (estabaAbierto) {
-
                 menu.classList.remove(
                     "menu-pictos-abierto"
                 );
-
                 return;
             }
 
@@ -1060,7 +879,6 @@ function crearPictoSeleccionable(opciones) {
 
             menu.style.left = "50%";
             menu.style.right = "auto";
-
             menu.style.transform =
                 "translateX(-50%)";
 
@@ -1071,16 +889,13 @@ function crearPictoSeleccionable(opciones) {
 
                 const margen = 10;
 
-                if (
-                    rect.left < margen
-                ) {
+                if (rect.left < margen) {
 
                     const correccion =
                         margen - rect.left;
 
                     menu.style.transform =
                         `translateX(calc(-50% + ${correccion}px))`;
-
                 }
 
                 const rectCorregido =
@@ -1088,20 +903,17 @@ function crearPictoSeleccionable(opciones) {
 
                 if (
                     rectCorregido.right >
-                    window.innerWidth -
-                        margen
+                    window.innerWidth - margen
                 ) {
 
                     const correccion =
                         rectCorregido.right -
-                        (
-                            window.innerWidth -
-                            margen
-                        );
+                        (window.innerWidth - margen);
 
                     menu.style.transform =
                         `translateX(calc(-50% - ${correccion}px))`;
                 }
+
             });
         }
     );
@@ -1147,22 +959,14 @@ document.addEventListener(
     () => {
 
         const resultado =
-            document.getElementById(
-                "resultado"
-            );
+            document.getElementById("resultado");
 
         const seleccion =
             window.getSelection();
 
         if (!resultado) return;
-
-        if (!seleccion.rangeCount) {
-            return;
-        }
-
-        if (seleccion.isCollapsed) {
-            return;
-        }
+        if (!seleccion.rangeCount) return;
+        if (seleccion.isCollapsed) return;
 
         const rango =
             seleccion.getRangeAt(0);
@@ -1172,10 +976,8 @@ document.addEventListener(
                 rango.commonAncestorContainer
             )
         ) {
-
             seleccionGuardada =
                 rango.cloneRange();
-
         }
     }
 );
@@ -1184,9 +986,7 @@ document.addEventListener(
 function subrayarSeleccion() {
 
     const resultado =
-        document.getElementById(
-            "resultado"
-        );
+        document.getElementById("resultado");
 
     if (
         !seleccionGuardada ||
@@ -1208,8 +1008,7 @@ function subrayarSeleccion() {
 
     while (walker.nextNode()) {
 
-        const nodo =
-            walker.currentNode;
+        const nodo = walker.currentNode;
 
         const filaTexto =
             nodo.parentElement &&
@@ -1219,40 +1018,31 @@ function subrayarSeleccion() {
 
         if (!filaTexto) continue;
 
-        if (
-            !rango.intersectsNode(nodo)
-        ) {
+        if (!rango.intersectsNode(nodo)) {
             continue;
         }
 
         let inicio = 0;
-        let fin =
-            nodo.textContent.length;
+        let fin = nodo.textContent.length;
 
         if (
-            nodo ===
-            rango.startContainer
+            nodo === rango.startContainer
         ) {
-            inicio =
-                rango.startOffset;
+            inicio = rango.startOffset;
         }
 
         if (
-            nodo ===
-            rango.endContainer
+            nodo === rango.endContainer
         ) {
-            fin =
-                rango.endOffset;
+            fin = rango.endOffset;
         }
 
         if (inicio < fin) {
-
             fragmentos.push({
                 nodo,
                 inicio,
                 fin
             });
-
         }
     }
 
@@ -1260,39 +1050,25 @@ function subrayarSeleccion() {
         .reverse()
         .forEach(fragmento => {
 
-            const nodo =
-                fragmento.nodo;
-
-            const inicio =
-                fragmento.inicio;
-
-            const fin =
-                fragmento.fin;
+            const nodo = fragmento.nodo;
+            const inicio = fragmento.inicio;
+            const fin = fragmento.fin;
 
             if (
-                fin <
-                nodo.textContent.length
+                fin < nodo.textContent.length
             ) {
-
                 nodo.splitText(fin);
             }
 
-            let textoSeleccionado =
-                nodo;
+            let textoSeleccionado = nodo;
 
             if (inicio > 0) {
-
                 textoSeleccionado =
-                    nodo.splitText(
-                        inicio
-                    );
-
+                    nodo.splitText(inicio);
             }
 
             const subrayado =
-                document.createElement(
-                    "span"
-                );
+                document.createElement("span");
 
             subrayado.className =
                 "subrayado-manual";
@@ -1329,9 +1105,7 @@ function extraerPuntuacionFinal(texto) {
             /[.,;:!?]+$/
         );
 
-    return match
-        ? match[0]
-        : "";
+    return match ? match[0] : "";
 }
 
 
@@ -1340,14 +1114,10 @@ function extraerPuntuacionFinal(texto) {
 function mostrarPictos() {
 
     const texto =
-        document.getElementById(
-            "texto"
-        ).value || "";
+        document.getElementById("texto").value || "";
 
     const resultado =
-        document.getElementById(
-            "resultado"
-        );
+        document.getElementById("resultado");
 
     seleccionGuardada = null;
 
@@ -1355,231 +1125,162 @@ function mostrarPictos() {
 
     texto
         .split("\n")
-        .forEach(
-            (
-                linea,
-                indiceLinea
-            ) => {
+        .forEach((linea, indiceLinea) => {
 
-        const contenedorLinea =
-            document.createElement(
-                "div"
-            );
+            const contenedorLinea =
+                document.createElement("div");
 
-        contenedorLinea.className =
-            "contenedor-linea";
+            contenedorLinea.className =
+                "contenedor-linea";
 
-        const palabras =
-            linea
-                .split(/\s+/)
-                .filter(Boolean);
-
-
-        for (
-            let i = 0;
-            i < palabras.length;
-            i++
-        ) {
-
-            const palabraOriginal =
-                palabras[i];
-
-            const palabraLimpia =
-                limpiarBordes(
-                    palabraOriginal
-                );
-
-            const opcionesAmbiguasPalabra =
-                obtenerOpcionesAmbiguas(
-                    palabraLimpia
-                );
-
-            const palabraExacta =
-                normalizarTextoExacto(
-                    palabraLimpia
-                );
-
-            const palabraAlias =
-                aplicarAlias(
-                    palabraLimpia
-                );
-
-            const palabraAnteriorOriginal =
-                palabras[i - 1] || "";
-
-            const palabraSiguienteOriginal =
-                palabras[i + 1] || "";
-
-            const palabraAnteriorLimpia =
-                limpiarBordes(
-                    palabraAnteriorOriginal
-                );
-
-            const palabraSiguienteLimpia =
-                limpiarBordes(
-                    palabraSiguienteOriginal
-                );
-
-            const palabraAnteriorExacta =
-                normalizarTextoExacto(
-                    palabraAnteriorLimpia
-                );
-
-            const palabraSiguienteExacta =
-                normalizarTextoExacto(
-                    palabraSiguienteLimpia
-                );
-
-            const palabraAnteriorAlias =
-                aplicarAlias(
-                    palabraAnteriorLimpia
-                );
-
-            const palabraSiguienteAlias =
-                aplicarAlias(
-                    palabraSiguienteLimpia
-                );
-
-            if (!palabraOriginal) {
-                continue;
-            }
-
-
-            const div =
-                document.createElement(
-                    "div"
-                );
-
-            div.className = "palabra";
-
-
-            const filaPicto =
-                document.createElement(
-                    "div"
-                );
-
-            filaPicto.className =
-                "fila-picto";
-
-
-            const filaSimbolo =
-                document.createElement(
-                    "div"
-                );
-
-            filaSimbolo.className =
-                "fila-simbolo";
-
-
-            const filaTexto =
-                document.createElement(
-                    "div"
-                );
-
-            filaTexto.className =
-                "fila-texto";
-
-            filaTexto.style.fontFamily =
-                tipografiaActual;
-
-
-            // =========================
-            // BUSCAR FRASES DE HASTA 10 PALABRAS
-            // =========================
-
-            let fraseEncontrada = null;
-            let palabrasConsumidas = 0;
-
-            const maxPalabrasFrase =
-                Math.min(
-                    10,
-                    palabras.length - i
-                );
-
+            const palabras =
+                linea
+                    .split(/\s+/)
+                    .filter(Boolean);
 
             for (
-                let longitud =
-                    maxPalabrasFrase;
-
-                longitud > 0;
-
-                longitud--
+                let i = 0;
+                i < palabras.length;
+                i++
             ) {
 
-                const grupoOriginal =
-                    palabras
-                        .slice(
-                            i,
-                            i + longitud
-                        )
-                        .join(" ");
+                const palabraOriginal =
+                    palabras[i];
 
-                const grupoLimpio =
-                    palabras
-                        .slice(
-                            i,
-                            i + longitud
-                        )
-                        .map(
-                            p =>
-                                limpiarBordes(
-                                    p
-                                )
-                        )
-                        .join(" ");
-
-                const grupoExacto =
-                    normalizarTextoExacto(
-                        grupoLimpio
+                const palabraLimpia =
+                    limpiarBordes(
+                        palabraOriginal
                     );
 
+                const opcionesAmbiguasPalabra =
+                    obtenerOpcionesAmbiguas(
+                        palabraLimpia
+                    );
 
-                // EXACTO
+                const palabraExacta =
+                    normalizarTextoExacto(
+                        palabraLimpia
+                    );
 
-                if (
-                    Object.prototype
-                        .hasOwnProperty
-                        .call(
-                            pictogramasExactos,
-                            grupoExacto
-                        )
-                ) {
+                const palabraAlias =
+                    aplicarAlias(
+                        palabraLimpia
+                    );
 
-                    fraseEncontrada = {
-                        original:
-                            grupoOriginal,
+                const palabraAnteriorOriginal =
+                    palabras[i - 1] || "";
 
-                        limpio:
-                            grupoLimpio,
+                const palabraSiguienteOriginal =
+                    palabras[i + 1] || "";
 
-                        normalizado:
-                            grupoExacto,
+                const palabraAnteriorLimpia =
+                    limpiarBordes(
+                        palabraAnteriorOriginal
+                    );
 
-                        imagen:
-                            pictogramasExactos[
-                                grupoExacto
-                            ]
-                    };
+                const palabraSiguienteLimpia =
+                    limpiarBordes(
+                        palabraSiguienteOriginal
+                    );
 
-                    palabrasConsumidas =
-                        longitud;
+                const palabraAnteriorExacta =
+                    normalizarTextoExacto(
+                        palabraAnteriorLimpia
+                    );
 
-                    break;
+                const palabraSiguienteExacta =
+                    normalizarTextoExacto(
+                        palabraSiguienteLimpia
+                    );
+
+                const palabraAnteriorAlias =
+                    aplicarAlias(
+                        palabraAnteriorLimpia
+                    );
+
+                const palabraSiguienteAlias =
+                    aplicarAlias(
+                        palabraSiguienteLimpia
+                    );
+
+                if (!palabraOriginal) {
+                    continue;
                 }
 
+                const div =
+                    document.createElement("div");
 
-                // ALIAS
+                div.className = "palabra";
 
-                const grupoAlias =
-                    aplicarAlias(
-                        grupoLimpio
+                const filaPicto =
+                    document.createElement("div");
+
+                filaPicto.className =
+                    "fila-picto";
+
+                const filaSimbolo =
+                    document.createElement("div");
+
+                filaSimbolo.className =
+                    "fila-simbolo";
+
+                const filaTexto =
+                    document.createElement("div");
+
+                filaTexto.className =
+                    "fila-texto";
+
+                filaTexto.style.fontFamily =
+                    tipografiaActual;
+
+
+                // =========================
+                // BUSCAR FRASES DE HASTA 10 PALABRAS
+                // =========================
+
+                let fraseEncontrada = null;
+                let palabrasConsumidas = 0;
+
+                const maxPalabrasFrase =
+                    Math.min(
+                        10,
+                        palabras.length - i
                     );
 
-                if (grupoAlias) {
+                for (
+                    let longitud =
+                        maxPalabrasFrase;
 
-                    const grupoAliasExacto =
+                    longitud > 0;
+
+                    longitud--
+                ) {
+
+                    const grupoOriginal =
+                        palabras
+                            .slice(
+                                i,
+                                i + longitud
+                            )
+                            .join(" ");
+
+                    const grupoLimpio =
+                        palabras
+                            .slice(
+                                i,
+                                i + longitud
+                            )
+                            .map(
+                                p =>
+                                    limpiarBordes(
+                                        p
+                                    )
+                            )
+                            .join(" ");
+
+                    const grupoExacto =
                         normalizarTextoExacto(
-                            grupoAlias
+                            grupoLimpio
                         );
 
                     if (
@@ -1587,7 +1288,7 @@ function mostrarPictos() {
                             .hasOwnProperty
                             .call(
                                 pictogramasExactos,
-                                grupoAliasExacto
+                                grupoExacto
                             )
                     ) {
 
@@ -1599,11 +1300,11 @@ function mostrarPictos() {
                                 grupoLimpio,
 
                             normalizado:
-                                grupoAliasExacto,
+                                grupoExacto,
 
                             imagen:
                                 pictogramasExactos[
-                                    grupoAliasExacto
+                                    grupoExacto
                                 ]
                         };
 
@@ -1612,680 +1313,668 @@ function mostrarPictos() {
 
                         break;
                     }
-                }
-            }
 
+                    const grupoAlias =
+                        aplicarAlias(
+                            grupoLimpio
+                        );
 
-            if (
-                fraseEncontrada &&
-                palabrasConsumidas > 1
-            ) {
+                    if (grupoAlias) {
 
-                div.classList.add(
-                    "frase-compuesta"
-                );
-
-            }
-
-
-            // =========================
-            // AMBIGÜEDAD GRAMATICAL
-            // =========================
-
-            const esAmbiguaActiva =
-                !!opcionesAmbiguasPalabra &&
-                (
-                    !fraseEncontrada ||
-                    palabrasConsumidas === 1
-                );
-
-
-            if (esAmbiguaActiva) {
-
-                fraseEncontrada = null;
-                palabrasConsumidas = 0;
-
-                const claveEleccion =
-                    claveAparicionAmbigua(
-                        indiceLinea,
-                        i,
-                        palabraLimpia
-                    );
-
-                let indiceElegido =
-                    eleccionesAmbiguas[
-                        claveEleccion
-                    ];
-
-                if (
-                    typeof indiceElegido !==
-                        "number" ||
-                    !opcionesAmbiguasPalabra[
-                        indiceElegido
-                    ]
-                ) {
-
-                    indiceElegido = 0;
-
-                    eleccionesAmbiguas[
-                        claveEleccion
-                    ] = 0;
-                }
-
-                const opcionElegida =
-                    opcionesAmbiguasPalabra[
-                        indiceElegido
-                    ];
-
-
-                const aplicarOpcion =
-                    opcion => {
-
-                    const nuevoIndice =
-                        opcionesAmbiguasPalabra
-                            .indexOf(
-                                opcion
+                        const grupoAliasExacto =
+                            normalizarTextoExacto(
+                                grupoAlias
                             );
 
-                    eleccionesAmbiguas[
-                        claveEleccion
-                    ] = nuevoIndice;
+                        if (
+                            Object.prototype
+                                .hasOwnProperty
+                                .call(
+                                    pictogramasExactos,
+                                    grupoAliasExacto
+                                )
+                        ) {
 
+                            fraseEncontrada = {
+                                original:
+                                    grupoOriginal,
+
+                                limpio:
+                                    grupoLimpio,
+
+                                normalizado:
+                                    grupoAliasExacto,
+
+                                imagen:
+                                    pictogramasExactos[
+                                        grupoAliasExacto
+                                    ]
+                            };
+
+                            palabrasConsumidas =
+                                longitud;
+
+                            break;
+                        }
+                    }
+                }
+
+                if (
+                    fraseEncontrada &&
+                    palabrasConsumidas > 1
+                ) {
+                    div.classList.add(
+                        "frase-compuesta"
+                    );
+                }
+
+
+                // =========================
+                // AMBIGÜEDAD GRAMATICAL
+                // =========================
+
+                const esAmbiguaActiva =
+                    !!opcionesAmbiguasPalabra &&
+                    (
+                        !fraseEncontrada ||
+                        palabrasConsumidas === 1
+                    );
+
+                if (esAmbiguaActiva) {
+
+                    fraseEncontrada = null;
+                    palabrasConsumidas = 0;
+
+                    const claveEleccion =
+                        claveAparicionAmbigua(
+                            indiceLinea,
+                            i,
+                            palabraLimpia
+                        );
+
+                    let indiceElegido =
+                        eleccionesAmbiguas[
+                            claveEleccion
+                        ];
+
+                    if (
+                        typeof indiceElegido !==
+                            "number" ||
+                        !opcionesAmbiguasPalabra[
+                            indiceElegido
+                        ]
+                    ) {
+
+                        indiceElegido = 0;
+
+                        eleccionesAmbiguas[
+                            claveEleccion
+                        ] = 0;
+                    }
+
+                    const opcionElegida =
+                        opcionesAmbiguasPalabra[
+                            indiceElegido
+                        ];
+
+                    const aplicarOpcion =
+                        opcion => {
+
+                            const nuevoIndice =
+                                opcionesAmbiguasPalabra
+                                    .indexOf(
+                                        opcion
+                                    );
+
+                            eleccionesAmbiguas[
+                                claveEleccion
+                            ] = nuevoIndice;
+
+                            renderizarInterpretacionAmbigua({
+                                opcion,
+                                filaPicto,
+                                filaSimbolo,
+                                filaTexto
+                            });
+
+                            const selectorViejo =
+                                div.querySelector(
+                                    ".selector-ambiguedad"
+                                );
+
+                            if (selectorViejo) {
+                                selectorViejo.remove();
+                            }
+
+                            const selectorNuevo =
+                                crearSelectorAmbiguedad(
+                                    opcionesAmbiguasPalabra,
+                                    opcion,
+                                    aplicarOpcion
+                                );
+
+                            div.appendChild(
+                                selectorNuevo
+                            );
+                        };
 
                     renderizarInterpretacionAmbigua({
-                        opcion,
+                        opcion:
+                            opcionElegida,
                         filaPicto,
                         filaSimbolo,
                         filaTexto
                     });
 
-
-                    const selectorViejo =
-                        div.querySelector(
-                            ".selector-ambiguedad"
-                        );
-
-                    if (selectorViejo) {
-                        selectorViejo.remove();
-                    }
-
-
-                    const selectorNuevo =
+                    const selector =
                         crearSelectorAmbiguedad(
                             opcionesAmbiguasPalabra,
-                            opcion,
+                            opcionElegida,
                             aplicarOpcion
                         );
 
-                    div.appendChild(
-                        selectorNuevo
-                    );
-                };
-
-
-                renderizarInterpretacionAmbigua({
-                    opcion:
-                        opcionElegida,
-
-                    filaPicto,
-                    filaSimbolo,
-                    filaTexto
-                });
-
-
-                const selector =
-                    crearSelectorAmbiguedad(
-                        opcionesAmbiguasPalabra,
-                        opcionElegida,
-                        aplicarOpcion
-                    );
-
-                div.appendChild(
-                    selector
-                );
-            }
-
-
-            // =========================
-            // VERBOS
-            // =========================
-
-            const raizVerbal =
-                esAmbiguaActiva
-                    ? null
-                    : obtenerRaizVerbal(
-                        palabraLimpia
-                    );
-
-            const esInfinitivo =
-                verbosBaseExactos.includes(
-                    palabraExacta
-                ) ||
-                (
-                    palabraAlias &&
-                    verbosBaseExactos.includes(
-                        normalizarTextoExacto(
-                            palabraAlias
-                        )
-                    )
-                );
-
-
-            if (raizVerbal) {
-
-                if (mostrarColores) {
-
-                    filaTexto.style.color =
-                        "red";
-
-                    filaTexto.style.fontWeight =
-                        "bold";
-
+                    div.appendChild(selector);
                 }
 
-                if (mostrarSimbolos) {
 
-                    if (esInfinitivo) {
+                // =========================
+                // VERBOS
+                // =========================
 
-                        const imgSimbolo =
-                            document.createElement(
-                                "img"
+                const raizVerbal =
+                    esAmbiguaActiva
+                        ? null
+                        : obtenerRaizVerbal(
+                            palabraLimpia
+                        );
+
+                const esInfinitivo =
+                    verbosBaseExactos.includes(
+                        palabraExacta
+                    ) ||
+                    (
+                        palabraAlias &&
+                        verbosBaseExactos.includes(
+                            normalizarTextoExacto(
+                                palabraAlias
+                            )
+                        )
+                    );
+
+                if (raizVerbal) {
+
+                    if (mostrarColores) {
+                        filaTexto.style.color =
+                            "red";
+                        filaTexto.style.fontWeight =
+                            "bold";
+                    }
+
+                    if (mostrarSimbolos) {
+
+                        if (esInfinitivo) {
+
+                            const imgSimbolo =
+                                document.createElement(
+                                    "img"
+                                );
+
+                            imgSimbolo.src =
+                                simboloVerboInfinitivo;
+
+                            imgSimbolo.style.width =
+                                "40px";
+
+                            imgSimbolo.style.height =
+                                "40px";
+
+                            filaSimbolo.appendChild(
+                                imgSimbolo
                             );
 
-                        imgSimbolo.src =
-                            simboloVerboInfinitivo;
+                        } else {
 
-                        imgSimbolo.style.width =
-                            "40px";
+                            filaSimbolo.innerText =
+                                "=";
 
-                        imgSimbolo.style.height =
-                            "40px";
+                            filaSimbolo.style.color =
+                                "red";
+                        }
+                    }
 
+                    const opcionesVerbo =
+                        obtenerPictos(
+                            raizVerbal
+                        );
+
+                    if (
+                        opcionesVerbo.length &&
+                        mostrarImagenes
+                    ) {
+
+                        const picto =
+                            crearPictoSeleccionable(
+                                opcionesVerbo
+                            );
+
+                        filaPicto.appendChild(
+                            picto
+                        );
+                    }
+                }
+
+
+                // =========================
+                // ADJETIVOS
+                // =========================
+
+                if (
+                    !esAmbiguaActiva &&
+                    esAdjetivo(
+                        palabraLimpia
+                    )
+                ) {
+
+                    const imgSimbolo =
+                        document.createElement(
+                            "img"
+                        );
+
+                    imgSimbolo.src =
+                        simboloAdjetivo;
+
+                    imgSimbolo.style.width =
+                        "40px";
+
+                    imgSimbolo.style.height =
+                        "40px";
+
+                    if (mostrarSimbolos) {
                         filaSimbolo.appendChild(
                             imgSimbolo
                         );
-
-                    } else {
-
-                        filaSimbolo.innerText =
-                            "=";
-
-                        filaSimbolo.style.color =
-                            "red";
-
                     }
                 }
 
 
-                const opcionesVerbo =
-                    obtenerPictos(
-                        raizVerbal
-                    );
+                // =========================
+                // PRONOMBRES
+                // =========================
 
                 if (
-                    opcionesVerbo.length &&
-                    mostrarImagenes
+                    !esAmbiguaActiva &&
+                    esPronombre(
+                        palabraLimpia
+                    )
                 ) {
 
-                    const picto =
-                        crearPictoSeleccionable(
-                            opcionesVerbo
+                    const img =
+                        document.createElement(
+                            "img"
                         );
 
-                    filaPicto.appendChild(
-                        picto
-                    );
-                }
-            }
+                    img.src =
+                        simboloPronombre;
 
+                    img.style.width =
+                        "40px";
 
-            // =========================
-            // ADJETIVOS
-            // =========================
+                    img.style.height =
+                        "40px";
 
-            if (
-                !esAmbiguaActiva &&
-                esAdjetivo(
-                    palabraLimpia
-                )
-            ) {
-
-                const imgSimbolo =
-                    document.createElement(
-                        "img"
-                    );
-
-                imgSimbolo.src =
-                    simboloAdjetivo;
-
-                imgSimbolo.style.width =
-                    "40px";
-
-                imgSimbolo.style.height =
-                    "40px";
-
-                if (mostrarSimbolos) {
-
-                    filaSimbolo.appendChild(
-                        imgSimbolo
-                    );
-
-                }
-            }
-
-
-            // =========================
-            // PRONOMBRES
-            // =========================
-
-            if (
-                !esAmbiguaActiva &&
-                esPronombre(
-                    palabraLimpia
-                )
-            ) {
-
-                const img =
-                    document.createElement(
-                        "img"
-                    );
-
-                img.src =
-                    simboloPronombre;
-
-                img.style.width =
-                    "40px";
-
-                img.style.height =
-                    "40px";
-
-                if (mostrarSimbolos) {
-
-                    filaSimbolo.appendChild(
-                        img
-                    );
-
-                }
-            }
-
-
-            // =========================
-            // REFLEXIVOS / CUASI REFLEJOS
-            // =========================
-
-            if (
-                !esAmbiguaActiva &&
-                esReflexivosCuasiReflejos(
-                    palabraLimpia
-                )
-            ) {
-
-                if (mostrarColores) {
-
-                    filaTexto.style.color =
-                        "red";
-
-                    filaTexto.style.fontWeight =
-                        "bold";
-
+                    if (mostrarSimbolos) {
+                        filaSimbolo.appendChild(
+                            img
+                        );
+                    }
                 }
 
-                const img =
-                    document.createElement(
-                        "img"
-                    );
 
-                img.src =
-                    simboloReflexivosCuasiReflejos;
+                // =========================
+                // REFLEXIVOS / CUASI REFLEJOS
+                // =========================
 
-                img.style.width =
-                    "40px";
+                if (
+                    !esAmbiguaActiva &&
+                    esReflexivosCuasiReflejos(
+                        palabraLimpia
+                    )
+                ) {
 
-                img.style.height =
-                    "40px";
+                    if (mostrarColores) {
+                        filaTexto.style.color =
+                            "red";
+                        filaTexto.style.fontWeight =
+                            "bold";
+                    }
 
-                if (mostrarSimbolos) {
+                    const img =
+                        document.createElement(
+                            "img"
+                        );
 
-                    filaSimbolo.appendChild(
-                        img
-                    );
+                    img.src =
+                        simboloReflexivosCuasiReflejos;
 
+                    img.style.width =
+                        "40px";
+
+                    img.style.height =
+                        "40px";
+
+                    if (mostrarSimbolos) {
+                        filaSimbolo.appendChild(
+                            img
+                        );
+                    }
                 }
-            }
 
 
-            // =========================
-            // RELACIONANTES
-            // =========================
+                // =========================
+                // RELACIONANTES
+                // =========================
 
-            if (
-                !esAmbiguaActiva &&
-                esRelacionante(
-                    palabraLimpia
-                )
-            ) {
+                if (
+                    !esAmbiguaActiva &&
+                    esRelacionante(
+                        palabraLimpia
+                    )
+                ) {
 
-                const img =
-                    document.createElement(
-                        "img"
-                    );
+                    const img =
+                        document.createElement(
+                            "img"
+                        );
 
-                img.src =
-                    simboloRelacionante;
+                    img.src =
+                        simboloRelacionante;
 
-                img.style.width =
-                    "40px";
+                    img.style.width =
+                        "40px";
 
-                img.style.height =
-                    "40px";
+                    img.style.height =
+                        "40px";
 
-                if (mostrarSimbolos) {
-
-                    filaSimbolo.appendChild(
-                        img
-                    );
-
+                    if (mostrarSimbolos) {
+                        filaSimbolo.appendChild(
+                            img
+                        );
+                    }
                 }
-            }
 
 
-            // =========================
-            // PREPOSICIONES
-            // =========================
+                // =========================
+                // PREPOSICIONES
+                // =========================
 
-            if (
-                !esAmbiguaActiva &&
-                esPreposicion(
-                    palabraLimpia
-                )
-            ) {
+                if (
+                    !esAmbiguaActiva &&
+                    esPreposicion(
+                        palabraLimpia
+                    )
+                ) {
 
-                const palabraA =
-                    palabraExacta === "a" ||
-                    palabraAlias === "a";
+                    const palabraA =
+                        palabraExacta === "a" ||
+                        palabraAlias === "a";
 
-
-                const siguienteEsInfinitivo =
-                    verbosBaseExactos.includes(
-                        palabraSiguienteExacta
-                    ) ||
-                    (
-                        palabraSiguienteAlias &&
+                    const siguienteEsInfinitivo =
                         verbosBaseExactos.includes(
-                            normalizarTextoExacto(
-                                palabraSiguienteAlias
-                            )
-                        )
-                    );
-
-
-                const anteriorEsVerbo =
-                    verbosConjugadosExactos[
-                        palabraAnteriorExacta
-                    ] ||
-                    verbosBaseExactos.includes(
-                        palabraAnteriorExacta
-                    ) ||
-                    (
-                        palabraAnteriorAlias &&
+                            palabraSiguienteExacta
+                        ) ||
                         (
-                            verbosConjugadosExactos[
-                                normalizarTextoExacto(
-                                    palabraAnteriorAlias
-                                )
-                            ] ||
+                            palabraSiguienteAlias &&
                             verbosBaseExactos.includes(
                                 normalizarTextoExacto(
-                                    palabraAnteriorAlias
+                                    palabraSiguienteAlias
                                 )
                             )
-                        )
-                    );
+                        );
 
+                    const anteriorEsVerbo =
+                        verbosConjugadosExactos[
+                            palabraAnteriorExacta
+                        ] ||
+                        verbosBaseExactos.includes(
+                            palabraAnteriorExacta
+                        ) ||
+                        (
+                            palabraAnteriorAlias &&
+                            (
+                                verbosConjugadosExactos[
+                                    normalizarTextoExacto(
+                                        palabraAnteriorAlias
+                                    )
+                                ] ||
+                                verbosBaseExactos.includes(
+                                    normalizarTextoExacto(
+                                        palabraAnteriorAlias
+                                    )
+                                )
+                            )
+                        );
 
-                const esFraseVerbal =
-                    palabraA &&
-                    siguienteEsInfinitivo &&
-                    anteriorEsVerbo;
+                    const esFraseVerbal =
+                        palabraA &&
+                        siguienteEsInfinitivo &&
+                        anteriorEsVerbo;
 
+                    if (mostrarColores) {
 
-                if (mostrarColores) {
+                        if (esFraseVerbal) {
 
-                    if (esFraseVerbal) {
+                            filaTexto.style.color =
+                                "red";
 
-                        filaTexto.style.color =
-                            "red";
+                            filaTexto.style.fontWeight =
+                                "bold";
 
-                        filaTexto.style.fontWeight =
-                            "bold";
+                        } else {
 
-                    } else {
+                            filaTexto.style.color =
+                                "blue";
 
-                        filaTexto.style.color =
-                            "blue";
-
-                        filaTexto.style.fontWeight =
-                            "bold";
-
+                            filaTexto.style.fontWeight =
+                                "bold";
+                        }
                     }
                 }
-            }
 
 
-            // =========================
-            // PICTOGRAMA FRASE / PALABRA
-            // =========================
-
-            if (
-                fraseEncontrada &&
-                mostrarImagenes &&
-                !raizVerbal &&
-                !esAmbiguaActiva
-            ) {
-
-                const opcionesFrase =
-                    Array.isArray(
-                        fraseEncontrada.imagen
-                    )
-                        ? fraseEncontrada
-                            .imagen
-                            .filter(Boolean)
-                        : fraseEncontrada.imagen
-                            ? [
-                                fraseEncontrada
-                                    .imagen
-                            ]
-                            : [];
-
+                // =========================
+                // PICTOGRAMA FRASE / PALABRA
+                // =========================
 
                 if (
-                    opcionesFrase.length
+                    fraseEncontrada &&
+                    mostrarImagenes &&
+                    !raizVerbal &&
+                    !esAmbiguaActiva
                 ) {
 
-                    const picto =
-                        crearPictoSeleccionable(
-                            opcionesFrase
+                    const opcionesFrase =
+                        Array.isArray(
+                            fraseEncontrada.imagen
+                        )
+                            ? fraseEncontrada
+                                .imagen
+                                .filter(Boolean)
+                            : fraseEncontrada.imagen
+                                ? [
+                                    fraseEncontrada
+                                        .imagen
+                                ]
+                                : [];
+
+                    if (
+                        opcionesFrase.length
+                    ) {
+
+                        const picto =
+                            crearPictoSeleccionable(
+                                opcionesFrase
+                            );
+
+                        filaPicto.appendChild(
+                            picto
+                        );
+                    }
+
+                    i +=
+                        palabrasConsumidas - 1;
+
+                } else if (
+                    !raizVerbal &&
+                    !esAmbiguaActiva
+                ) {
+
+                    const opcionesSimple =
+                        obtenerPictos(
+                            palabraLimpia
                         );
 
-                    filaPicto.appendChild(
-                        picto
-                    );
+                    if (
+                        opcionesSimple.length &&
+                        mostrarImagenes
+                    ) {
+
+                        const picto =
+                            crearPictoSeleccionable(
+                                opcionesSimple
+                            );
+
+                        filaPicto.appendChild(
+                            picto
+                        );
+                    }
                 }
 
-                i +=
-                    palabrasConsumidas -
-                    1;
 
-            } else if (
-                !raizVerbal &&
-                !esAmbiguaActiva
-            ) {
-
-                const opcionesSimple =
-                    obtenerPictos(
-                        palabraLimpia
-                    );
+                // =========================
+                // TEXTO
+                // =========================
 
                 if (
-                    opcionesSimple.length &&
-                    mostrarImagenes
+                    fraseEncontrada &&
+                    !raizVerbal &&
+                    palabrasConsumidas > 1
                 ) {
 
-                    const picto =
-                        crearPictoSeleccionable(
-                            opcionesSimple
+                    filaTexto.style.color = "";
+                    filaTexto.style.fontWeight = "";
+
+                    const palabrasFrase =
+                        palabras.slice(
+                            i -
+                            (
+                                palabrasConsumidas -
+                                1
+                            ),
+                            i + 1
                         );
 
-                    filaPicto.appendChild(
-                        picto
-                    );
-
-                }
-            }
-
-
-            // =========================
-            // TEXTO
-            // =========================
-
-            if (
-                fraseEncontrada &&
-                !raizVerbal &&
-                palabrasConsumidas > 1
-            ) {
-
-                filaTexto.style.color = "";
-                filaTexto.style.fontWeight =
-                    "";
-
-                const palabrasFrase =
-                    palabras.slice(
-                        i -
+                    palabrasFrase.forEach(
                         (
-                            palabrasConsumidas -
-                            1
-                        ),
-                        i + 1
+                            palabraFrase,
+                            indiceFrase
+                        ) => {
+
+                            const span =
+                                document.createElement(
+                                    "span"
+                                );
+
+                            const puntuacion =
+                                indiceFrase ===
+                                palabrasFrase.length - 1
+                                    ? extraerPuntuacionFinal(
+                                        palabraFrase
+                                    )
+                                    : "";
+
+                            const sinPuntuacion =
+                                palabraFrase.replace(
+                                    /[.,;:!?]+$/g,
+                                    ""
+                                );
+
+                            span.innerText =
+                                sinPuntuacion.toUpperCase() +
+                                puntuacion;
+
+                            if (mostrarColores) {
+
+                                const anterior =
+                                    indiceFrase > 0
+                                        ? palabrasFrase[
+                                            indiceFrase - 1
+                                        ]
+                                        : "";
+
+                                const siguiente =
+                                    indiceFrase <
+                                    palabrasFrase.length - 1
+                                        ? palabrasFrase[
+                                            indiceFrase + 1
+                                        ]
+                                        : "";
+
+                                const estilo =
+                                    obtenerEstiloPalabraCompuesta(
+                                        palabraFrase,
+                                        anterior,
+                                        siguiente
+                                    );
+
+                                span.style.color =
+                                    estilo.color;
+
+                                span.style.fontWeight =
+                                    estilo.negrita
+                                        ? "bold"
+                                        : "normal";
+                            }
+
+                            filaTexto.appendChild(
+                                span
+                            );
+                        }
                     );
 
+                } else {
 
-                palabrasFrase.forEach(
-                    (
-                        palabraFrase,
-                        indiceFrase
-                    ) => {
+                    const textoMostrar =
+                        (
+                            palabraOriginal ||
+                            ""
+                        ).toUpperCase();
 
-                    const span =
+                    const spanTexto =
                         document.createElement(
                             "span"
                         );
 
-                    const puntuacion =
-                        indiceFrase ===
-                        palabrasFrase.length -
-                            1
-                            ? extraerPuntuacionFinal(
-                                palabraFrase
-                            )
-                            : "";
-
-                    const sinPuntuacion =
-                        palabraFrase.replace(
-                            /[.,;:!?]+$/g,
-                            ""
-                        );
-
-                    span.innerText =
-                        sinPuntuacion.toUpperCase() +
-                        puntuacion;
-
-
-                    if (mostrarColores) {
-
-                        const anterior =
-                            indiceFrase > 0
-                                ? palabrasFrase[
-                                    indiceFrase -
-                                    1
-                                ]
-                                : "";
-
-                        const siguiente =
-                            indiceFrase <
-                            palabrasFrase.length -
-                                1
-                                ? palabrasFrase[
-                                    indiceFrase +
-                                    1
-                                ]
-                                : "";
-
-                        const estilo =
-                            obtenerEstiloPalabraCompuesta(
-                                palabraFrase,
-                                anterior,
-                                siguiente
-                            );
-
-                        span.style.color =
-                            estilo.color;
-
-                        span.style.fontWeight =
-                            estilo.negrita
-                                ? "bold"
-                                : "normal";
-                    }
+                    spanTexto.innerText =
+                        textoMostrar;
 
                     filaTexto.appendChild(
-                        span
+                        spanTexto
                     );
-                });
+                }
 
-            } else {
+                div.appendChild(filaPicto);
+                div.appendChild(filaSimbolo);
+                div.appendChild(filaTexto);
 
-                const textoMostrar =
-                    (
-                        palabraOriginal ||
-                        ""
-                    ).toUpperCase();
-
-                const spanTexto =
-                    document.createElement(
-                        "span"
-                    );
-
-                spanTexto.innerText =
-                    textoMostrar;
-
-                filaTexto.appendChild(
-                    spanTexto
+                contenedorLinea.appendChild(
+                    div
                 );
             }
 
-
-            div.appendChild(
-                filaPicto
+            resultado.appendChild(
+                contenedorLinea
             );
-
-            div.appendChild(
-                filaSimbolo
-            );
-
-            div.appendChild(
-                filaTexto
-            );
-
-            contenedorLinea.appendChild(
-                div
-            );
-        }
-
-
-        resultado.appendChild(
-            contenedorLinea
-        );
-
-    });
+        });
 
 
     // =========================
@@ -2307,7 +1996,6 @@ function mostrarPictos() {
             resultado.clientWidth;
 
         let escalaGeneral = 1;
-
 
         lineas.forEach(linea => {
 
@@ -2336,14 +2024,11 @@ function mostrarPictos() {
                     escalaNecesaria <
                     escalaGeneral
                 ) {
-
                     escalaGeneral =
                         escalaNecesaria;
-
                 }
             }
         });
-
 
         lineas.forEach(linea => {
 
@@ -2364,10 +2049,7 @@ function mostrarPictos() {
                 );
 
             linea.style.marginBottom =
-                `${
-                    10 -
-                    espacioQueSobra
-                }px`;
+                `${10 - espacioQueSobra}px`;
         });
 
     });
@@ -2390,7 +2072,6 @@ function cambiarTipografia() {
         mostrarPictos();
     });
 }
-
 
 function toggleSimbolos() {
 
@@ -2420,7 +2101,6 @@ function toggleSimbolos() {
     mostrarPictos();
 }
 
-
 function togglePictos() {
 
     mostrarImagenes =
@@ -2448,7 +2128,6 @@ function togglePictos() {
 
     mostrarPictos();
 }
-
 
 function toggleColor() {
 
@@ -2481,69 +2160,59 @@ function toggleColor() {
 
 // ==================== MARGEN SEGURO PARA EXPORTAR ====================
 
-function prepararResultadoParaExportar(
-    resultado
-) {
+function prepararResultadoParaExportar(resultado) {
 
     const original = {
-
         paddingLeft:
             resultado.style.paddingLeft,
 
         paddingRight:
             resultado.style.paddingRight
-
     };
 
     const base =
         resultado.getBoundingClientRect();
 
-    let minLeft =
-        base.left;
-
-    let maxRight =
-        base.right;
-
+    let minLeft = base.left;
+    let maxRight = base.right;
 
     resultado
         .querySelectorAll("*")
         .forEach(elemento => {
 
-        if (
-            elemento.classList &&
-            elemento.classList.contains(
-                "no-descargar"
-            )
-        ) {
-            return;
-        }
+            if (
+                elemento.classList &&
+                elemento.classList.contains(
+                    "no-descargar"
+                )
+            ) {
+                return;
+            }
 
-        const r =
-            elemento.getBoundingClientRect();
+            const r =
+                elemento.getBoundingClientRect();
 
-        if (
-            r.width <= 0 ||
-            r.height <= 0
-        ) {
-            return;
-        }
+            if (
+                r.width <= 0 ||
+                r.height <= 0
+            ) {
+                return;
+            }
 
-        minLeft =
-            Math.min(
-                minLeft,
-                r.left
-            );
+            minLeft =
+                Math.min(
+                    minLeft,
+                    r.left
+                );
 
-        maxRight =
-            Math.max(
-                maxRight,
-                r.right
-            );
-    });
-
+            maxRight =
+                Math.max(
+                    maxRight,
+                    r.right
+                );
+        });
 
     const seguridad = 12;
-
 
     resultado.style.paddingLeft =
         `${
@@ -2554,7 +2223,6 @@ function prepararResultadoParaExportar(
             seguridad
         }px`;
 
-
     resultado.style.paddingRight =
         `${
             Math.max(
@@ -2564,7 +2232,6 @@ function prepararResultadoParaExportar(
             seguridad
         }px`;
 
-
     return () => {
 
         resultado.style.paddingLeft =
@@ -2572,7 +2239,6 @@ function prepararResultadoParaExportar(
 
         resultado.style.paddingRight =
             original.paddingRight;
-
     };
 }
 
@@ -2595,33 +2261,27 @@ function descargarImagen() {
             resultado
         );
 
-
     requestAnimationFrame(() => {
 
         html2canvas(
             resultado,
             {
-
                 useCORS: true,
-
                 allowTaint: false,
-
                 backgroundColor:
                     "#ffffff",
-
                 scale: 2,
 
                 ignoreElements:
                     elemento => {
 
-                    return (
-                        elemento.classList &&
-                        elemento.classList.contains(
-                            "no-descargar"
-                        )
-                    );
-                }
-
+                        return (
+                            elemento.classList &&
+                            elemento.classList.contains(
+                                "no-descargar"
+                            )
+                        );
+                    }
             }
         )
         .then(canvas => {
@@ -2646,7 +2306,6 @@ function descargarImagen() {
                 );
 
             link.click();
-
         })
         .catch(error => {
 
@@ -2657,7 +2316,6 @@ function descargarImagen() {
             restaurarMargenesExportacion();
 
             console.error(error);
-
         });
 
     });
@@ -2673,7 +2331,6 @@ function copiarImagen() {
             "resultado"
         );
 
-
     if (
         !navigator.clipboard ||
         !window.ClipboardItem
@@ -2686,17 +2343,14 @@ function copiarImagen() {
         return;
     }
 
-
     resultado.classList.add(
         "modo-descarga"
     );
-
 
     const restaurarMargenesExportacion =
         prepararResultadoParaExportar(
             resultado
         );
-
 
     const blobPromesa =
         new Promise(
@@ -2705,69 +2359,59 @@ function copiarImagen() {
                 reject
             ) => {
 
-        requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
 
-            html2canvas(
-                resultado,
-                {
+                    html2canvas(
+                        resultado,
+                        {
+                            useCORS: true,
+                            allowTaint: false,
+                            backgroundColor:
+                                "#ffffff",
+                            scale: 2,
 
-                    useCORS: true,
+                            ignoreElements:
+                                elemento => {
 
-                    allowTaint: false,
+                                    return (
+                                        elemento.classList &&
+                                        elemento.classList.contains(
+                                            "no-descargar"
+                                        )
+                                    );
+                                }
+                        }
+                    )
+                    .then(canvas => {
 
-                    backgroundColor:
-                        "#ffffff",
+                        canvas.toBlob(
+                            blob => {
 
-                    scale: 2,
+                                if (blob) {
+                                    resolve(blob);
+                                } else {
+                                    reject(
+                                        new Error(
+                                            "No se pudo generar la imagen."
+                                        )
+                                    );
+                                }
 
-                    ignoreElements:
-                        elemento => {
-
-                        return (
-                            elemento.classList &&
-                            elemento.classList.contains(
-                                "no-descargar"
-                            )
+                            },
+                            "image/png"
                         );
-                    }
+                    })
+                    .catch(reject);
 
-                }
-            )
-            .then(canvas => {
-
-                canvas.toBlob(
-                    blob => {
-
-                    if (blob) {
-
-                        resolve(blob);
-
-                    } else {
-
-                        reject(
-                            new Error(
-                                "No se pudo generar la imagen."
-                            )
-                        );
-
-                    }
-
-                }, "image/png");
-
-            })
-            .catch(reject);
-
-        });
-
-    });
-
+                });
+            }
+        );
 
     const item =
         new ClipboardItem({
             "image/png":
                 blobPromesa
         });
-
 
     navigator.clipboard
         .write([item])
@@ -2777,7 +2421,6 @@ function copiarImagen() {
             alert(
                 "Imagen copiada. Ya podés pegarla donde quieras."
             );
-
         })
 
         .catch(error => {
@@ -2787,7 +2430,6 @@ function copiarImagen() {
             alert(
                 "No se pudo copiar la imagen en este navegador. Podés usar Descargar imagen."
             );
-
         })
 
         .finally(() => {
@@ -2797,6 +2439,5 @@ function copiarImagen() {
             );
 
             restaurarMargenesExportacion();
-
         });
 }
