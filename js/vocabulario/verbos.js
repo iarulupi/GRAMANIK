@@ -31,9 +31,18 @@ const vocabularioVerbos = {
               ],
     "ponerse": "https://static.arasaac.org/pictograms/6627/6627_300.png",
 
+    "guardar": "https://static.arasaac.org/pictograms/5514/5514_300.png",
+
+    "sacar": "https://static.arasaac.org/pictograms/5568/5568_300.png",
+
     "pensar": "https://static.arasaac.org/pictograms/38796/38796_300.png",
 
     "nacer": "https://static.arasaac.org/pictograms/8176/8176_300.png",
+
+    "sorprender": [
+        "https://static.arasaac.org/pictograms/9038/9038_300.png",
+        "https://static.arasaac.org/pictograms/7260/7260_300.png",
+        ]
 
     "llamarse": "https://static.arasaac.org/pictograms/27353/27353_300.png",
 
@@ -319,6 +328,7 @@ let verbosBase = [
     "escribir",
     "mirar",
     "completar",
+    "sacar",
     "pintarse",
     "meterse",
     "meter",
@@ -397,6 +407,7 @@ let verbosBase = [
 "señalar",
 "armar",
 "caminar",
+    "guardar",
 "salir",
 "lastimarse",
    "poder",
@@ -410,6 +421,7 @@ let verbosBase = [
     "vender",
     "repasar",
     "enojarse",
+    "sorprender",
     "crear",
 ];
 
@@ -418,6 +430,7 @@ let verbosConjugados = {
 // ===== INDICACIONES =====
 
 "repasá": "repasar",
+"hacé": "hacer",
 "mirá": "mirar",
 "trozá": "trozar",
 "dibujá": "dibujar",
@@ -602,6 +615,98 @@ let verbosConjugados = {
 "vamos a decir": "decir",
 "van a decir": "decir",
 
+// ===== VERBO SORPRENDER =====
+
+// PRESENTE HABITUAL
+"sorprendo": "sorprender",
+"sorprendes": "sorprender",
+"sorprende": "sorprender",
+"sorprendemos": "sorprender",
+"sorprenden": "sorprender",
+
+// PRETÉRITO PERFECTO SIMPLE
+"sorprendí": "sorprender",
+"sorprendiste": "sorprender",
+"sorprendió": "sorprender",
+"sorprendimos": "sorprender",
+"sorprendieron": "sorprender",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he sorprendido": "sorprender",
+"has sorprendido": "sorprender",
+"ha sorprendido": "sorprender",
+"hemos sorprendido": "sorprender",
+"han sorprendido": "sorprender",
+
+// FUTURO COMPUESTO
+"habré sorprendido": "sorprender",
+"habrás sorprendido": "sorprender",
+"habrá sorprendido": "sorprender",
+"habremos sorprendido": "sorprender",
+"habrán sorprendido": "sorprender",
+    
+// ===== VERBO SACAR =====
+
+// PRESENTE HABITUAL
+"saco": "sacar",
+"sacas": "sacar",
+"sacás": "sacar",
+"saca": "sacar",
+"sacamos": "sacar",
+"sacan": "sacar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"saqué": "sacar",
+"sacaste": "sacar",
+"sacó": "sacar",
+"sacamos": "sacar",
+"sacaron": "sacar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he sacado": "sacar",
+"has sacado": "sacar",
+"ha sacado": "sacar",
+"hemos sacado": "sacar",
+"han sacado": "sacar",
+
+// FUTURO COMPUESTO
+"habré sacado": "sacar",
+"habrás sacado": "sacar",
+"habrá sacado": "sacar",
+"habremos sacado": "sacar",
+"habrán sacado": "sacar",
+
+// ===== VERBO GUARDAR =====
+
+// PRESENTE HABITUAL
+"guardo": "guardar",
+"guardas": "guardar",
+"guardás": "guardar",
+"guarda": "guardar",
+"guardamos": "guardar",
+"guardan": "guardar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"guardé": "guardar",
+"guardaste": "guardar",
+"guardó": "guardar",
+"guardamos": "guardar",
+"guardaron": "guardar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he guardado": "guardar",
+"has guardado": "guardar",
+"ha guardado": "guardar",
+"hemos guardado": "guardar",
+"han guardado": "guardar",
+
+// FUTURO COMPUESTO
+"habré guardado": "guardar",
+"habrás guardado": "guardar",
+"habrá guardado": "guardar",
+"habremos guardado": "guardar",
+"habrán guardado": "guardar",
+    
 // ===== VERBO REPASAR =====
 
 // PRESENTE HABITUAL
