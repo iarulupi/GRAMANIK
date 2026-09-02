@@ -1177,13 +1177,6 @@ let verbosConjugados = {
 
 // == nadar ==
 
-// PRESENTE HABITUAL
-"nado": "nadar",
-"nadas": "nadar",
-"nada": "nadar",
-"nadamos": "nadar",
-"nadan": "nadar",
-
 // PRETÉRITO PERFECTO SIMPLE
 "nadé": "nadar",
 "nadaste": "nadar",
