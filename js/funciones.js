@@ -58,10 +58,6 @@ const reflexivosExactos = normalizarListaExacta(pronombresReflexivosCuasiReflejo
 // Permite elegir manualmente la categoría cuando una misma forma escrita
 // puede funcionar de más de una manera.
 
-// ==================== PALABRAS AMBIGUAS ====================
-// Permite elegir manualmente la categoría cuando una misma forma escrita
-// puede funcionar de más de una manera.
-
 const palabrasAmbiguas = {
 
     "corto": [
@@ -109,27 +105,57 @@ const palabrasAmbiguas = {
         }
     ],
 
-    // ME / TE / SE / NOS pueden funcionar como pronombres personales
-    // o como pronombres reflexivos/cuasi reflejos. Se elige manualmente.
+    "leo": [
+        {
+            tipo: "verbo",
+            etiqueta: "VERBO",
+            base: "leer",
+            picto: "leer"
+        },
+        {
+            tipo: "sustantivo",
+            etiqueta: "SUSTANTIVO",
+            base: "leo",
+            picto: "leo"
+        }
+    ],
+
+    "cocina": [
+        {
+            tipo: "verbo",
+            etiqueta: "VERBO",
+            base: "cocinar",
+            picto: "cocinar"
+        },
+        {
+            tipo: "sustantivo",
+            etiqueta: "SUSTANTIVO",
+            base: "cocina",
+            picto: "cocina"
+        }
+    ],
+
     "me": [
         { tipo: "reflexivo", etiqueta: "REFLEXIVO" },
         { tipo: "pronombre", etiqueta: "PRONOMBRE" }
     ],
+
     "te": [
         { tipo: "reflexivo", etiqueta: "REFLEXIVO" },
         { tipo: "pronombre", etiqueta: "PRONOMBRE" }
     ],
+
     "se": [
         { tipo: "reflexivo", etiqueta: "REFLEXIVO" },
         { tipo: "pronombre", etiqueta: "PRONOMBRE" }
     ],
+
     "nos": [
         { tipo: "reflexivo", etiqueta: "REFLEXIVO" },
         { tipo: "pronombre", etiqueta: "PRONOMBRE" }
     ]
 
 };
-
 const eleccionesAmbiguas = {};
 
 function obtenerOpcionesAmbiguas(palabra) {
