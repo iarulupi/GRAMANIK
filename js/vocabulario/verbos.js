@@ -598,6 +598,8 @@ let verbosConjugados = {
     
 // == decir ==
 
+"digas": "decir",
+    
 // PRESENTE HABITUAL
 "digo": "decir",
 "dices": "decir",
