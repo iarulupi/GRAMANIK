@@ -42,7 +42,7 @@ const vocabularioVerbos = {
     "sorprender": [
         "https://static.arasaac.org/pictograms/9038/9038_300.png",
         "https://static.arasaac.org/pictograms/7260/7260_300.png",
-        ]
+        ],
 
     "llamarse": "https://static.arasaac.org/pictograms/27353/27353_300.png",
 
