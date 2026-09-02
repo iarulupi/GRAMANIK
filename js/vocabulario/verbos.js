@@ -449,7 +449,9 @@ let verbosConjugados = {
 "cortá": "cortar",
 "guardá": "guardar",
 "poné": "poner",
-
+"sacá": "sacar",
+"guardá": "guardar",
+"guardalo": "guardar",
 // ===== FRASES VERBALES =====
 
 "se puede formar": "formar",
