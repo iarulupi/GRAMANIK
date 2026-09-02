@@ -18,7 +18,7 @@ const vocabularioPersonas = {
     "bebé": [
         "https://static.arasaac.org/pictograms/6060/6060_300.png",
         "https://static.arasaac.org/pictograms/2275/2275_300.png",
-        ]
+        ],
 
     "hombre": "https://static.arasaac.org/pictograms/4665/4665_300.png",
     "mujer": [
