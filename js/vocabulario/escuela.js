@@ -141,6 +141,11 @@ const vocabularioEscuela = {
         "https://static.arasaac.org/pictograms/36659/36659_300.png"
     ],
 
+    "papel":"https://static.arasaac.org/pictograms/8349/8349_300.png",
+    "papeles":"https://static.arasaac.org/pictograms/2398/2398_300.png",
+
+    "sobre": "https://static.arasaac.org/pictograms/10325/10325_300.png",
+
     "tiza": "https://static.arasaac.org/pictograms/36602/36602_300.png",
     "tizas": "https://static.arasaac.org/pictograms/4965/4965_300.png",
 
