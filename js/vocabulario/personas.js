@@ -11,12 +11,20 @@ const vocabularioPersonas = {
     "ella": "https://static.arasaac.org/pictograms/7029/7029_300.png",
     "nosotros": "https://static.arasaac.org/pictograms/7186/7186_300.png",
 
-    "niño": "",
-    "niña": "",
-    "bebé": "",
+    "niño": "https://static.arasaac.org/pictograms/7176/7176_300.png",
+    "nene":"https://static.arasaac.org/pictograms/7176/7176_300.png",
+    "nena": "https://static.arasaac.org/pictograms/27509/27509_300.png",
+    "niña": "https://static.arasaac.org/pictograms/27509/27509_300.png",
+    "bebé": [
+        "https://static.arasaac.org/pictograms/6060/6060_300.png",
+        "https://static.arasaac.org/pictograms/2275/2275_300.png",
+        ]
 
-    "hombre": "",
-    "mujer": "",
+    "hombre": "https://static.arasaac.org/pictograms/4665/4665_300.png",
+    "mujer": [
+    "https://static.arasaac.org/pictograms/24621/24621_300.png",
+    "https://static.arasaac.org/pictograms/4703/4703_300.png",
+    ]
     "chico": "https://static.arasaac.org/pictograms/4673/4673_300.png",
     "chica": "https://static.arasaac.org/pictograms/10206/10206_300.png",
 "chico sustantivo": "https://static.arasaac.org/pictograms/4673/4673_300.png",
@@ -37,10 +45,10 @@ const vocabularioPersonas = {
 
     "compañero": "https://static.arasaac.org/pictograms/39421/39421_300.png",
     "compañeros": "https://static.arasaac.org/pictograms/7063/7063_300.png",
-    "compañera": "",
+    "compañera": "https://static.arasaac.org/pictograms/39422/39422_300.png",
 
-    "alumno": "",
-    "alumna": "",
+    "alumno": "https://static.arasaac.org/pictograms/5900/5900_300.png",
+    "alumna": "https://static.arasaac.org/pictograms/5899/5899_300.png",
     "alumnos": "https://i.ibb.co/gM2YyTbp/Whats-App-Image-2026-03-04-at-6-16-45-PM.jpg",
 
     "maestro": "https://static.arasaac.org/pictograms/2457/2457_300.png",
