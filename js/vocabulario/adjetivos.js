@@ -5,6 +5,7 @@
 const vocabularioAdjetivos = {
 
     "adjetivos": "https://static.arasaac.org/pictograms/32584/32584_300.png",
+    "adjetivo": "https://static.arasaac.org/pictograms/32584/32584_300.png",
 
     "uno": "https://static.arasaac.org/pictograms/4889/4889_300.png",
     "dos": "https://static.arasaac.org/pictograms/4890/4890_300.png",
