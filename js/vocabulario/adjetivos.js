@@ -56,6 +56,7 @@ const vocabularioAdjetivos = {
     ],
 
     "grande": "https://static.arasaac.org/pictograms/4658/4658_300.png",
+    "grandes": "https://static.arasaac.org/pictograms/4658/4658_300.png",
     "gigante": "https://i.ibb.co/q33pwrHG/Whats-App-Image-2026-04-08-at-6-36-32-PM.jpg",
 
     "chico": "https://static.arasaac.org/pictograms/4716/4716_300.png",
@@ -274,6 +275,7 @@ let adjetivos = [
     "feo",
     "fea",
     "grande",
+    "grandes",
     "chico",
     "chica",
     "alto",
