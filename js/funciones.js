@@ -1084,7 +1084,9 @@ function subrayarSeleccion() {
                 textoSeleccionado
             );
         });
-
+// Dibujar una sola línea continua por cada tramo seleccionado.
+// Así el subrayado también atraviesa los espacios entre palabras.
+actualizarSubrayadoContinuo();
     const seleccion =
         window.getSelection();
 
@@ -1094,7 +1096,59 @@ function subrayarSeleccion() {
 
     seleccionGuardada = null;
 }
+function actualizarSubrayadoContinuo() {
 
+    const resultado =
+        document.getElementById("resultado");
+
+    if (!resultado) return;
+
+    // Borra solamente las líneas auxiliares anteriores.
+    resultado
+        .querySelectorAll(".subrayado-continuo")
+        .forEach(linea => linea.remove());
+
+    resultado
+        .querySelectorAll(".contenedor-linea")
+        .forEach(contenedor => {
+
+            const subrayados = Array.from(
+                contenedor.querySelectorAll(
+                    ".subrayado-manual"
+                )
+            );
+
+            if (!subrayados.length) return;
+
+            const rectContenedor =
+                contenedor.getBoundingClientRect();
+
+            const primero =
+                subrayados[0].getBoundingClientRect();
+
+            const ultimo =
+                subrayados[
+                    subrayados.length - 1
+                ].getBoundingClientRect();
+
+            const linea =
+                document.createElement("div");
+
+            linea.className =
+                "subrayado-continuo";
+
+            linea.style.left =
+                `${primero.left - rectContenedor.left}px`;
+
+            linea.style.width =
+                `${ultimo.right - primero.left}px`;
+
+            linea.style.top =
+                `${primero.bottom - rectContenedor.top + 5}px`;
+
+            contenedor.appendChild(linea);
+        });
+}
 
 // ==================== FUNCIONES ====================
 
