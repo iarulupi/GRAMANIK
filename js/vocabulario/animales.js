@@ -62,17 +62,7 @@ const vocabularioAnimales = {
     "cebra": "https://static.arasaac.org/pictograms/2324/2324_300.png",
     "mono": "https://static.arasaac.org/pictograms/2477/2477_300.png",
 
-    "patas": [
-        "https://static.arasaac.org/pictograms/34971/34971_300.png",
-        "https://static.arasaac.org/pictograms/27953/27953_300.png",
-        "https://static.arasaac.org/pictograms/16833/16833_300.png",
-        ],
-    "pata": "https://static.arasaac.org/pictograms/27953/27953_300.png",
-    "cuello": "https://static.arasaac.org/pictograms/34953/34953_300.png",
-    "cola":"https://static.arasaac.org/pictograms/5967/5967_300.png",
-    "colmillo": "https://static.arasaac.org/pictograms/39845/39845_300.png",
-    "colmillos": "https://static.arasaac.org/pictograms/39845/39845_300.png",
-    "trompa": "https://static.arasaac.org/pictograms/7287/7287_300.png",
+
 };
 
 Object.assign(pictogramas, vocabularioAnimales);
