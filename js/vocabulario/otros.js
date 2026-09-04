@@ -115,6 +115,14 @@ const vocabularioOtros = {
 
     "shampoo": "https://static.arasaac.org/pictograms/2699/2699_300.png",
     "acondicionador": "https://static.arasaac.org/pictograms/35823/35823_300.png",
+
+    // ==================== PARTES DEL CUERPO ====================
+
+    "partes del cuerpo": "https://static.arasaac.org/pictograms/29145/29145_300.png",
+    "cuerpo": "https://static.arasaac.org/pictograms/6473/6473_300.png",
+    "orejas": "https://static.arasaac.org/pictograms/2871/2871_300.png",
+    "oreja": "https://static.arasaac.org/pictograms/2871/2871_300.png",
+
 };
 
 Object.assign(pictogramas, vocabularioOtros);
