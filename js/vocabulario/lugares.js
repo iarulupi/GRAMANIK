@@ -88,6 +88,7 @@ const vocabularioLugares = {
       "https://static.arasaac.org/pictograms/11211/11211_300.png",
       "https://static.arasaac.org/pictograms/15551/15551_300.png",
                 ],
+   "selva": "https://static.arasaac.org/pictograms/3385/3385_300.png",
 
 };
 
