@@ -84,6 +84,10 @@ const vocabularioLugares = {
    "campo": "https://static.arasaac.org/pictograms/2683/2683_300.png",
    "ciudad": "https://static.arasaac.org/pictograms/2704/2704_300.png",
    "club": "https://static.arasaac.org/pictograms/37951/37951_300.png",
+   "shopping": [
+      "https://static.arasaac.org/pictograms/11211/11211_300.png",
+      "https://static.arasaac.org/pictograms/15551/15551_300.png",
+                ],
 
 };
 
