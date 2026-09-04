@@ -119,9 +119,40 @@ const vocabularioOtros = {
     // ==================== PARTES DEL CUERPO ====================
 
     "partes del cuerpo": "https://static.arasaac.org/pictograms/29145/29145_300.png",
+    
     "cuerpo": "https://static.arasaac.org/pictograms/6473/6473_300.png",
+    
     "orejas": "https://static.arasaac.org/pictograms/2871/2871_300.png",
+    
     "oreja": "https://static.arasaac.org/pictograms/2871/2871_300.png",
+
+"pierna": "https://static.arasaac.org/pictograms/8666/8666_300.png",
+
+"axila": [
+    "https://static.arasaac.org/pictograms/37137/37137_300.png",
+    "https://static.arasaac.org/pictograms/2989/2989_300.png"
+],
+
+"tronco": [
+    "https://static.arasaac.org/pictograms/29136/29136_300.png",
+    "https://static.arasaac.org/pictograms/27343/27343_300.png"
+],
+
+"cuello": "https://static.arasaac.org/pictograms/25040/25040_300.png",
+
+"órganos": "https://static.arasaac.org/pictograms/24214/24214_300.png",
+
+"dedos": "https://static.arasaac.org/pictograms/9826/9826_300.png",
+
+"frente": "https://static.arasaac.org/pictograms/3326/3326_300.png",
+
+"ceja": "https://static.arasaac.org/pictograms/3011/3011_300.png",
+
+"labios": "https://static.arasaac.org/pictograms/2953/2953_300.png",
+
+"ombligo": "https://static.arasaac.org/pictograms/2873/2873_300.png",
+
+"uña": "https://static.arasaac.org/pictograms/2783/2783_300.png",
 
 };
 
