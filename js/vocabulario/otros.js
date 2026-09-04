@@ -99,7 +99,22 @@ const vocabularioOtros = {
         "https://static.arasaac.org/pictograms/35565/35565_300.png",
     "https://static.arasaac.org/pictograms/8517/8517_300.png",
 ],
-    
+
+// ==================== HIGIENE PERSONAL ====================
+
+    "higiene personal": "https://static.arasaac.org/pictograms/23406/23406_300.png",
+
+    "jabón": [
+        "https://static.arasaac.org/pictograms/2964/2964_300.png",
+        "https://static.arasaac.org/pictograms/8094/8094_300.png"
+    ],
+    "jabon": [
+        "https://static.arasaac.org/pictograms/2964/2964_300.png",
+        "https://static.arasaac.org/pictograms/8094/8094_300.png"
+    ],
+
+    "shampoo": "https://static.arasaac.org/pictograms/2699/2699_300.png",
+    "acondicionador": "https://static.arasaac.org/pictograms/35823/35823_300.png",
 };
 
 Object.assign(pictogramas, vocabularioOtros);
