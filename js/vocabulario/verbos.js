@@ -11,6 +11,12 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/32298/32298_300.png"
     ],
 
+    "vivir": [
+"https://static.arasaac.org/pictograms/11605/11605_300.png",
+        "https://static.arasaac.org/pictograms/38394/38394_300.png",
+        
+    ],
+
     "reír": [
         "https://static.arasaac.org/pictograms/30393/30393_300.png",
         "https://static.arasaac.org/pictograms/38792/38792_300.png"
@@ -423,6 +429,7 @@ let verbosBase = [
     "enojarse",
     "sorprender",
     "crear",
+    "vivir",
 ];
 
 let verbosConjugados = {
@@ -595,6 +602,36 @@ let verbosConjugados = {
 "enojar": "enojarse",
 "enojar": "enojarse",
 "enojar": "enojarse",
+
+// ==================== VIVIR ====================
+
+// PRESENTE HABITUAL
+"vivo": "vivir",
+"vivís": "vivir",
+"vive": "vivir",
+"vivimos": "vivir",
+"viven": "vivir",
+
+// PRETÉRITO PERFECTO SIMPLE
+"viví": "vivir",
+"viviste": "vivir",
+"vivió": "vivir",
+"vivimos": "vivir",
+"vivieron": "vivir",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he vivido": "vivir",
+"has vivido": "vivir",
+"ha vivido": "vivir",
+"hemos vivido": "vivir",
+"han vivido": "vivir",
+
+// FUTURO COMPUESTO
+"voy a vivir": "vivir",
+"vas a vivir": "vivir",
+"va a vivir": "vivir",
+"vamos a vivir": "vivir",
+"van a vivir": "vivir",
     
 // == decir ==
 
