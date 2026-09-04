@@ -223,6 +223,8 @@ const vocabularioAdjetivos = {
     "moderno": "",
 
     "floreado":"https://static.arasaac.org/pictograms/11264/11264_300.png",
+    "floreados":"https://static.arasaac.org/pictograms/11264/11264_300.png",
+    "floreadas":"https://static.arasaac.org/pictograms/11264/11264_300.png",
     "floreada": "https://static.arasaac.org/pictograms/11264/11264_300.png",
     "rayado": "https://static.arasaac.org/pictograms/7225/7225_300.png",
     "rayada": "https://static.arasaac.org/pictograms/7225/7225_300.png",
@@ -298,8 +300,12 @@ let adjetivos = [
     "enojada",
     "rayadas",
     "rayada",
+    "rayado",
+    "rayados",
     "floreadas",
     "floreada",
+    "floreado",
+    "floreados",
 
 
     // ==================== ADJETIVOS DEL CLIMA ====================
