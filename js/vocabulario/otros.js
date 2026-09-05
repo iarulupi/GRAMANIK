@@ -121,6 +121,12 @@ const vocabularioOtros = {
     "partes del cuerpo": "https://static.arasaac.org/pictograms/29145/29145_300.png",
     
     "cuerpo": "https://static.arasaac.org/pictograms/6473/6473_300.png",
+
+    "mano derecha" : "https://static.arasaac.org/pictograms/4624/4624_300.png",
+
+    "mano izquierda": "https://static.arasaac.org/pictograms/4672/4672_300.png",
+
+    "mano": "https://static.arasaac.org/pictograms/2928/2928_300.png",
     
     "orejas": "https://static.arasaac.org/pictograms/2871/2871_300.png",
     
