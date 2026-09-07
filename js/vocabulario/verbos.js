@@ -416,6 +416,7 @@ let verbosBase = [
     "incendiar",
     "extinguir",
     "calentar",
+    "usar",
     "enfriar",
     "reír",
     "llorar",
@@ -863,6 +864,37 @@ let verbosConjugados = {
 "habremos sacado": "sacar",
 "habrán sacado": "sacar",
 
+// ===== USAR =====
+
+// PRESENTE HABITUAL
+"uso": "usar",
+"usas": "usar",
+"usás": "usar",
+"usa": "usar",
+"usamos": "usar",
+"usan": "usar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"usé": "usar",
+"usaste": "usar",
+"usó": "usar",
+"usamos": "usar",
+"usaron": "usar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he usado": "usar",
+"has usado": "usar",
+"ha usado": "usar",
+"hemos usado": "usar",
+"han usado": "usar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a usar": "usar",
+"vas a usar": "usar",
+"va a usar": "usar",
+"vamos a usar": "usar",
+"van a usar": "usar",    
+    
 // ===== VERBO GUARDAR =====
 
 // PRESENTE HABITUAL
