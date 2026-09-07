@@ -268,6 +268,8 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/22033/22033_300.png",
     ],
 
+    "dibujar": "https://static.arasaac.org/pictograms/8088/8088_300.png",
+
      "necesitar":"https://static.arasaac.org/pictograms/37160/37160_300.png",
 
     // ==================== FALTABAN EN TU VOCABULARIO ====================
@@ -433,6 +435,7 @@ let verbosBase = [
     "sorprender",
     "crear",
     "vivir",
+    "dibujar",
 ];
 
 let verbosConjugados = {
@@ -462,6 +465,7 @@ let verbosConjugados = {
 "sacá": "sacar",
 "guardá": "guardar",
 "guardalo": "guardar",
+"dibujá": "dibujar",
 // ===== FRASES VERBALES =====
 
 "se puede formar": "formar",
@@ -943,6 +947,36 @@ let verbosConjugados = {
 "va a reír": "reír",
 "vamos a reír": "reír",
 "van a reír": "reír",
+
+// ===== DIBUJAR =====
+
+// PRESENTE HABITUAL
+"dibujo": "dibujar",
+"dibujas": "dibujar",
+"dibuja": "dibujar",
+"dibujamos": "dibujar",
+"dibujan": "dibujar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"dibujé": "dibujar",
+"dibujaste": "dibujar",
+"dibujó": "dibujar",
+"dibujamos": "dibujar",
+"dibujaron": "dibujar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he dibujado": "dibujar",
+"has dibujado": "dibujar",
+"ha dibujado": "dibujar",
+"hemos dibujado": "dibujar",
+"han dibujado": "dibujar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a dibujar": "dibujar",
+"vas a dibujar": "dibujar",
+"va a dibujar": "dibujar",
+"vamos a dibujar": "dibujar",
+"van a dibujar": "dibujar",
     
 // ===== LLORAR =====
 
