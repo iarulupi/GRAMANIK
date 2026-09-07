@@ -45,6 +45,13 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/31839/31839_300.png"
     ],
 
+"faltar": [
+    "https://static.arasaac.org/pictograms/29063/29063_300.png",
+    "https://static.arasaac.org/pictograms/29062/29062_300.png",
+    "https://static.arasaac.org/pictograms/29064/29064_300.png",
+    "https://static.arasaac.org/pictograms/29065/29065_300.png",
+],
+    
     "poner": [ 
         "https://static.arasaac.org/pictograms/6989/6989_300.png",
         "https://static.arasaac.org/pictograms/32757/32757_300.png",
@@ -322,6 +329,7 @@ let verbosBase = [
     "elegir",
     "recordar",
     "romper",
+    "faltar",
     "prender",
     "copiar",
     "contestar",
@@ -605,6 +613,37 @@ let verbosConjugados = {
 "enojar": "enojarse",
 "enojar": "enojarse",
 "enojar": "enojarse",
+
+// ===== FALTAR =====
+
+// PRESENTE HABITUAL
+"falto": "faltar",
+"faltas": "faltar",
+"faltás": "faltar",
+"falta": "faltar",
+"faltamos": "faltar",
+"faltan": "faltar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"falté": "faltar",
+"faltaste": "faltar",
+"faltó": "faltar",
+"faltamos": "faltar",
+"faltaron": "faltar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he faltado": "faltar",
+"has faltado": "faltar",
+"ha faltado": "faltar",
+"hemos faltado": "faltar",
+"han faltado": "faltar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a faltar": "faltar",
+"vas a faltar": "faltar",
+"va a faltar": "faltar",
+"vamos a faltar": "faltar",
+"van a faltar": "faltar",
 
 // ==================== VIVIR ====================
 
