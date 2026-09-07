@@ -272,25 +272,6 @@ const vocabularioVerbos = {
 
      "necesitar":"https://static.arasaac.org/pictograms/37160/37160_300.png",
 
-    // ==================== FALTABAN EN TU VOCABULARIO ====================
-
-    "andar": "",
-    "meter": "",
-    "meterse": "",
-    "dibujar": "",
-    "formar": "",
-    "repasar": "",
-    "matar": "",
-    "trabajar": "",
-    "saltar": "",
-    "poder": "",
-    "gustar": "",
-    "tener": "",
-    "ser": "",
-    "estar": "",
-    "haber": "",
-
-
     // ==================== VERBOS DE CLIMA ====================
 
     "llover": "",
