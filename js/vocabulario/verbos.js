@@ -919,6 +919,7 @@ let verbosConjugados = {
 
 // PRETÉRITO PERFECTO SIMPLE
 "estuve": "estar",
+"estaba": "estar",
 "estuviste": "estar",
 "estuvo": "estar",
 "estuvimos": "estar",
