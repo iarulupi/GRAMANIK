@@ -262,7 +262,7 @@ const vocabularioVerbos = {
     "contestar": [
         "https://i.ibb.co/0pxrqk81/file-00000000f2c471f59e3749041a934381.png",
         "https://static.arasaac.org/pictograms/9031/9031_300.png",
-        ]
+        ],
 
     "bailar": "https://static.arasaac.org/pictograms/35747/35747_300.png",
 
