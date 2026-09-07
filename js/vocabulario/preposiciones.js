@@ -1,7 +1,6 @@
 // ==================== PREPOSICIONES ====================
 
 let preposiciones = [
-    "por",
     "a",
     "del",
     "al",
