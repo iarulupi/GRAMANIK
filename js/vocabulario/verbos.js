@@ -11,6 +11,8 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/32298/32298_300.png"
     ],
 
+    "doblar": "https://static.arasaac.org/pictograms/16861/16861_300.png",
+
     "vivir": [
 "https://static.arasaac.org/pictograms/11605/11605_300.png",
         "https://static.arasaac.org/pictograms/38394/38394_300.png",
@@ -421,6 +423,7 @@ let verbosBase = [
 "tener",
 "ser",
 "estar",
+    "doblar",
    "ganar",
    "perder",
    "llamar",
@@ -1038,6 +1041,36 @@ let verbosConjugados = {
 "va a venir": "venir",
 "vamos a venir": "venir",
 "van a venir": "venir",
+
+// ===== DOBLAR =====
+
+// PRESENTE HABITUAL
+"doblo": "doblar",
+"doblas": "doblar",
+"dobla": "doblar",
+"doblamos": "doblar",
+"doblan": "doblar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"doblé": "doblar",
+"doblaste": "doblar",
+"dobló": "doblar",
+"doblamos": "doblar",
+"doblaron": "doblar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he doblado": "doblar",
+"has doblado": "doblar",
+"ha doblado": "doblar",
+"hemos doblado": "doblar",
+"han doblado": "doblar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a doblar": "doblar",
+"vas a doblar": "doblar",
+"va a doblar": "doblar",
+"vamos a doblar": "doblar",
+"van a doblar": "doblar",
 
 
 // ===== VERBO PASEAR =====
