@@ -11,6 +11,19 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/32298/32298_300.png"
     ],
 
+    "hablar":[
+        "https://static.arasaac.org/pictograms/6517/6517_300.png",
+        "https://static.arasaac.org/pictograms/37217/37217_300.png",
+        "https://static.arasaac.org/pictograms/36544/36544_300.png",
+        "https://static.arasaac.org/pictograms/3345/3345_300.png",
+        ],
+    "conversar": [
+        "https://static.arasaac.org/pictograms/6517/6517_300.png",
+        "https://static.arasaac.org/pictograms/37217/37217_300.png",
+        "https://static.arasaac.org/pictograms/36544/36544_300.png",
+        "https://static.arasaac.org/pictograms/3345/3345_300.png",
+        ],
+
     "doblar": "https://static.arasaac.org/pictograms/16861/16861_300.png",
 
     "vivir": [
@@ -297,6 +310,8 @@ Object.assign(pictogramas, vocabularioVerbos);
 let verbosBase = [
     "batir",
     "poner",
+    "hablar",
+    "conversar",
     "ponerse",
     "necesitar",
     "pensar",
@@ -620,6 +635,68 @@ let verbosConjugados = {
 "va a vivir": "vivir",
 "vamos a vivir": "vivir",
 "van a vivir": "vivir",
+
+// ===== CONVERSAR =====
+
+// PRESENTE HABITUAL
+"converso": "conversar",
+"conversas": "conversar",
+"conversás": "conversar",
+"conversa": "conversar",
+"conversamos": "conversar",
+"conversan": "conversar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"conversé": "conversar",
+"conversaste": "conversar",
+"conversó": "conversar",
+"conversamos": "conversar",
+"conversaron": "conversar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he conversado": "conversar",
+"has conversado": "conversar",
+"ha conversado": "conversar",
+"hemos conversado": "conversar",
+"han conversado": "conversar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a conversar": "conversar",
+"vas a conversar": "conversar",
+"va a conversar": "conversar",
+"vamos a conversar": "conversar",
+"van a conversar": "conversar",
+    
+// ===== HABLAR =====
+
+// PRESENTE HABITUAL
+"hablo": "hablar",
+"hablas": "hablar",
+"hablás": "hablar",
+"habla": "hablar",
+"hablamos": "hablar",
+"hablan": "hablar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"hablé": "hablar",
+"hablaste": "hablar",
+"habló": "hablar",
+"hablamos": "hablar",
+"hablaron": "hablar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he hablado": "hablar",
+"has hablado": "hablar",
+"ha hablado": "hablar",
+"hemos hablado": "hablar",
+"han hablado": "hablar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a hablar": "hablar",
+"vas a hablar": "hablar",
+"va a hablar": "hablar",
+"vamos a hablar": "hablar",
+"van a hablar": "hablar",
     
 // == decir ==
 
