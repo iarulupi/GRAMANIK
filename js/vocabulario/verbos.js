@@ -11,6 +11,11 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/32298/32298_300.png"
     ],
 
+    "preguntar": [
+        "https://static.arasaac.org/pictograms/9847/9847_300.png",
+        "https://static.arasaac.org/pictograms/9840/9840_300.png",
+        ],
+
     "hablar":[
         "https://static.arasaac.org/pictograms/6517/6517_300.png",
         "https://static.arasaac.org/pictograms/37217/37217_300.png",
@@ -254,7 +259,10 @@ const vocabularioVerbos = {
 
     "mirar": "https://static.arasaac.org/pictograms/6564/6564_300.png",
 
-    "contestar": "https://i.ibb.co/0pxrqk81/file-00000000f2c471f59e3749041a934381.png",
+    "contestar": [
+        "https://i.ibb.co/0pxrqk81/file-00000000f2c471f59e3749041a934381.png",
+        "https://static.arasaac.org/pictograms/9031/9031_300.png",
+        ]
 
     "bailar": "https://static.arasaac.org/pictograms/35747/35747_300.png",
 
@@ -368,6 +376,7 @@ let verbosBase = [
     "festejar",
     "decir",
     "venir",
+    "preguntar",
     "volver",
     "vestir",
     "compartir",
@@ -791,6 +800,37 @@ let verbosConjugados = {
 "habrá sorprendido": "sorprender",
 "habremos sorprendido": "sorprender",
 "habrán sorprendido": "sorprender",
+
+// ===== PREGUNTAR =====
+
+// PRESENTE HABITUAL
+"pregunto": "preguntar",
+"preguntas": "preguntar",
+"preguntás": "preguntar",
+"pregunta": "preguntar",
+"preguntamos": "preguntar",
+"preguntan": "preguntar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"pregunté": "preguntar",
+"preguntaste": "preguntar",
+"preguntó": "preguntar",
+"preguntamos": "preguntar",
+"preguntaron": "preguntar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he preguntado": "preguntar",
+"has preguntado": "preguntar",
+"ha preguntado": "preguntar",
+"hemos preguntado": "preguntar",
+"han preguntado": "preguntar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a preguntar": "preguntar",
+"vas a preguntar": "preguntar",
+"va a preguntar": "preguntar",
+"vamos a preguntar": "preguntar",
+"van a preguntar": "preguntar",
     
 // ===== VERBO SACAR =====
 
