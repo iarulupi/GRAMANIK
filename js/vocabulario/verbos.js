@@ -2621,6 +2621,7 @@ let verbosConjugados = {
 "hizo": "hacer",
 "hicimos": "hacer",
 "hicieron": "hacer",
+"hacían": "hacer", 
 
 // FUTURO PRÓXIMO O PERIFRÁSTICO
 "voy a hacer": "hacer",
