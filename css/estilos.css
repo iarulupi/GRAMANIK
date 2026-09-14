@@ -395,6 +395,11 @@ button {
     border-bottom: none;
 }
 
+/* Separación extra entre símbolo y palabra al copiar/descargar */
+.modo-descarga .fila-simbolo {
+    margin-bottom: 3px;
+}
+
 
 /* ==================== COLOR MANUAL DE TEXTO ==================== */
 
