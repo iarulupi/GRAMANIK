@@ -64,8 +64,12 @@ const vocabularioVerbos = {
               ],
     "ponerse": "https://static.arasaac.org/pictograms/6627/6627_300.png",
 
-    "guardar": "https://static.arasaac.org/pictograms/5514/5514_300.png",
+    "guardar": [
+        "https://static.arasaac.org/pictograms/5514/5514_300.png",
+        "https://static.arasaac.org/pictograms/37938/37938_300.png",
+        ],
 
+        
     "sacar": "https://static.arasaac.org/pictograms/5568/5568_300.png",
 
     "pensar": "https://static.arasaac.org/pictograms/38796/38796_300.png",
