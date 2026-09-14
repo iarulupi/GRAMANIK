@@ -3,7 +3,7 @@
 const vocabularioPersonas = {
 
     "persona": "https://static.arasaac.org/pictograms/34560/34560_nocolor_500.png",
-    "personas": "https://static.arasaac.org/pictograms/6632/6632_300.png",
+    "personas": "https://static.arasaac.org/pictograms/7116/7116_300.png",
 
     "yo": "https://static.arasaac.org/pictograms/6632/6632_300.png",
     "vos": "https://static.arasaac.org/pictograms/6625/6625_300.png",
