@@ -300,6 +300,15 @@ const vocabularioVerbos = {
 
      "necesitar":"https://static.arasaac.org/pictograms/37160/37160_300.png",
 
+    "cumplir": "https://static.arasaac.org/pictograms/26784/26784_300.png",
+    
+    "planchar":"https://static.arasaac.org/pictograms/26331/26331_300.png",
+
+    "colgar": [
+        "https://static.arasaac.org/pictograms/5593/5593_300.png",
+        "https://static.arasaac.org/pictograms/26487/26487_300.png",
+        ],
+
     // ==================== VERBOS DE CLIMA ====================
 
     "llover": "",
@@ -323,6 +332,9 @@ const vocabularioVerbos = {
 Object.assign(pictogramas, vocabularioVerbos);
 
 let verbosBase = [
+    "cumplir",
+    "planchar",
+    "colgar",
     "batir",
     "poner",
     "hablar",
@@ -654,6 +666,98 @@ let verbosConjugados = {
 "va a faltar": "faltar",
 "vamos a faltar": "faltar",
 "van a faltar": "faltar",
+
+// ===== PLANCHAR =====
+
+// PRESENTE HABITUAL
+"plancho": "planchar",
+"planchas": "planchar",
+"planchás": "planchar",
+"plancha": "planchar",
+"planchamos": "planchar",
+"planchan": "planchar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"planché": "planchar",
+"planchaste": "planchar",
+"planchó": "planchar",
+"planchamos": "planchar",
+"plancharon": "planchar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he planchado": "planchar",
+"has planchado": "planchar",
+"ha planchado": "planchar",
+"hemos planchado": "planchar",
+"han planchado": "planchar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a planchar": "planchar",
+"vas a planchar": "planchar",
+"va a planchar": "planchar",
+"vamos a planchar": "planchar",
+"van a planchar": "planchar",
+
+// ===== CUMPLIR =====
+
+// PRESENTE HABITUAL
+"cumplo": "cumplir",
+"cumples": "cumplir",
+"cumple": "cumplir",
+"cumplimos": "cumplir",
+"cumplen": "cumplir",
+
+// PRETÉRITO PERFECTO SIMPLE
+"cumplí": "cumplir",
+"cumpliste": "cumplir",
+"cumplió": "cumplir",
+"cumplimos": "cumplir",
+"cumplieron": "cumplir",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he cumplido": "cumplir",
+"has cumplido": "cumplir",
+"ha cumplido": "cumplir",
+"hemos cumplido": "cumplir",
+"han cumplido": "cumplir",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a cumplir": "cumplir",
+"vas a cumplir": "cumplir",
+"va a cumplir": "cumplir",
+"vamos a cumplir": "cumplir",
+"van a cumplir": "cumplir",
+
+// ===== COLGAR =====
+
+// PRESENTE HABITUAL
+"cuelgo": "colgar",
+"cuelgas": "colgar",
+"colgás": "colgar",
+"cuelga": "colgar",
+"colgamos": "colgar",
+"cuelgan": "colgar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"colgué": "colgar",
+"colgaste": "colgar",
+"colgó": "colgar",
+"colgamos": "colgar",
+"colgaron": "colgar",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he colgado": "colgar",
+"has colgado": "colgar",
+"ha colgado": "colgar",
+"hemos colgado": "colgar",
+"han colgado": "colgar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a colgar": "colgar",
+"vas a colgar": "colgar",
+"va a colgar": "colgar",
+"vamos a colgar": "colgar",
+"van a colgar": "colgar",
 
 // ==================== VIVIR ====================
 
