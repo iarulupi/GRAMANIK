@@ -39,6 +39,17 @@ const vocabularioPersonas = {
     "abuelo": "https://static.arasaac.org/pictograms/23718/23718_300.png",
     "abuela": "https://static.arasaac.org/pictograms/23710/23710_300.png",
 
+    "familia": [
+        "https://static.arasaac.org/pictograms/2392/2392_300.png",
+        "https://static.arasaac.org/pictograms/11729/11729_300.png",
+        "https://static.arasaac.org/pictograms/11731/11731_300.png",
+        "https://static.arasaac.org/pictograms/11728/11728_300.png",
+        "https://static.arasaac.org/pictograms/11735/11735_300.png",
+        "https://static.arasaac.org/pictograms/11733/11733_300.png",
+        "https://static.arasaac.org/pictograms/24515/24515_300.png",
+        "https://static.arasaac.org/pictograms/38600/38600_300.png",
+        ],
+
     "amigo": "https://static.arasaac.org/pictograms/8487/8487_300.png",
     "amiga": "https://static.arasaac.org/pictograms/8486/8486_300.png",
     "amigos": "https://static.arasaac.org/pictograms/2255/2255_300.png",
