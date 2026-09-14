@@ -175,6 +175,19 @@ const vocabularioOtros = {
     "colmillos": "https://static.arasaac.org/pictograms/39845/39845_300.png",
     "trompa": "https://static.arasaac.org/pictograms/7287/7287_300.png",
 
+    // ==================== MATEMÁTICA ====================
+
+"todos": [
+    "https://static.arasaac.org/pictograms/5596/5596_300.png",
+    "https://static.arasaac.org/pictograms/36081/36081_300.png"
+],
+
+"algunos": "https://i.ibb.co/jPsqM09K/algunos.jpg",
+
+"ninguno": "https://i.ibb.co/Tqr7HJ15/ninguno.jpg",
+
+"algunas": "https://static.arasaac.org/pictograms/5374/5374_300.png",
+
 };
 
 Object.assign(pictogramas, vocabularioOtros);
