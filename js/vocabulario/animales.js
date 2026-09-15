@@ -17,6 +17,10 @@ const vocabularioAnimales = {
     "elefante": "https://static.arasaac.org/pictograms/2372/2372_300.png",
     "hipopótamo": "https://static.arasaac.org/pictograms/2424/2424_300.png",
     "león": "https://static.arasaac.org/pictograms/25187/25187_300.png",
+    "ratón": [
+        "https://static.arasaac.org/pictograms/2546/2546_300.png",
+        "https://static.arasaac.org/pictograms/28845/28845_300.png",
+        ],
 
     "gato": [
         "https://static.arasaac.org/pictograms/2406/2406_300.png",
