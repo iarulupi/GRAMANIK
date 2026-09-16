@@ -118,6 +118,8 @@ const vocabularioOtros = {
     "shampoo": "https://static.arasaac.org/pictograms/2699/2699_300.png",
     "acondicionador": "https://static.arasaac.org/pictograms/35823/35823_300.png",
 
+    "cepillo de dientes": "https://static.arasaac.org/pictograms/38813/38813_300.png",
+
     // ==================== PARTES DEL CUERPO ====================
 
     "partes del cuerpo": "https://static.arasaac.org/pictograms/29145/29145_300.png",
@@ -133,6 +135,9 @@ const vocabularioOtros = {
     "orejas": "https://static.arasaac.org/pictograms/2871/2871_300.png",
     
     "oreja": "https://static.arasaac.org/pictograms/2871/2871_300.png",
+
+    "diente": "https://static.arasaac.org/pictograms/10267/10267_300.png",
+    "dientes": "https://static.arasaac.org/pictograms/2737/2737_300.png",
 
 "pierna": "https://static.arasaac.org/pictograms/8666/8666_300.png",
 
