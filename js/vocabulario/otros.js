@@ -54,6 +54,8 @@ const vocabularioOtros = {
         "https://static.arasaac.org/pictograms/33068/33068_300.png"
     ],
 
+    "comedor": "https://static.arasaac.org/pictograms/9824/9824_300.png",
+
     "dormitorio": [
         "https://static.arasaac.org/pictograms/5988/5988_300.png",
         "https://static.arasaac.org/pictograms/33068/33068_300.png"
