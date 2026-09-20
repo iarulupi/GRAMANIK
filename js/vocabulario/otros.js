@@ -42,7 +42,7 @@ const vocabularioOtros = {
     "silla": "https://static.arasaac.org/pictograms/3155/3155_300.png",
     "mesa": "https://static.arasaac.org/pictograms/3129/3129_300.png",
 
-    "dedo": "https://static.arasaac.org/pictograms/3298/3298_300.png",
+    "canasta": "https://static.arasaac.org/pictograms/3012/3012_300.png",
 
 
     // ==================== PARTES DE LA CASA ====================
@@ -123,6 +123,8 @@ const vocabularioOtros = {
     // ==================== PARTES DEL CUERPO ====================
 
     "partes del cuerpo": "https://static.arasaac.org/pictograms/29145/29145_300.png",
+
+     "dedo": "https://static.arasaac.org/pictograms/3298/3298_300.png",
     
     "cuerpo": "https://static.arasaac.org/pictograms/6473/6473_300.png",
 
