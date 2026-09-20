@@ -9,6 +9,12 @@ const vocabularioComidas = {
     "alimento": "https://static.arasaac.org/pictograms/4610/4610_300.png",
     "alimentos": "https://static.arasaac.org/pictograms/4610/4610_300.png",
 
+    "picnic":  [
+"https://static.arasaac.org/pictograms/10236/10236_300.png",
+        "https://static.arasaac.org/pictograms/28361/28361_300.png",
+        "https://static.arasaac.org/pictograms/39755/39755_300.png",
+        ],
+        
     "desayuno": "https://static.arasaac.org/pictograms/4626/4626_300.png",
 
     "almuerzo": [
