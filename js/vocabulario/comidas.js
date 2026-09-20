@@ -276,6 +276,14 @@ const vocabularioComidas = {
         "https://static.arasaac.org/pictograms/3383/3383_300.png"
     ],
 
+    "sandwich": [
+        "https://static.arasaac.org/pictograms/38504/38504_300.png",
+        "https://static.arasaac.org/pictograms/3383/3383_300.png"
+    ],
+    "sandwiches": [
+        "https://static.arasaac.org/pictograms/38504/38504_300.png",
+        "https://static.arasaac.org/pictograms/3383/3383_300.png"
+    ],
 
     // ==================== PASTAS ====================
 
