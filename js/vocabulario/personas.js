@@ -8,6 +8,15 @@ const vocabularioPersonas = {
     "yo": "https://static.arasaac.org/pictograms/6632/6632_300.png",
     "vos": "https://static.arasaac.org/pictograms/6625/6625_300.png",
     "él": "https://static.arasaac.org/pictograms/6481/6481_300.png",
+    "ellos": [
+        "https://static.arasaac.org/pictograms/7033/7033_300.png",
+        "https://static.arasaac.org/pictograms/7032/7032_300.png",
+        "https://static.arasaac.org/pictograms/31805/31805_300.png",
+        ],
+    "ellas": [
+        "https://static.arasaac.org/pictograms/7031/7031_300.png",
+        "https://static.arasaac.org/pictograms/7030/7030_300.png",
+        ],
     "ella": "https://static.arasaac.org/pictograms/7029/7029_300.png",
     "nosotros": "https://static.arasaac.org/pictograms/7186/7186_300.png",
 
