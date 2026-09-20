@@ -211,7 +211,7 @@ const vocabularioVerbos = {
 
     "señalar": "https://i.ibb.co/Wpknv2zk/9.png",
 
-    "decir": "https://i.ibb.co/4g8yYrDJ/8.png",
+    "decir": "https://static.arasaac.org/pictograms/9693/9693_300.png",
 
     "armar": "https://i.ibb.co/mCSnH0GV/armar.png",
 
