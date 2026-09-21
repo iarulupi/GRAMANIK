@@ -35,6 +35,7 @@ const vocabularioEscuela = {
      "oraciones": "https://i.ibb.co/Cp0276jq/oracion.jpg",
     "relato": "https://i.ibb.co/MDB0HdKK/relato.jpg",
     "palabra": "https://i.ibb.co/fVkvCxqB/palabra.jpg",
+    "palabras": "https://i.ibb.co/fVkvCxqB/palabra.jpg",
     "párrafo": "https://i.ibb.co/FbZ1SH5C/parrafo.jpg",
 
     "verbo": "https://static.arasaac.org/pictograms/32604/32604_300.png",
