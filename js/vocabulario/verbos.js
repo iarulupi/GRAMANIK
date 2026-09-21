@@ -15,6 +15,11 @@ const vocabularioVerbos = {
 
     "correr": "https://static.arasaac.org/pictograms/6465/6465_300.png",
 
+    "desfilar": [
+        "https://static.arasaac.org/pictograms/36663/36663_300.png",
+        "https://static.arasaac.org/pictograms/38346/38346_300.png",
+        ],
+
     "preguntar": [
         "https://static.arasaac.org/pictograms/9847/9847_300.png",
         "https://static.arasaac.org/pictograms/9840/9840_300.png",
@@ -368,6 +373,7 @@ let verbosBase = [
     "contestar",
     "despegar",
     "viajar",
+    "desfilar",
     "ordenar",
     "dormir",
     "andar",
@@ -834,6 +840,29 @@ let verbosConjugados = {
 "va a conversar": "conversar",
 "vamos a conversar": "conversar",
 "van a conversar": "conversar",
+
+// ===== DESFILAR =====
+
+// PRESENTE HABITUAL
+"desfilo": "desfilar",
+"desfilas": "desfilar",
+"desfila": "desfilar",
+"desfilamos": "desfilar",
+"desfilan": "desfilar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"desfilé": "desfilar",
+"desfilaste": "desfilar",
+"desfiló": "desfilar",
+"desfilamos": "desfilar",
+"desfilaron": "desfilar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a desfilar": "desfilar",
+"vas a desfilar": "desfilar",
+"va a desfilar": "desfilar",
+"vamos a desfilar": "desfilar",
+"van a desfilar": "desfilar",
     
 // ===== HABLAR =====
 
