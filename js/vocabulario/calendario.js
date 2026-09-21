@@ -141,6 +141,8 @@ const vocabularioCalendario = {
 
     "primavera": "https://static.arasaac.org/pictograms/5553/5553_300.png",
 
+    "estaciones": "https://static.arasaac.org/pictograms/5464/5464_300.png",
+
 
     // ==================== FECHAS Y CELEBRACIONES ====================
 
