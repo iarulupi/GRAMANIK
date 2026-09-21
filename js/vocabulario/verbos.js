@@ -2209,7 +2209,29 @@ let verbosConjugados = {
 "vamos a pegar": "pegar",
 "van a pegar": "pegar",
 
+// ===== TERMINAR =====
 
+// PRESENTE HABITUAL
+"termino": "terminar",
+"terminas": "terminar",
+"termina": "terminar",
+"terminamos": "terminar",
+"terminan": "terminar",
+
+// PRETÉRITO PERFECTO SIMPLE
+"terminé": "terminar",
+"terminaste": "terminar",
+"terminó": "terminar",
+"terminamos": "terminar",
+"terminaron": "terminar",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a terminar": "terminar",
+"vas a terminar": "terminar",
+"va a terminar": "terminar",
+"vamos a terminar": "terminar",
+"van a terminar": "terminar",
+    
 // ===== EMPEZAR =====
 
 // PRESENTE HABITUAL
