@@ -139,7 +139,12 @@ const vocabularioVerbos = {
 
     "cortar": [
         "https://static.arasaac.org/pictograms/2547/2547_300.png",
-        "https://static.arasaac.org/pictograms/26002/26002_300.png"
+        "https://static.arasaac.org/pictograms/26002/26002_300.png",
+        "https://static.arasaac.org/pictograms/25022/25022_300.png",
+        "https://static.arasaac.org/pictograms/5975/5975_300.png",
+        "https://static.arasaac.org/pictograms/27696/27696_300.png",
+        "https://static.arasaac.org/pictograms/10153/10153_300.png",
+        "https://static.arasaac.org/pictograms/10150/10150_300.png",
     ],
 
     "lavar": [
