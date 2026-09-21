@@ -242,7 +242,7 @@ const vocabularioAdjetivos = {
     "lejos": "https://i.ibb.co/Q3byJ6Rh/cerca.jpg",
 
     "último": "https://i.ibb.co/VYTXCW52/ultimo.jpg",
-    "primero": "https://i.ibb.co/Q7GrdmNj/primero.jpg"
+    "primero": "https://i.ibb.co/Q7GrdmNj/primero.jpg",
 
     "correcto": "https://static.arasaac.org/pictograms/34641/34641_300.png",
     "correcta": "https://static.arasaac.org/pictograms/34641/34641_300.png",
