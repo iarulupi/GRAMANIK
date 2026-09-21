@@ -11,6 +11,10 @@ const vocabularioVerbos = {
         "https://static.arasaac.org/pictograms/32298/32298_300.png"
     ],
 
+    "saltar": "https://static.arasaac.org/pictograms/39052/39052_300.png",
+
+    "correr": "https://static.arasaac.org/pictograms/6465/6465_300.png",
+
     "preguntar": [
         "https://static.arasaac.org/pictograms/9847/9847_300.png",
         "https://static.arasaac.org/pictograms/9840/9840_300.png",
@@ -398,6 +402,7 @@ let verbosBase = [
     "compartir",
     "querer",
     "formar",
+    "correr",
     "traer",
     "trozar",
     "tachar",
@@ -1672,6 +1677,36 @@ let verbosConjugados = {
 "van a formar": "formar",
 
 
+// ===== CORRER =====
+
+// PRESENTE HABITUAL
+"corro": "correr",
+"corres": "correr",
+"corre": "correr",
+"corremos": "correr",
+"corren": "correr",
+
+// PRETÉRITO PERFECTO SIMPLE
+"corrí": "correr",
+"corriste": "correr",
+"corrió": "correr",
+"corrimos": "correr",
+"corrieron": "correr",
+
+// PRETÉRITO PERFECTO COMPUESTO
+"he corrido": "correr",
+"has corrido": "correr",
+"ha corrido": "correr",
+"hemos corrido": "correr",
+"han corrido": "correr",
+
+// FUTURO PRÓXIMO O PERIFRÁSTICO
+"voy a correr": "correr",
+"vas a correr": "correr",
+"va a correr": "correr",
+"vamos a correr": "correr",
+"van a correr": "correr",
+    
 // == compartir ==
 
 // PRESENTE HABITUAL
