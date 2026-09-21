@@ -244,6 +244,11 @@ const vocabularioAdjetivos = {
     "último": "https://i.ibb.co/VYTXCW52/ultimo.jpg",
     "primero": "https://i.ibb.co/Q7GrdmNj/primero.jpg"
 
+    "correcto": "https://static.arasaac.org/pictograms/34641/34641_300.png",
+    "correcta": "https://static.arasaac.org/pictograms/34641/34641_300.png",
+    "incorrecto": "https://static.arasaac.org/pictograms/34639/34639_300.png",
+    "incorrecta": "https://static.arasaac.org/pictograms/34639/34639_300.png",
+
 };
 
 
@@ -303,6 +308,10 @@ let adjetivos = [
     "floreada",
     "floreado",
     "floreados",
+    "correcto",
+    "correcta",
+    "incorrecto",
+    "incorrecta",
 
 
     // ==================== ADJETIVOS DEL CLIMA ====================
