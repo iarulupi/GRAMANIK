@@ -143,6 +143,8 @@ const vocabularioCalendario = {
 
     "estaciones": "https://static.arasaac.org/pictograms/5464/5464_300.png",
 
+    "estación": "https://static.arasaac.org/pictograms/5464/5464_300.png",
+
 
     // ==================== FECHAS Y CELEBRACIONES ====================
 
