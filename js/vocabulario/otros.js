@@ -133,6 +133,8 @@ const vocabularioOtros = {
     "mano izquierda": "https://static.arasaac.org/pictograms/4672/4672_300.png",
 
     "mano": "https://static.arasaac.org/pictograms/2928/2928_300.png",
+
+    "manos": "https://static.arasaac.org/pictograms/9830/9830_300.png",
     
     "orejas": "https://static.arasaac.org/pictograms/2871/2871_300.png",
     
