@@ -417,6 +417,7 @@ let verbosBase = [
     "saltar",
     "repasar",
     "dictar",
+    "terminar",
     "regalar",
     "operar",
     "nadar",
