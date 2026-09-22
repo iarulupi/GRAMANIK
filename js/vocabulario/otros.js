@@ -32,6 +32,8 @@ const vocabularioOtros = {
 
     "nave espacial": "https://static.arasaac.org/pictograms/2344/2344_300.png",
 
+    "partes": "https://static.arasaac.org/pictograms/9877/9877_300.png",
+
     "dolor": "https://static.arasaac.org/pictograms/30620/30620_300.png",
 
     "ver tele": "https://static.arasaac.org/pictograms/29123/29123_300.png",
